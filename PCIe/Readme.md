@@ -23,11 +23,11 @@ Kart bağlantı soketi fiziksel olarak yanlış takmayı engellemek adına 2 par
 
     Full Mini
 
-/Ekran Resmi 2021-09-14 10.43.19.png
+![Full Mini PCIe](https://github.com/akkoyun/Standartlar/blob/01.00.00/PCIe/Images/Full_Mini_PCIe_Dimension.png)
 
     Half Mini
 
-/Ekran Resmi 2021-09-14 10.41.52.png
+![Half Mini PCIe](https://github.com/akkoyun/Standartlar/blob/01.00.00/PCIe/Images/Half_Mini_PCIe_Dimension.png)
 
 ## Kart Bağlantı Soketi
 
