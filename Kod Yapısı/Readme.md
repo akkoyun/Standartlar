@@ -85,6 +85,8 @@ Kodlar kullanım yerine göre değişiklikler göstermektedir.
 | B8xx | Güç Kaynağı Grubu | Voltaj seviyesine ve yöntemine bakılmaksızın güç kaynağı amacı ile tasarlanmış olan tüm modüller bu grup içersinde yer almaktadır. Batarya kontrol, güç yönetim, buck-boost vb ayrık modüller bu gruba dahildir. Muhtelif haberleşme kanalları üzerinden işlemci ile iletişim kurabilirler. |
 | B9xx | Ana Kart Grubu | Komponent içerip içermemesinden bağımsız olarak bir veya birkaç modülü birbirine bağlayan (kablo grubu hariç) tüm modüller bu grup içerisinde yer almaktadır. Modüller arası dönüştürücü adaptörler bu gruba dahildir. |
 
+![Bxxx](https://github.com/akkoyun/Standartlar/blob/01.00.00/Kod%20Yapısı/Images/Bxxx_Code_Tree.png)
+
 #### C (Casting) Segmenti Grup Kodları
 
     Planlanma, tasarım, üretim gibi tamamen kendi üretimimiz olan (müşteri mülkiyetli
