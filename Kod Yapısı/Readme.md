@@ -10,7 +10,6 @@ Kodlama yapısı aşağıdaki formatta kullanılmaktadır.
 
 ***
 
-<center>
 | Kod     | Açıklama                  | Detay |
 |:-------:|---------------------------|-------|
 | A       | Segment Kodu              | [Açıklama](#) |
@@ -20,7 +19,6 @@ Kodlama yapısı aşağıdaki formatta kullanılmaktadır.
 | Eeeeee  | Üretim Parti ve Sıra Kodu | [Açıklama](#) |
 | Fff     | Parça Kodu                | [Açıklama](#) |
 | G       | Özel Üretim Kodu          | [Açıklama](#) |
-</center>
 
 #### Kod kullanım şekilleri.
 
