@@ -7,7 +7,6 @@ Kodlama yapısı aşağıdaki formatta kullanılmaktadır.
 </br>
 <center><H3>ABbbCD-(Eeeeee)-(Fff)-(G)</H3></center>
 </br>
----
 
 <center>
 
