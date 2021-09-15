@@ -8,8 +8,9 @@ Kodlama yapısı aşağıdaki formatta kullanılmaktadır.
 <center><H3>ABbbCD-(Eeeeee)-(Fff)-(G)</H3></center>
 </br>
 
-<center>
+***
 
+<center>
 | Kod     | Açıklama                  | Detay |
 |:-------:|---------------------------|-------|
 | A       | Segment Kodu              | [Açıklama](#) |
