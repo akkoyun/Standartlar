@@ -10,6 +10,7 @@ Kodlama yapısı aşağıdaki formatta kullanılmaktadır.
 ---
 
 <center>
+
 | Kod     | Açıklama                  | Detay |
 |:-------:|---------------------------|-------|
 | A       | Segment Kodu              | [Açıklama](#) |
