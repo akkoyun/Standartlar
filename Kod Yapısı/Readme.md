@@ -190,8 +190,8 @@ Kodlar kullanım yerine göre değişiklikler göstermektedir.
 | E1xx | Batarya | Ürünler / modüller içerisinde kullanılan her türlü batarya (şarj edilebilir yada edilemez) voltaj seviyesine bakılmaksızın bu grup içerisinde yer almaktadır. |
 | E2xx | Solar Panel | ürünler içerisinde kullanılan değişken ebat, voltaj veya güçte olan her tip solar panel bu grup içerisinde yer almaktadır. |
 | E3xx | RF Anten | Ürünler içerisinde kullanılmakta olan her çeşit (çubuk, PCB, sticker vb) ve her frekanstaki antenler bu grup içerisinde yer almaktadır. |
-| E4xx | Switch / Buton | ürün içerisinde kullanılan her türlü anahtarlama işlemi yapan elemanların tamamı bu grup içerisinde yer almaktadır. |
-| E5xx | -- | -- |
+| E4xx | Switch / Buton | Ürün içerisinde kullanılan her türlü anahtarlama işlemi yapan elemanların tamamı bu grup içerisinde yer almaktadır. |
+| E5xx | Basınç Sensörü | Her türlü analog yada dijital su basıncı ölçen sensörler bu grup içerisinde yer almaktadır. |
 | E6xx | -- | -- |
 | E7xx | -- | -- |
 | E8xx | -- | -- |
