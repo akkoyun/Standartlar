@@ -4,6 +4,8 @@ Modüler sistem planlaması içerisinde tüm kartlar ve modüller için uyumlu b
 
 Kurum içi kodlama yapısında her türlü PCIe yapısına sahip modüller için "-PCIe" eklentisi yapılacaktır. Örneğin PCIe iletişim yapısına sahip GSM modülü için **B101AA-PCIe**
 
+![PCIe BUS](https://github.com/akkoyun/Standartlar/blob/01.00.00/PCIe/Images/PICw_Bus_Standart.png)
+
 ## PCIe Kart Yapısı
 
 PCIe standartları doğrultusunda 4 farklı kart ebatı ve yapısı mevcuttur. Bu yapı kodları kart boyutu ve dizgi yönü göz önüne alınarak planlanmıştır. 
