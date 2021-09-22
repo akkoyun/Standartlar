@@ -6,17 +6,21 @@
 
 ### Şematik tasarım notları
 
-#### AE-33729 - Sinyal hatları tristate olması.
+##### AE-33729 - Sinyal hatları tristate olması.
 
 Yapılan tüm tasarım inceleme dokümanlarında özellikle belirtilen bir maddedir. Modemin açma kapama işlemleri sırasında sinyal hatları üzerinden güç alarak kapanmama sorunlarının olabileceği bu nedenle sinyal hatlarının tristate özellikte (istenilen durumlarda yüksek empedans modunda bırakılabilmesi) olması istenmektedir.
 
 Bu nedenle seçilen voltaj dönüştürücülerin mutlaka tristate özellik desteklemesi gerektiği unutulmamalıdır.
 
-#### AE-33764 - SIM hattı kapasitör değerleri.
+***
+
+##### AE-33764 - SIM hattı kapasitör değerleri.
 
 Tüm SIM hatları (I/O, CLK, RST ve SIM_VCC) yüksek frekans parazitler için 33pF kapasitör ile filtre edilmelidir. Buna ek olarak SIM_VCC hattı ayrıca bir 1uF kapasitör ile (GE910 için) desteklenmelidir. 
 
-#### AE-33764 - SIM hattı ESD koruması.
+***
+
+##### AE-33764 - SIM hattı ESD koruması.
 
 Tüm SIM hatları sokete insan eli değebileceği için ESD koruması yapılması gerekmektedir. Bu ESD ler zener gibi tek yönlü korumalar yerine çift yönlü olarak seçilmelidir. 
 
@@ -24,11 +28,15 @@ SIM pinlerinde kullanılacak olan TVS diyotları kullanırken stand-off voltajı
 
 Telitin önerdiği ESD : SP1001-04JTG
 
-#### AE-33729 - LED sinyalleri filtrasyonu.
+***
+
+##### AE-33729 - LED sinyalleri filtrasyonu.
 
 Sistem içerisinde kullanılan tüm LED komponentleri için anode ve cathode hatları üzerine 33pF kapasitör ile filtre edilmesi gerekmektedir.
 
-#### AE-33729 - Filtre kapasitörleri.
+***
+
+##### AE-33729 - Filtre kapasitörleri.
 
 Sistem içerisinde kullanılan aşağıda tanımlanmış kısımlar eğer metal kalkan ile yalıtılmaması durumunda 33pF kapasitör ile filtrelenecektir. 
 
@@ -40,9 +48,11 @@ Seçilen filtre kapasitörünün planlanması gerekmektedir. Genellikle 33pF SMD
 
 Seçilecek kapasitörün 33pF 25V ve 1GHz rezonanslı olması gerekmektedir.
 
+***
+
 ### PCB tasarım notları
 
-#### 00262307 - PCB yol kalınlıkları
+##### 00262307 - PCB yol kalınlıkları
 
 00262307 teknik yazışması neticesinde gelen cevaba göre yüksek sıklıkla veri transferi yapılması gerekli durumlarda GE910 GSM modem için güç hattı yol kalınlığı 2mm (1oz) olarak kullanılması uygun ve hesaplamalar doğrudur.
 
@@ -56,16 +66,24 @@ Tasarım önerisinde ayrıca güç yolları için ısı artışlarının ihmal e
 
 Teknik notu yazan : Bruno Tomaz (Telit)
 
-#### AE-33729 - Anten empedansı
+***
+
+##### AE-33729 - Anten empedansı
 
 Yapılan tüm tasarım inceleme dokümanlarında özellikle belirtilen bir maddedir. PCB tasarım sırasında anten hatlarının olabildiğince kısa tutulması gerektiği ve ayrıca bu anten hatlarının altında iç katmanların boş olması gerektiği sadece zıt katmanın GND olması gerektiği belirtilmiştir. Ayrıca anten hatlarının etrafı via lar ile çevrilmeli ve olası dış etkilenmeler minimuma indirilmelidir. 
 
-#### AE-33729 - Anten ve güç hattı teması.
+***
+
+##### AE-33729 - Anten ve güç hattı teması.
 
 Anten hatlarının hiçbir güç hattı ile yakınlaşmaması mutlaktır. Anten hatları sadece GND sınırı bununmalıdır.
 
-#### AE-33729 - Kart sınırları GND hattı.
+***
+
+##### AE-33729 - Kart sınırları GND hattı.
 
 Kart sınırları mutlaka tüm katmanlarda GND olarak planlanmalıdır. Ayrıca kart kenarlarında 2mm (max) aralıklı via kafes yapısı kurulmalıdır. 
+
+***
 
 ## Bug's
