@@ -6,7 +6,19 @@
 
 ### Şematik tasarım notları
 
-##### **AE-33729 - Sinyal hatları tristate olması.**
+##### 00263214 - VIOT1 ve VIOT2 nin birleştirilmesi.
+
+Modem besleme kaynaklarından Viot1 ve Viot2 (filtre edilmiş güç beslemesi) kaynaklarının birleştirilmesi müşteri tercihinde olan bir uygulama olduğu ve sorun olmadığı belirtilmiştir.
+
+***
+
+##### 00263214 - Modemin 3V3 ile beslenmesi. 
+
+Modemin 3V3 ile beslenmesi (3V2 min güç beslemesi olarak tanımlanmıştır) gerilim düşümü durumlarında (akım çektiği anlarda) limit altına düşebilir olması ve yollarda oluşabilecek güç kayıplarından dolayı uygun bulunmamıştır.
+
+***
+
+##### AE-33729 - Sinyal hatları tristate olması.
 
 Yapılan tüm tasarım inceleme dokümanlarında özellikle belirtilen bir maddedir. Modemin açma kapama işlemleri sırasında sinyal hatları üzerinden güç alarak kapanmama sorunlarının olabileceği bu nedenle sinyal hatlarının tristate özellikte (istenilen durumlarda yüksek empedans modunda bırakılabilmesi) olması istenmektedir.
 
@@ -64,6 +76,8 @@ Güç hatlarının olabildiğince kısa tutulması gerektiği (kart nezdinde) ay
 
 Tasarım önerisinde ayrıca güç yolları için ısı artışlarının ihmal edilebilir düzeyde olduğu belirtilmiştir. RMS değeri üzerinden hesaplanan değerlerde güç yolu için termal gücün 10-30 mW olduğu söylenmiş ve ayrıca modemin termal gücünün 2W olduğu göz önünde bulundurulursa bunun ihmal edilebilecek kadar az olduğu yazılmıştır.
 
+Voltaj düşümleri kontrol edilir ve hesaplanır olması durumunda 0.5mm (1oz) uygundur.
+
 Teknik notu yazan : Bruno Tomaz (Telit)
 
 ***
@@ -83,6 +97,12 @@ Anten hatlarının hiçbir güç hattı ile yakınlaşmaması mutlaktır. Anten 
 ##### AE-33729 - Kart sınırları GND hattı.
 
 Kart sınırları mutlaka tüm katmanlarda GND olarak planlanmalıdır. Ayrıca kart kenarlarında 2mm (max) aralıklı via kafes yapısı kurulmalıdır. 
+
+***
+
+##### 00263214 - Anten match (filtre) hattının kaldırılması.
+
+Anten empedansının 50ohm olduğundan emin olunan durumlarda anten match devresi kaldırılabilir olduğu fakat bunun müşteri tercihinde olup önerilmediği belirtildi.
 
 ***
 
