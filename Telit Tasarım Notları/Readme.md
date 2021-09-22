@@ -6,7 +6,7 @@
 
 ### Şematik tasarım notları
 
-##### AE-33729 - Sinyal hatları tristate olması.
+##### **AE-33729 - Sinyal hatları tristate olması.**
 
 Yapılan tüm tasarım inceleme dokümanlarında özellikle belirtilen bir maddedir. Modemin açma kapama işlemleri sırasında sinyal hatları üzerinden güç alarak kapanmama sorunlarının olabileceği bu nedenle sinyal hatlarının tristate özellikte (istenilen durumlarda yüksek empedans modunda bırakılabilmesi) olması istenmektedir.
 
