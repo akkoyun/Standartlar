@@ -4,7 +4,7 @@ Modüler sistem planlaması içerisinde tüm kartlar ve modüller için uyumlu b
 
 Kurum içi kodlama yapısında her türlü PCIe yapısına sahip modüller için "-PCIe" eklentisi yapılacaktır. Örneğin PCIe iletişim yapısına sahip GSM modülü için **B101AA-PCIe**
 
-![PCIe BUS](https://github.com/akkoyun/Standartlar/blob/01.00.00/PCIe/Images/PICw_Bus_Standart.png)
+![PCIe BUS](/PCIe/Images/PICw_Bus_Standart.png)
 
 ## PCIe Kart Yapısı
 
@@ -25,11 +25,11 @@ Kart bağlantı soketi fiziksel olarak yanlış takmayı engellemek adına 2 par
 
     Full Mini
 
-![Full Mini PCIe](https://github.com/akkoyun/Standartlar/blob/01.00.00/PCIe/Images/Full_Mini_PCIe_Dimension.png)
+![Full Mini PCIe](/PCIe/Images/Full_Mini_PCIe_Dimension.png)
 
     Half Mini
 
-![Half Mini PCIe](https://github.com/akkoyun/Standartlar/blob/01.00.00/PCIe/Images/Half_Mini_PCIe_Dimension.png)
+![Half Mini PCIe](/PCIe/Images/Full_Mini_PCIe_Dimension.png)
 
 ## Kart Bağlantı Soketi
 
