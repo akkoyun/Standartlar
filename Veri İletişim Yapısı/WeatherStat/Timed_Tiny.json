@@ -1,0 +1,45 @@
+{
+    "Command": "STF:WeatherStat.Timed_Tiny",
+    "Device": {
+        "Info": {
+            "ID": "70A11D1D01000026"
+        },
+        "Power": {
+            "Battery": {
+                "AC": -0.15,
+                "IV": 4.17,
+                "SOC": 92.13,
+                "Charge": 3
+            }
+        },
+        "IoT": {
+            "GSM": {
+                "Operator": {
+                    "Code": 28601,
+                    "RSSI": 10,
+                    "ConnTime": 22
+                }
+            }
+        }
+    },
+    "Payload": {
+        "TimeStamp": "2022-03-23  14:18:28",
+        "WeatherStat": {
+            "Environment": {
+                "AT": 22.223,
+                "AH": 22.222,
+                "AP": 222.22,
+                "UV": 3,
+                "ST": [
+                    22.22,
+                    0,
+                    0,
+                    22.11
+                ],
+                "R": 22,
+                "WD": 329,
+                "WS": 22.33
+            }
+        }
+    }
+}

@@ -29,7 +29,10 @@ Paket komut satırı aşağıdaki yapıda kurgulanmıştır.
 
 ### WeatherStat
 
-| Komut Adı   | Açıklama                                |
-|-------------|-----------------------------------------|
-| Timed       | Zamanlı uyanma ve sunucuya veri kaydı   |
-| Manual      | Manual uyandırma ve sunucuya veri kaydı |
+| Komut Adı   | Açıklama                                      | Gönderim Nedeni                         |
+|-------------|-----------------------------------------------|-----------------------------------------|
+| Manual      | Manual uyandırma ile tam veri gönderimi       | Manual gönderim butonuna basılırsa      |
+| Timed       | Zamanlı uyanma ile tam veri gönderimi         | Her 30 dk da bir (saat 12:xx de)        |
+| Timed_Tiny  | Zamanlı uyanma ile kısaltılmış veri gönderimi | Her 30 dk da bir (geri kalan saatlerde) |
+
+* Veri paketleri cinsine göre paket içeriğini [ilgili sayfadan](WeatherStat/Commands.md) incleyebilirsiniz.

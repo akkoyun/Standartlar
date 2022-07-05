@@ -1,0 +1,46 @@
+| JSON Variable | Manual	| Timed	| Timed_Tiny	|
+|---------------|:---------:|:-----:|:-------------:|
+| Command		|X			|X		|X				|
+| Device		|X			|X		|X				|
+| Info			|X			|X		|X				|
+| ID			|X			|X		|X				|
+| Hardware		|X			|X		|-				|
+| Firmware		|X			|X		|-				|
+| Power			|X			|X		|X				|
+| Battery		|X			|X		|X				|
+| AC			|X			|X		|X				|
+| FB			|X			|X		|-				|
+| IB			|X			|X		|-				|
+| IV			|X			|X		|X				|
+| SOC			|X			|X		|X				|
+| T				|X			|X		|-				|
+| Charge		|X			|X		|X				|
+| IoT			|X			|X		|X				|
+| GSM			|X			|X		|X				|
+| Module		|X			|X		|-				|
+| Firmware		|X			|X		|-				|
+| IMEI			|X			|X		|-				|
+| Manufacturer	|X			|X		|-				|
+| Model			|X			|X		|-				|
+| Serial		|X			|X		|-				|
+| Operator		|X			|X		|X				|
+| Iccid			|X			|X		|-				|
+| Code			|X			|X		|X				|
+| RSSI			|X			|X		|X				|
+| ConnTime		|X			|X		|X				|
+| Payload		|X			|X		|X				|
+| TimeStamp		|X			|X		|X				|
+| WeatherStat	|X			|X		|X				|
+| Location		|X			|X		|-				|
+| Latitude		|X			|X		|-				|
+| Longitude		|X			|X		|-				|
+| Environment	|X			|X		|X				|
+| AT			|X			|X		|X				|
+| AH			|X			|X		|X				|
+| AP			|X			|X		|X				|
+| UV			|X			|X		|X				|
+| ST			|X			|X		|X				|
+| R				|X			|X		|X				|
+| WD			|X			|X		|X				|
+| WS			|X			|X		|X				|
+|               | [JSON](Manual.json)      | [JSON](Timed.json)  | [JSON](Timed_Tiny.json)          |
