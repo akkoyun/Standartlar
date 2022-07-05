@@ -1,26 +1,6 @@
-# "Payload" Ana Segment Tanımı
+# "WeatherStat" Veri Paketi 
 
-Sistemlerin ölçümlediği sensör datalarının tamamını içerisinde barından veri paketi bölümüdür. Bu paket içerisinde ölçüm zamanı yanı sıra ölçümleme nedeni ve veriler yer almaktadır. Tüm iletişim paketi içerisindeki veriler sisteme ait değerler barındırırken bu alan ölçüm yapılacak işleme ait veriler barındırmaktadır.
-
-## 1. : "TimeStamp" Veri Paketi Zaman Etiketi
-
-Veri paketinin oluşum zamana ait zaman etiketidir. Tüm payload verilerinde zorunlu olarak bulunacaktır.
-
-|                 | Açıklama                                             |
-|-----------------|------------------------------------------------------|
-| Değişken Adı    | TimeStamp                                            |
-| Değişken Tanımı | Veri ölçümleme zamanına ait zaman etiketi            |
-| Değişken Tipi   | Date/Time                                            |
-| Değişlen Birimi | -                                                    |
-| Örnek Veri      | 2020-10-23  14:18:28                                 |
-
-## 2. : Cihaz Veri Paketi 
-
-Cihaza özel oluşturulan veri paketi bloğudur. Proje ismine göre isimler ile adlandırılmaktadır.  Mevcut projeler için aşağıda veri tipleri tanımlanmıştır.
-
-## 2.A. : "WeatherStat" Veri Paketi 
-
-WeatherStat projesine ait veri paketi bloğudur. Command alanında belirlenen komuta özel yapıda olacaktır. Weather projesine has olarak event koduna göre veri yapısı değişmeyecek her şartta aynı veri gönderilecektir.
+WeatherStat projesine ait veri paketi bloğudur. Command alanında belirlenen komuta özel yapıda olacaktır. Meteoroloji istasyonuna ait veri paketleri ve hangi komutta hangi verisetinin gönderileceği bilgisi [ilgili linkte](Commands.md) tanımlanmıştır.
 
 ```json
 "Payload": {
@@ -51,17 +31,21 @@ WeatherStat projesine ait veri paketi bloğudur. Command alanında belirlenen ko
 
 ***
 
-### 2.A.1. : "Location" Konum Bilgisi
+## "Location" Konum Bilgisi
 
 WeatherStat projesi saha üzerinde yer alan konumunu takip etmek amacı ile GPS alıcısı bulundurmaktadır. Bu konum bilgileri Latitude ve Longtitude konumu altında verilmektedir.
 
-#### 2.A.1.1. : "Latitude" : Cihaz Enlem Bilgisi
+***
+
+### "Latitude" : Cihaz Enlem Bilgisi
 
 Cihazlarımız üzerinde anlık konum bilgisi alabilmek adına GPS sensörü bulunmaktadır. Bu GPS sensörü üzerinden günün belirlenen saatleri içerisinde (cihaz konumunın sürekli değişmemesi ve güç tüketiminin gündüz gün ışığı ile karşılanması planlanarak her gün öğle saatlerinde 12-14 saatleri arasında gönderilecektir) gönderilecek olan enlem bilgisidir. 
 
 Bir noktanın enlemi, ekvator düzleminin bu noktayı Dünya'nın merkezine bağlayan doğru ile oluşturduğu açının ölçüsüdür. Yapısal olarak -90° ile 90° arasında oluşur. Negatif değerler güney yarım küre konumları içindir ve ekvatorda enlem 0 ° değerindedir.
 
-#### 2.A.1.2 : "Longtituude" : Cihaz Boylam Bilgisi
+***
+
+### "Longtituude" : Cihaz Boylam Bilgisi
 
 Cihazlarımız üzerinde anlık konum bilgisi alabilmek adına GPS sensörü bulunmaktadır. Bu GPS sensörü üzerinden günün belirlenen saatleri içerisinde (cihaz konumunın sürekli değişmemesi ve güç tüketiminin gündüz gün ışığı ile karşılanması planlanarak her gün öğle saatlerinde 12-14 saatleri arasında gönderilecektir) gönderilecek olan boylam bilgisidir. 
 
@@ -69,11 +53,11 @@ Enlem için ekvator gibi doğal bir referans olmaması farkıyla, prensip boylam
 
 ***
 
-### 2.A.2. : "Environment" : Cihaz Sensör Ölçüm Bilgisi
+## "Environment" : Cihaz Sensör Ölçüm Bilgisi
 
 WeatherStat projesi meteoroloji istasyonu olduğu için ölçümlenen verilerde çevresel (environment) verilerdir ve data paketi bu segment içerisindedir. Diğer projelerde bu alan değişebilecektir.
 
-#### 2.A.2.1. : "AT"
+### "AT" : Hava Sıcaklığı Verisi
 
 |                 | Açıklama       |
 |-----------------|----------------|
@@ -86,7 +70,7 @@ WeatherStat projesi meteoroloji istasyonu olduğu için ölçümlenen verilerde 
 
 Sistemin T (hava sıcaklığı) sensörüne ait kalibre sıcaklık değeridir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.
 
-#### 2.A.2.2. : "AH"
+### "AH" : Bağıl Nem Verisi
 
 |                 | Açıklama       |
 |-----------------|----------------|
@@ -99,7 +83,7 @@ Sistemin T (hava sıcaklığı) sensörüne ait kalibre sıcaklık değeridir. E
 
 Sistemin TH (hava bağıl nem) sensörüne ait kalibre bağıl nem değeridir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.
 
-#### 2.A.2.3. : "AP"
+### "AP" : Hava Basıncı Verisi
 
 |                 | Açıklama       |
 |-----------------|----------------|
@@ -112,7 +96,7 @@ Sistemin TH (hava bağıl nem) sensörüne ait kalibre bağıl nem değeridir. E
 
 Sistemin P sensörüne ait kalibre hava basıncı değeridir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.
 
-#### 2.A.2.4. : "UV"
+### "UV" : Güneş UV Şiddeti Verisi
 
 |                 | Açıklama       |
 |-----------------|----------------|
@@ -125,7 +109,7 @@ Sistemin P sensörüne ait kalibre hava basıncı değeridir. Eğer sistemde don
 
 Sistemin UV sensörüne ait kalibre UV indisi değeridir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.
 
-#### 2.A.2.5. : "ST"
+### "ST" : Kademeli Toprak Sıcaklığı Verisi
 
 |                 | Açıklama         |
 |-----------------|------------------|
@@ -144,7 +128,7 @@ ST[1] : 30cm
 ST[2] : 60cm
 ST[3] : 90cm
 
-#### 2.A.2.6. : "R"
+### "R" : Yağmur Kova Ölçüm Verisi
 
 |                 | Açıklama          |
 |-----------------|-------------------|
@@ -157,7 +141,7 @@ ST[3] : 90cm
 
 Sistemin R sensörüne ait yağmur şiddeti değeridir. Kovalı sistem yağmur sensörü için gönderilen bu değer bir hesap yöntemi ile hesaplanıp veritabanına hesaplanan değer kaydedilecektir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.
 
-#### 2.A.2.7. : "WD"
+### "WD" : Rüzgar Yönü Verisi
 
 |                 | Açıklama             |
 |-----------------|----------------------|
@@ -170,7 +154,7 @@ Sistemin R sensörüne ait yağmur şiddeti değeridir. Kovalı sistem yağmur s
 
 Sistemin W sensörüne ait rüzgar yönü değeridir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.
 
-#### 2.A.2.8. : "WS"
+### "WS" : Rüzgar Şiddeti Verisi
 
 |                 | Açıklama             |
 |-----------------|----------------------|

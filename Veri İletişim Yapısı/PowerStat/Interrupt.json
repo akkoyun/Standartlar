@@ -47,8 +47,7 @@
                 "PowerFactor": -0.15941,
                 "Consumption": [60697, 14007, 60697],
                 "Frequency": 50.02493
-            },      
-            "Fault": [true, true, true, false, true, true, true, true, false, true, true]
+            }
         }
     }
 }

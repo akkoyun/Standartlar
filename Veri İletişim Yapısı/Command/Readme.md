@@ -3,7 +3,7 @@
 Hangi cihazın (projenin) hangi işlemi yapması için veri gönderdiğini tanımlayan komut açıklamasıdır. 
 
 ```json
-"Command": "STF:WeatherStat.Timed_Save"
+"Command": "STF:WeatherStat.Timed"
 ```
 
 Paket komut satırı aşağıdaki yapıda kurgulanmıştır.

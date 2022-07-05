@@ -101,26 +101,8 @@ Tüm projeler ortak bir veri iletişim altyapısı içerisinde birleştirilmiş 
 }
 ```
 
-| Segment | Açıklama                                                                              |
-|---------|:--------------------------------------------------------------------------------------|
-| Command | Paketin hangi cihaza ait komut için gönderildiğini tanımlayan komut parametresi.      |
-| Device  | Cihaza ait tanımlayıcı bilgilerin yer aldığı segment (tüm cihazlar için aynı yapı).   |
-| Payload | Veri paketine ait ana verinin yer aldığı segment (herbir command için farklı yapıda). |
-
-### 2.A. - Command
-
-Veri paketine ait kotun yer aldığı segmenttir.
-
-[Segment yapısı ve detayları](Command.md)
-
-### 2.B. - Device
-
-Cihaz tanımlayıcı bilgilerinin yer aldığı tüm cihazlar için aynı olan segmenttir. (güç ve iot yapısına göre değişiklikler olabilir fakat şu anda yukarıda bahsedilen projeler için sabittir).
-
-[Segment yapısı ve detayları](Device.md)
-
-### 2.C. - Payload
-
-Projeye ait ana bilginin tanımlandığı alandır. Command tipine göre değişkenlik gösterecektir.
-
-[Segment yapısı ve detayları](Payload.md)
+| Segment | Açıklama                                                                              | Detaylar                                         |
+|---------|:--------------------------------------------------------------------------------------|--------------------------------------------------|
+| Command | Paketin hangi cihaza ait komut için gönderildiğini tanımlayan komut parametresi.      | [Segment yapısı ve detayları](Command/Readme.md) |
+| Device  | Cihaza ait tanımlayıcı bilgilerin yer aldığı segment (tüm cihazlar için aynı yapı).   | [Segment yapısı ve detayları](Device/Readme.md)  |
+| Payload | Veri paketine ait ana verinin yer aldığı segment (herbir command için farklı yapıda). | [Segment yapısı ve detayları](Payload/Readme.md) |
