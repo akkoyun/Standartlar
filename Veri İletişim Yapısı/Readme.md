@@ -106,3 +106,20 @@ Tüm projeler ortak bir veri iletişim altyapısı içerisinde birleştirilmiş 
 | Command | Paketin hangi cihaza ait komut için gönderildiğini tanımlayan komut parametresi.      | [Segment yapısı ve detayları](Command/Readme.md) |
 | Device  | Cihaza ait tanımlayıcı bilgilerin yer aldığı segment (tüm cihazlar için aynı yapı).   | [Segment yapısı ve detayları](Device/Readme.md)  |
 | Payload | Veri paketine ait ana verinin yer aldığı segment (herbir command için farklı yapıda). | [Segment yapısı ve detayları](Payload/Readme.md) |
+
+## 3. - Cevap Paketi Yapısı
+
+Tüm IoT cihazlarımız sistemi yapı gereği sunuculara veri gönderimi yaptıktan sonra cevap için beklemede kalır. Sunucu tarafından verinin uygun şekilde yakalandığını belirten ibare gelmesi durumunda sistem rutin işlemine devam eder (uyuyan cihazlar tekrar uyku moduna döner). Eğerki onay mesajı gelmemesi durumunda veri kaydını tekrar gönderir (5 deneme yapar ve hala kayıt olmadı ise uyur). Bu nedenle gönderilen veri paketine karşılık olarak aşağıdaki yapıda bir cevap sunucu tarafından dönecektir.
+
+
+```json
+{
+	"Event": 200,
+}
+```
+
+Event değişkeni içerisinde gönderilecek olan kod numaraları HTTP Header tanımları ile aynıdır (aşağıda belirtilmiştir). Bu kod numaraları artabilir olduğu ve duruma göre ekleme yapılabileceği unutulmamalıdır (tabloda belirtilen kodlar sabittir).
+
+| Result  | Açıklama                                    |
+|---------|---------------------------------------------|
+| 200     | Status Ok : Veri düzgün şekilde kaydedildi. |
