@@ -1,4 +1,4 @@
-# 2.1. "Command" Ana Segment Tanımı
+# "Command" Ana Segment Tanımı
 
 Hangi cihazın (projenin) hangi işlemi yapması için veri gönderdiğini tanımlayan komut açıklamasıdır. 
 
@@ -18,21 +18,41 @@ Paket komut satırı aşağıdaki yapıda kurgulanmıştır.
 
 ## Proje ve Komut Listesi
 
-### WeatherStat
+Geliştirmekte olduğumuz IoT sistemler birden fazla projeyi kapsamaktadır. Proje özelinde **Payload** paketi değişkenlik göstermektedir. Bu değişiklikleri veri paketinin ilk satırında **Command** parametresi ile tanımlamaktayız. Bu komut seti ve projeye göre veri gönderim nedenleri, içerikleri ve detayları aşağıda tanımlanmıştır.
+
+***
+
+### WeatherStat [P101]
+
+| Komut Adı   | Gönderim Nedeni                         |
+|-------------|-----------------------------------------|
+| Manual      | Sistem nominal şartlarda uyku modunda durur. Eğer sistem üzerinde yer alan uyandırma butonuna basılır ise (saha kurulumlarında veri gönderimi test etmek vb sebeplerden dolayı) sistem kendini uyandırıp GSM üzerinden internete bağlanır ve veri kaydını yapar. Sistemin manuel olarak uyandırdığını tanımlamak adına sistem sunucuya veri paketini **Manual** komutu ile gönderir.|
+| Timed       | Sistem nominal şartlarda uyku modunda durur. Sistem herhangi bir dış uyandırma olmaksızın sistem içerisinde yer alan zamanlayıcı ile uyanıp veri gönderimi yapar (varsayılan olarak 30dk aralıklarla). Bu zamanlı uyanma ve veri gönderimi sistem iletişim maliyetlerini azaltmak ve sunucu yükünü hafifletmek adına full ve tiny adı altında 2 farklı pakette yapılır. Eğer sistem zamanı 12:00 - 12:59 aralığında ise sistem güncellemesi yapabilmek için full paket gönderilir. Zamanlı full gönderim sunucuya **Timed** komutu ile gönderilir.|
+| Timed_Tiny  | Sistem nominal şartlarda uyku modunda durur. Sistem herhangi bir dış uyandırma olmaksızın sistem içerisinde yer alan zamanlayıcı ile uyanıp veri gönderimi yapar (varsayılan olarak 30dk aralıklarla). Bu zamanlı uyanma ve veri gönderimi sistem iletişim maliyetlerini azaltmak ve sunucu yükünü hafifletmek adına full ve tiny adı altında 2 farklı pakette yapılır. Eğer sistem zamanı 12:00 - 12:59 aralığı dışında ise tiny paket gönderilir. Zamanlı tiny gönderim sunucuya **Timed_Tiny** komutu ile gönderilir. |
+
+* Veri paketleri cinsine göre paket içeriğini [ilgili sayfadan](/Veri%20%C4%B0leti%C5%9Fim%20Yap%C4%B1s%C4%B1/WeatherStat/Commands.md) incleyebilirsiniz.
+
+***
+
+### PowerStat [P401]
+
+| Komut Adı | Açıklama                           |
+|-----------|------------------------------------|
+| Online    | Sistem anlık olarak girdi kanallarını taramaktadır. Bu tarama sonucunda sistemde R fazı geldi ise (elektrik geldi ise) sistem otomatik olarak GSM üzerinden internete bağlanır ve cihazı online moda geçirir. Bu mod değişikliğini sunucuya kaydettirir.|
+| Timed     | Sistem içerisinde bulunan RTC (saat) online prosedürü sırasında kendisini zaman sunucuları üzerinden senkronize eder ve anlık doğru zaman parametrelerini alır. Ardından pompa durumuna göre zamanlı veri atmak üzere RTC üzerinden alarm  kurar. Sistem varsayılan değerleri olarak pompa çalışıyorken 10dk, pompa duruyorken 30dk zaman aralıkları ile sunucuya veri güncellemesi gönderir. Bu zamanlı gönderimler **Timed** komutu ile sunucuya gönderilir.|
+| Interrupt | Sistem anlık olarak girdi kanallarını taramaktadır. Bu tarama sonucunda sistem girdilerinde herhangi bir değişiklik olur ise ve sistem firmware bünyesindeki yapay zeka modülü bu değişikliği bir bildirim olarak etiketler ise sistem sunucuya işlem kaydı oluştururu. Bu işlem kaydı **Interrupt** komutu ile sunucuya gönderilir.|
+| Alarm     | Sistem içerisinde girdi parametreleri yanı sıra enerji ve basınç parametrelerini de anlık takip eder (sistem online yani pompa çalışıyorken). Bu takip sonrasında bir hata yada bildirim kodu oluşur ise (enerji limit değişimi, basınç yükselmesi düşmesi vs gibi) sistem sunucuya işlem kaydı oluştururu. Bu işlem kaydı **Alarm** komutu ile sunucuya gönderilir.|
+| Offline   | Sistem anlık olarak girdi kanallarını taramaktadır. Bu tarama sonucunda sistemde R fazı gider ise (elektrik gitmesi durumunda) sistem otomatik olarak sunucuya enerji gitti bildirimi yapar ve internet bağlantısını keser. Bu mod değişikliği sunucuya **Offline** komutu ile gönderilir.|
+
+* Veri paketleri cinsine göre paket içeriğini [ilgili sayfadan](/Veri%20%C4%B0leti%C5%9Fim%20Yap%C4%B1s%C4%B1/PowerStat/Commands.md) incleyebilirsiniz.
+
+***
+
+### FilterStat [P511]
 
 | Komut Adı | Açıklama                           |
 |-----------|------------------------------------|
 | Online    |                                    |
-| Timed     |                                    |
-| Interrupt |                                    |
+| Clean     |                                    |
 | Offline   |                                    |
-
-### WeatherStat
-
-| Komut Adı   | Açıklama                                      | Gönderim Nedeni                         |
-|-------------|-----------------------------------------------|-----------------------------------------|
-| Manual      | Manual uyandırma ile tam veri gönderimi       | Manual gönderim butonuna basılırsa      |
-| Timed       | Zamanlı uyanma ile tam veri gönderimi         | Her 30 dk da bir (saat 12:xx de)        |
-| Timed_Tiny  | Zamanlı uyanma ile kısaltılmış veri gönderimi | Her 30 dk da bir (geri kalan saatlerde) |
-
-* Veri paketleri cinsine göre paket içeriğini [ilgili sayfadan](/Veri%20%C4%B0leti%C5%9Fim%20Yap%C4%B1s%C4%B1/WeatherStat/Commands.md) incleyebilirsiniz.
+***
