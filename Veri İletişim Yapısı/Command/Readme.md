@@ -35,4 +35,4 @@ Paket komut satırı aşağıdaki yapıda kurgulanmıştır.
 | Timed       | Zamanlı uyanma ile tam veri gönderimi         | Her 30 dk da bir (saat 12:xx de)        |
 | Timed_Tiny  | Zamanlı uyanma ile kısaltılmış veri gönderimi | Her 30 dk da bir (geri kalan saatlerde) |
 
-* Veri paketleri cinsine göre paket içeriğini [ilgili sayfadan](WeatherStat/Commands.md) incleyebilirsiniz.
+* Veri paketleri cinsine göre paket içeriğini [ilgili sayfadan](/Veri%20%C4%B0leti%C5%9Fim%20Yap%C4%B1s%C4%B1/WeatherStat/Commands.md) incleyebilirsiniz.
