@@ -7,11 +7,8 @@
         "Power": {
             "Battery": {
                 "AC": -0.15,
-                "FB": 2000,
-                "IB": 1300,
                 "IV": 4.17,
                 "SOC": 92.13,
-                "T": 0,
                 "Charge": 3
             }
         },
@@ -19,7 +16,10 @@
             "GSM": {
                 "Operator": {
                     "Code": 28601,
-                    "RSSI": 10
+                    "RSSI": 10,
+                    "ConnTime": 22,
+                    "LAC": "855E",
+                    "Cell_ID": "BFAB"
                 }
             }
         }
