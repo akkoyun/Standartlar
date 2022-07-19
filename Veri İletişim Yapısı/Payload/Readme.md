@@ -21,6 +21,6 @@ Cihaza özel oluşturulan veri paketi bloğudur. Proje ismine göre isimler ile 
 | Proje Kodu | Proje Adı   | Payload Yapısı                             |
 |------------|-------------|--------------------------------------------|
 | P101       | WeatherStat | [Payload Yapısı](../WeatherStat/Readme.md) |
-| P401       | PowerStat   | [Payload Yapısı](../) |
+| P401       | PowerStat   | [Payload Yapısı](../PowerStat/Readme.md)   |
 | P511       | FilterStat  | [Payload Yapısı](../) |
-
+gi
