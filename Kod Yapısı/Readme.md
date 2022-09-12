@@ -138,8 +138,8 @@ Kodlar kullanım yerine göre değişiklikler göstermektedir.
 | H3xx          | Somun       | Ölçüsüne bakılmaksızın tüm Somun'lar bu grup içerisindedir.  |
 | H4xx          | Pul         | Ölçüsüne bakılmaksızın tüm Pul'lar bu grup içerisindedir.    |
 | H5xx          | Ayraç       | Ölçüsüne bakılmaksızın tüm Ayraç'lar bu grup içerisindedir.  |
-| H6xx          | Segman.     | Ölçüsüne bakılmaksızın tüm Ayraç'lar bu grup içerisindedir.  |
-| H7xx          | -- | -- |
+| H6xx          | Segman      | Ölçüsüne bakılmaksızın tüm Segman'lar bu grup içerisindedir.  |
+| H7xx          | Pim         | Ölçüsüne bakılmaksızın tüm Pim'ler bu grup içerisindedir.  |
 | H8xx          | -- | -- |
 | H9xx          | -- | -- |
 
