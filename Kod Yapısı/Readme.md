@@ -140,7 +140,7 @@ Kodlar kullanım yerine göre değişiklikler göstermektedir.
 | H5xx          | Ayraç       | Ölçüsüne bakılmaksızın tüm Ayraç'lar bu grup içerisindedir.  |
 | H6xx          | Segman      | Ölçüsüne bakılmaksızın tüm Segman'lar bu grup içerisindedir.  |
 | H7xx          | Pim         | Ölçüsüne bakılmaksızın tüm Pim'ler bu grup içerisindedir.  |
-| H8xx          | -- | -- |
+| H8xx          | Yay         | Ölçüsüne bakılmaksızın tüm Yay'lar bu grup içerisindedir.  |
 | H9xx          | -- | -- |
 
 #### W (Wire) Segmenti Grup Kodları
