@@ -1,18 +1,20 @@
-# PCIe Global Soket Yapısı <sup>01.01.02</sup>
+# PCIe Global Soket Yapısı <sup>02.00.00</sup>
 
-Modüler sistem planlaması içerisinde tüm kartlar ve modüller için uyumlu bir veri yolu standardı belirlemek gerekmiştir. Bu nedenle PCIe-mini soketler için aşağıdaki bağlantı mimarisi uygun görülmüştür.
+Modüler sistem planlaması içerisinde tüm kartlar için uyumlu bir veri yolu standardı belirlemek gerekmiştir. Bu nedenle PCIe-mini soketler için aşağıdaki bağlantı mimarisi uygun görülmüştür. Birçok modüle hitap eden bir yapı kurabilmek adına aşağıda tanımlanan ana standartlarda yapı kurgulanmıştır.
+
+* İşlemci modülü iletişim standardı.
+* Add-On modül iletişim standardı.
+* Güç modül iletişim standardı.
 
 Kurum içi kodlama yapısında her türlü PCIe yapısına sahip modüller için "-PCIe" eklentisi yapılacaktır. Örneğin PCIe iletişim yapısına sahip GSM modülü için **B101AA-PCIe**
 
-![PCIe BUS](/PCIe/Images/PICw_Bus_Standart.png)
-
-## PCIe Kart Yapısı
+# PCIe Kart Yapısı
 
 PCIe standartları doğrultusunda 4 farklı kart ebatı ve yapısı mevcuttur. Bu yapı kodları kart boyutu ve dizgi yönü göz önüne alınarak planlanmıştır. 
 
 Kart bağlantı soketi fiziksel olarak yanlış takmayı engellemek adına 2 parçadan oluşmuştur. 1. küçük kısım iç yapımız gereği güç ve ana güç (veya iletişim) kontrol sinyalleri için ayrılmıştır. 2. ve büyük kısım ise diğer tüm sinyaller için kullanılmaktadır.
 
-### Kart Ebat Standartları
+## Kart Ebat Standartları
 
 | Standart | Kartı Adı | Açıklama | Ebat |
 |:--------:|-----------|----------|------|
@@ -29,45 +31,139 @@ Kart bağlantı soketi fiziksel olarak yanlış takmayı engellemek adına 2 par
 
     Half Mini
 
-![Half Mini PCIe](/PCIe/Images/Full_Mini_PCIe_Dimension.png)
+![Half Mini PCIe](/PCIe/Images/Half_Mini_PCIe_Dimension.png)
 
-## Kart Bağlantı Soketi
+# Kart Bağlantı Soketi
 
 Modüller tek veya çift yön dizimine göre farklı soketlere bağlanmaktadır. Fakat modül tipleri standarda bindirmek adına tüm modüller çift yönlü kart olarak düşünülüp yüksek yapıda PCIe soketine bağlanacaktır. 
 
 Örnek : TE-1775862-2 soketi kullanılması durumunda modülün alt yüzü için maksimum komponent yüksekliği 1.35mm olarak tanımlanmıştır. Bu koşullar sağlandığı zaman anakart ile komponent arasında 1.45mm boşluk kalmaktadır. kart-kart mesafesi 2.8mm dir. 
 
+***
+
+# İşlemci modülü iletişim standardı.
+
+Modüler yapı bünyesinde kullanılacak olan işlemci modülleri için geliştirilmiş ortak iletişim protokolüdür. 
+
 ## PinOut
 
-| Top Side | Pin ID | Pin ID | Bottom Side |
-|---------:|:------:|:------:|:-------------|
-| Power Feed | 01 | 02 | Power Feed |
-| Power Feed | 03 | 04 | Power Feed |
-| Power Feed | 05 | 06 | Power Feed |
-| 3V3 | 07 | 08 | 3V3 |
-| Vcc | 09 | 10 | Vcc |
-| USB D+ | 11 | 12 | Power Enable |
-| USB D- | 13 | 14 | Communication Enable |
-| GND | 15 | 16 | GND |
-| - | Key | Key | - |
-| GND | 17 | 18 | GND |
-| UART 1 RX [-] | 19 | 20 | UART 0 RX [3V3] |
-| UART 1 TX [-] | 21 | 22 | UART 0 TX [3V3] |
-| GND | 23 | 24 | GND |
-| Analog 1 [3V3] | 25 | 26 | I/O Signa 1 [3V3] |
-| Analog 2 [3V3] | 27 | 28 | I/O Signa 1 [3V3] |
-| Analog 3 [3V3] | 29 | 30 | I/O Signa 1 [3V3] |
-| Analog 4 [3V3] | 31 | 32 | I/O Signa 1 [3V3] |
-| MOSI [3V3] | 33 | 34 | I/O Signa 1 [3V3] |
-| MISO [3V3] | 35 | 36 | I/O Signa 1 [3V3] |
-| SCK [3V3] | 37 | 38 | I/O Signa 1 [3V3] |
-| CS [3V3] | 39 | 40 | I/O Signa 1 [3V3] |
-| GND | 41 | 42 | GND |
-| PWM 1 [3V3] | 43 | 44 | PWM 2 [3V3] |
-| GND | 45 | 46 | GND |
-| I2C Enable [3V3] | 47 | 48 | I2C SCL [3V3] |
-| I2C Interrupt [3V3] | 49 | 50 | I2C SDA [3V3] |
-| GND | 51 | 52 | GND |
+| Top Side            | Pin ID | Pin ID | Bottom Side          |
+|--------------------:|:------:|:------:|:---------------------|
+|                     | 01     | 02     |                      |
+|                     | 03     | 04     |                      |
+|                     | 05     | 06     |                      |
+|                     | 07     | 08     |                      |
+|                     | 09     | 10     |                      |
+|                     | 11     | 12     |                      |
+|                     | 13     | 14     |                      |
+|                     | 15     | 16     |                      |
+| -                   | Key    | Key    | -                    |
+|                     | 17     | 18     |                      |
+|                     | 19     | 20     |                      |
+|                     | 21     | 22     |                      |
+|                     | 23     | 24     |                      |
+|                     | 25     | 26     |                      |
+|                     | 27     | 28     |                      |
+|                     | 29     | 30     |                      |
+|                     | 31     | 32     |                      |
+|                     | 33     | 34     |                      |
+|                     | 35     | 36     |                      |
+|                     | 37     | 38     |                      |
+|                     | 39     | 40     |                      |
+|                     | 41     | 42     |                      |
+|                     | 43     | 44     |                      |
+|                     | 45     | 46     |                      |
+|                     | 47     | 48     |                      |
+|                     | 49     | 50     |                      |
+|                     | 51     | 52     |                      |
+
+***
+
+# Add-On modül iletişim standardı.
+
+Modüler yapı bünyesinde kullanılacak olan her türlü modül için geliştirilmiş ortak iletişim protokolüdür. IoT modüller dahil olmak üzere tüm modüller için ortak standarttır.
+
+## PinOut
+
+| Top Side            | Pin ID | Pin ID | Bottom Side          |
+|--------------------:|:------:|:------:|:---------------------|
+| Power Feed          | 01     | 02     | Power Feed           |
+| Power Feed          | 03     | 04     | Power Feed           |
+| Power Feed          | 05     | 06     | Power Feed           |
+| 3V3                 | 07     | 08     | 3V3                  |
+| Vcc                 | 09     | 10     | Vcc                  |
+| USB D+              | 11     | 12     | Power Enable         |
+| USB D-              | 13     | 14     | Communication Enable |
+| GND                 | 15     | 16     | GND                  |
+| -                   | Key    | Key    | -                    |
+| GND                 | 17     | 18     | GND                  |
+| UART 1 RX [3V3]     | 19     | 20     | UART 0 RX [3V3]      |
+| UART 1 TX [3V3]     | 21     | 22     | UART 0 TX [3V3]      |
+| GND                 | 23     | 24     | GND                  |
+| Analog 1 [3V3]      | 25     | 26     | I/O Signa 1 [3V3]    |
+| Analog 2 [3V3]      | 27     | 28     | I/O Signa 1 [3V3]    |
+| Analog 3 [3V3]      | 29     | 30     | I/O Signa 1 [3V3]    |
+| Analog 4 [3V3]      | 31     | 32     | I/O Signa 1 [3V3]    |
+| MOSI [3V3]          | 33     | 34     | I/O Signa 1 [3V3]    |
+| MISO [3V3]          | 35     | 36     | I/O Signa 1 [3V3]    |
+| SCK [3V3]           | 37     | 38     | I/O Signa 1 [3V3]    |
+| CS [3V3]            | 39     | 40     | I/O Signa 1 [3V3]    |
+| GND                 | 41     | 42     | GND                  |
+| PWM 1 [3V3]         | 43     | 44     | PWM 2 [3V3]          |
+| GND                 | 45     | 46     | GND                  |
+| I2C Enable [3V3]    | 47     | 48     | I2C SCL [3V3]        |
+| I2C Interrupt [3V3] | 49     | 50     | I2C SDA [3V3]        |
+| GND                 | 51     | 52     | GND                  |
+
+***
+
+# Güç modül iletişim standardı.
+
+Modüler yapı bünyesinde kullanılacak olan güç modülleri için geliştirilmiş ortak iletişim protokolüdür. 
+
+## PinOut
+
+| Top Side            | Pin ID | Pin ID | Bottom Side          |
+|--------------------:|:------:|:------:|:---------------------|
+|                     | 01     | 02     |                      |
+|                     | 03     | 04     |                      |
+|                     | 05     | 06     |                      |
+|                     | 07     | 08     |                      |
+|                     | 09     | 10     |                      |
+|                     | 11     | 12     |                      |
+|                     | 13     | 14     |                      |
+|                     | 15     | 16     |                      |
+| -                   | Key    | Key    | -                    |
+|                     | 17     | 18     |                      |
+|                     | 19     | 20     |                      |
+|                     | 21     | 22     |                      |
+|                     | 23     | 24     |                      |
+|                     | 25     | 26     |                      |
+|                     | 27     | 28     |                      |
+|                     | 29     | 30     |                      |
+|                     | 31     | 32     |                      |
+|                     | 33     | 34     |                      |
+|                     | 35     | 36     |                      |
+|                     | 37     | 38     |                      |
+|                     | 39     | 40     |                      |
+|                     | 41     | 42     |                      |
+|                     | 43     | 44     |                      |
+|                     | 45     | 46     |                      |
+|                     | 47     | 48     |                      |
+|                     | 49     | 50     |                      |
+|                     | 51     | 52     |                      |
+
+
+
+
+
+
+
+
+
+
+
+
 
 ***
 
@@ -316,3 +412,7 @@ Kullanılmaması durumunda bağlanmayacaktır.
 
     Gerekli olması durumunda dijital hat olarak kullanılabilecektir. Dijital olarak 
     kullanılması durumunda analog iletişim yapılmayacaktır.
+
+
+
+![PCIe BUS](/PCIe/Images/PICw_Bus_Standart.png)
