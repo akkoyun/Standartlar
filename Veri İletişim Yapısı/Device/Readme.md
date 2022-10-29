@@ -31,6 +31,7 @@ Proje içerisinde kullanılmakta olan donanıma (cihaz elektronik donanımı) ai
             },
             "Operator": {
                 "Iccid": "8990011916180288985",
+                "IP": "192.168.0.1",
                 "Code": 28601,
                 "RSSI": 10,
                 "ConnTime": 22,
