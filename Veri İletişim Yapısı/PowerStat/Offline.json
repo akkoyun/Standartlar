@@ -15,6 +15,7 @@
         "IoT": {
             "GSM": {
                 "Operator": {
+                    "IP": "192.168.0.1",
                     "Code": 28601,
                     "RSSI": 10,
                     "ConnTime": 22,

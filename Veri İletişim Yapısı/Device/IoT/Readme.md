@@ -16,6 +16,7 @@ IoT iletişim bloğuna ait cihaz tarafından gönderilen veri paketi aşağıdak
         },
         "Operator": {
             "Iccid": "8990011916180288985",
+            "IP": "192.168.0.1",
             "Code": 28601,
             "RSSI": 10,
             "ConnTime": 22,
@@ -30,7 +31,7 @@ IoT iletişim bloğuna ait cihaz tarafından gönderilen veri paketi aşağıdak
 
 İlgili komutun içeriğinde tanımlandığı şekilde gerek veri paketini küçültmek gerekse backend işlemlerini aza indirmek amacı ile bazı durumlarda aşağıdaki tabloda belirtildiği üzere bazı parametreler sunucuya gönderilmeyecektir.
 
-| Değişlen Adı  | Normal Paket      | Tiny Paket        | 
+| Değişken Adı  | Normal Paket      | Tiny Paket        | 
 |---------------|:-----------------:|:-----------------:|
 | Module		|:white_check_mark:	|:x:				|
 | Firmware		|:white_check_mark:	|:x:				|
@@ -40,6 +41,7 @@ IoT iletişim bloğuna ait cihaz tarafından gönderilen veri paketi aşağıdak
 | Serial		|:white_check_mark:	|:x:				|
 | Operator		|:white_check_mark:	|:white_check_mark:	|
 | Iccid			|:white_check_mark:	|:x:				|
+| IP			|:white_check_mark:	|:white_check_mark:	|
 | Code			|:white_check_mark:	|:white_check_mark:	|
 | RSSI			|:white_check_mark:	|:white_check_mark:	|
 | ConnTime		|:white_check_mark:	|:white_check_mark:	|
@@ -73,7 +75,7 @@ GSM IoT iletişime ait modül içerisinde çalışmakta olan embeded firmware ve
 | Değişken Adı    | Firmware                                             |
 | Değişken Tanımı | GSM **Firmware** (GE910 firmware versiyonu)          |
 | Değişken Tipi   | String (9 Byte)                                      |
-| Değişlen Birimi | -                                                    |
+| Değişken Birimi | -                                                    |
 | Örnek Veri      | 13.00.007                                            |
 
     # Bu veri "tiny" paketlerinde gönderilemyecektir.
@@ -89,7 +91,7 @@ GSM Modemleri fiziksel olarak kayıt altına alabilmek ve devlet regülasyonular
 | Değişken Adı    | IMEI                                                 |
 | Değişken Tanımı | GSM Modem **IMEI** Number (IMEI)                     |
 | Değişken Tipi   | String (15 Byte)                                     |
-| Değişlen Birimi | -                                                    |
+| Değişken Birimi | -                                                    |
 | Örnek Veri      | 353613080341053                                      |
 
     # Bu veri "tiny" paketlerinde gönderilemyecektir.
@@ -105,7 +107,7 @@ GSM Modem üretici bilgisi.
 | Değişken Adı    | Manufacturer                   |
 | Değişken Tanımı | GSM Modem **Manufacturer**     |
 | Değişken Tipi   | Integer                        |
-| Değişlen Birimi | -                              |
+| Değişken Birimi | -                              |
 | Örnek Veri      | 1                              |
 
 Kullanmakta olduğumuz üretici bilgileri.
@@ -131,7 +133,7 @@ GSM Modem model bilgisi.
 | Değişken Adı    | Model                          |
 | Değişken Tanımı | GSM Modem **Model**            |
 | Değişken Tipi   | Integer                        |
-| Değişlen Birimi | -                              |
+| Değişken Birimi | -                              |
 | Örnek Veri      | 1                              |
 
 Kullanmakta olduğumuz model bilgileri.
@@ -158,7 +160,7 @@ GSM Modem seri numara bilgisi.
 | Değişken Adı    | Serial                         |
 | Değişken Tanımı | GSM Modem **Serial Number**    |
 | Değişken Tipi   | String                         |
-| Değişlen Birimi | -                              |
+| Değişken Birimi | -                              |
 | Örnek Veri      | 0000020273                     |
 
     # Bu veri "tiny" paketlerinde gönderilemyecektir.
@@ -180,10 +182,24 @@ ICCID (Integrated Circuit Card Identifier) olarak bilinen kod numarası GSM şeb
 | Değişken Adı    | ICCID                                                |
 | Değişken Tanımı | **I**ntegrated **C**ircuit **C**ard **I**dentifier   |
 | Değişken Tipi   | String (19/20 byte)                                  |
-| Değişlen Birimi | -                                                    |
+| Değişken Birimi | -                                                    |
 | Örnek Veri      | 8990011901130266075                                  |
 
     # Bu veri "tiny" paketlerinde gönderilemyecektir.
+
+***
+
+#### "IP" : Hat IP Adresi
+
+IP adresi modül şebekeye her bağlandığında operatör tarafından verilen (statik veya dinamik) adrestir. Sunucu ile yapılan tüm iletişimler (gelen veya giden veri) bu adres üzerinden yürütülmektedir. 
+
+|                 | Açıklama                                             |
+|-----------------|------------------------------------------------------|
+| Değişken Adı    | IP                                                   |
+| Değişken Tanımı | **I**nternet **P**rotokol Address                    |
+| Değişken Tipi   | String (15 byte max)                                 |
+| Değişken Birimi | -                                                    |
+| Örnek Veri      | 123.456.789.012                                      |
 
 ***
 
@@ -196,7 +212,7 @@ GSM in hangi operatöre bağlandığı bilgisidir.
 | Değişken Adı    | Code                                                 |
 | Değişken Tanımı | Operator **Code** (Operatör kodu)                    |
 | Değişken Tipi   | int                                                  |
-| Değişlen Birimi | -                                                    |
+| Değişken Birimi | -                                                    |
 | Örnek Veri      | 28601                                                |
 
 Operatör code bilgileri xxxyy yapısında 2 bileşenden oluşmaktadır. İlk 3 rakam (286) ülke kodunu son 2 rakam (01) ise operatör kodunu belirtmektedir. Yurt dışı projelerinde bu alan ülke konunumun belirlenmesinde faydalı olacaktır. Her operatör için dünya genelinde hazırlanmış bir kod [listesi](https://www.mcc-mnc.com) mevcuttur. Türkiye için operatör listesi aşağıdaki gibidir.
@@ -217,7 +233,7 @@ Operatör code bilgileri xxxyy yapısında 2 bileşenden oluşmaktadır. İlk 3 
 | Değişken Adı    | RSSI                                                 |
 | Değişken Tanımı | **R**eceived **S**ignal **S**trength **I**ndicator (Sinyal gücü) |
 | Değişken Tipi   | int                                                  |
-| Değişlen Birimi | -                                                    |
+| Değişken Birimi | -                                                    |
 | Örnek Veri      | 30                                                   |
 
 Sistemi şebekeye bağlantı sinyal gücü hakkında bilgi vermektedir. dBm dönüşümü aşağıdaki şekilde yapılmaktadır.
@@ -251,7 +267,7 @@ GSM IoT sistemler öncelikle şebeke bağlantısı kurar ve daha sonra 2G alt ya
 | Değişken Adı    | ConnTime                                             |
 | Değişken Tanımı | **Conn**ection **Time** (Bağlanma Süresi)            |
 | Değişken Tipi   | int                                                  |
-| Değişlen Birimi | Saniye                                               |
+| Değişken Birimi | Saniye                                               |
 | Örnek Veri      | 32                                                   |
 
 ***
@@ -267,7 +283,7 @@ GSM IoT sistemler sahada yer alan verici ile iletişime geçer ve kendini kaydet
 | Değişken Adı    | LAC                                                  |
 | Değişken Tanımı | **L**ocation **A**rea **C**ode                       |
 | Değişken Tipi   | String (4 byte HEX)                                  |
-| Değişlen Birimi | -                                                    |
+| Değişken Birimi | -                                                    |
 | Örnek Veri      | 855E                                                 |
 
 ***
@@ -283,7 +299,7 @@ GSM IoT sistemler sahada yer alan verici ile iletişime geçer ve kendini kaydet
 | Değişken Adı    | Cell_ID                                              |
 | Değişken Tanımı | Operatör Baz İstasyonu Kodu                          |
 | Değişken Tipi   | String (4 byte HEX)                                  |
-| Değişlen Birimi | -                                                    |
+| Değişken Birimi | -                                                    |
 | Örnek Veri      | BFAB                                                 |
 
 ***
