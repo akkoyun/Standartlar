@@ -1,4 +1,4 @@
-![Blok Diagram](/Veri%20%C4%B0leti%C5%9Fim%20Yap%C4%B1s%C4%B1/Images/Block%20Diagram.jpg)
+![Blok Diagram](/Veri%20%C4%B0leti%C5%9Fim%20Yap%C4%B1s%C4%B1/Images/Kafka%20Block%20Diagram.jpg)
 
 # Veri İletişim Protokolü [01.02.00]
 
