@@ -1,5 +1,5 @@
 {
-    "Command": "STF:PowerStat.Offline",
+    "Command": "STF:PowerStat.Alarm",
     "Device": {
         "Info": {
             "ID": "70A11D1D01000026",
@@ -30,7 +30,24 @@
         "TimeStamp": "2022-03-23  14:18:28",
         "PowerStat": {
             "DeviceStatus": 240,
-            "FaultStatus": 500
+            "FaultStatus": 500,
+            "Pressure": {
+                "Min": 6.792786,
+                "Max": 6.841798,
+                "Avg": 6.801981,
+                "Inst": 6.819542,
+                "Slope": -0.000488,
+                "Offset": 16,
+                "R2": 0.724861,
+                "DataCount": 48
+            },
+            "Energy": {
+                "Voltage": [222.0329, 220.3512, 223.6668],
+                "Current": [0.007388, 0.006879, 0.007192],
+                "PowerFactor": -0.15941,
+                "Consumption": [60697, 14007, 60697],
+                "Frequency": 50.02493
+            }
         }
     }
 }

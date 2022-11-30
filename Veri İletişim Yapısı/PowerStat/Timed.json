@@ -2,7 +2,9 @@
     "Command": "STF:PowerStat.Timed",
     "Device": {
         "Info": {
-            "ID": "70A11D1D01000026"
+            "ID": "70A11D1D01000026",
+            "Temperature": 27.91341,
+            "Humidity": 24.7523
         },
         "Power": {
             "Battery": {
@@ -18,7 +20,6 @@
                     "IP": "192.168.0.1",
                     "Code": 28601,
                     "RSSI": 10,
-                    "ConnTime": 22,
                     "LAC": "855E",
                     "Cell_ID": "BFAB"
                 }
@@ -30,8 +31,6 @@
         "PowerStat": {
             "DeviceStatus": 240,
             "FaultStatus": 500,
-            "Temperature": 27.91341,
-            "Humidity": 24.7523,
             "Pressure": {
                 "Min": 6.792786,
                 "Max": 6.841798,

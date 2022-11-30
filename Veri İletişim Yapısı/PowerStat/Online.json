@@ -4,7 +4,9 @@
         "Info": {
             "ID": "70A11D1D01000026",
             "Hardware": "03.00.00",
-            "Firmware": "03.00.00"
+            "Firmware": "03.00.00",
+            "Temperature": 27.91341,
+            "Humidity": 24.7523
         },
         "Power": {
             "Battery": {
@@ -43,8 +45,6 @@
         "PowerStat": {
             "DeviceStatus": 240,
             "FaultStatus": 500,
-            "Temperature": 27.91341,
-            "Humidity": 24.7523,
             "Fault": [true, true, true, false, true, true, true, true, false, true, true]
         }
     }

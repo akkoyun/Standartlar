@@ -6,7 +6,9 @@ Cihaza ait tanımlayıcı bilgileri içermektedir.
 "Info": {
     "ID": "70A11D1D01000026",
     "Hardware": "03.00.00",
-    "Firmware": "03.00.00"
+    "Firmware": "03.00.00",
+    "Temperature": 27.91,
+    "Humidity": 24.75
 }
 ```
 
@@ -19,6 +21,8 @@ Cihaza ait tanımlayıcı bilgileri içermektedir.
 | ID			|:white_check_mark:	|:white_check_mark:	|
 | Hardware		|:white_check_mark:	|:x:				|
 | Firmware		|:white_check_mark:	|:x:				|
+| Temperature	|:white_check_mark:	|:x:				|
+| Humidity		|:white_check_mark:	|:x:				|
 
 ***
 
@@ -60,5 +64,41 @@ Cihazın firmware tarafına ait tanımlayıcı versiyon bildirimidir. Majör, mi
 ```
 
 	Versiyon kodlama yapısı semantik kodlama sistemi üzerine kurgulanmıştır.
+
+***
+
+### "Temperature" : PCB (kutu içi) Sıcaklığı Verisi
+
+Sistemin T (kutu içi / PCB sıcaklığı) sensörüne ait kalibre sıcaklık değeridir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.
+
+```json
+"Temperature": 27.91
+```
+
+|                 | Açıklama       |
+|-----------------|----------------|
+| Değişken Adı    | Temperature    |
+| Değişken Tanımı | PCB Sıcaklığı  |
+| Değişken Tipi   | Float          |
+| Değişlen Birimi | Derece         |
+| Örnek Veri      | 27.91          |
+
+***
+
+### "Humidity" : PCB (kutu içi) Bağıl Nem Verisi
+
+Sistemin H (kutu içi / PCB bağıl nem) sensörüne ait kalibre bağıl nem değeridir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.
+
+```json
+"Humidity": 24.75
+```
+
+|                 | Açıklama       |
+|-----------------|----------------|
+| Değişken Adı    | Humidity       |
+| Değişken Tanımı | PCB Bağıl Nem  |
+| Değişken Tipi   | Float          |
+| Değişlen Birimi | %              |
+| Örnek Veri      | 24.75          |
 
 ***

@@ -8,8 +8,6 @@ PowerStat projesine ait veri paketi bloğudur. Command alanında belirlenen komu
 	"PowerStat": {
 		"DeviceStatus": 240,
 		"FaultStatus": 500,
-		"Temperature": 31.12024,
-		"Humidity": 32.19268,
 		"Pressure": {
 			"Min": 5.294469,
 			"Max": 5.303883,
@@ -139,34 +137,6 @@ Sisteme tanımlanan güç katsayısının altına düştüğü zaman oluşan hat
 #### 517 : Akım Dengesizliği
 
 3 Fazlı sistemlerde akımlar arası en fazla %6 dengesizlik olması beklenir. Bu dengesizliğin üstü akım dengesizliğidir. Akım dengesizliği pompa vs gibi ekipmanların dengesiz yük çekmesi gibi durumlarda oluşur.
-
-***
-
-### "Temperature" : PCB (kutu içi) Sıcaklığı Verisi
-
-|                 | Açıklama       |
-|-----------------|----------------|
-| Değişken Adı    | Temperature    |
-| Değişken Tanımı | PCB Sıcaklığı  |
-| Değişken Tipi   | Float          |
-| Değişlen Birimi | Derece         |
-| Örnek Veri      | 22.22          |
-
-Sistemin T (kutu içi / PCB sıcaklığı) sensörüne ait kalibre sıcaklık değeridir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.
-
-***
-
-### "Humidity" : PCB (kutu içi) Bağıl Nem Verisi
-
-|                 | Açıklama       |
-|-----------------|----------------|
-| Değişken Adı    | Humidity       |
-| Değişken Tanımı | PCB Bağıl Nem  |
-| Değişken Tipi   | Float          |
-| Değişlen Birimi | %              |
-| Örnek Veri      | 22.22          |
-
-Sistemin H (kutu içi / PCB bağıl nem) sensörüne ait kalibre bağıl nem değeridir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.
 
 ***
 

@@ -1,6 +1,6 @@
 ![Blok Diagram](/Veri%20%C4%B0leti%C5%9Fim%20Yap%C4%B1s%C4%B1/Images/Block%20Diagram.png)
 
-# Veri İletişim Protokolü [01.01.00]
+# Veri İletişim Protokolü [01.02.00]
 
 "STF Tarım" için **Temmuz 2022** ve sonrası geliştirilmekte olan tüm IoT cihazları için kullanılacak olan veri iletişim yapısı ve teknik detayları bu doküman içerisinde tanımlanmıştır. Diğer tüm **STF** projeleri ile birlikte yapılan planlama doğrultusunda tüm cihazların tek bir **EndPoint** üzerinden çalışması uygun görülmüştür. End point üzerinden hangi cihazın hangi şartlarda veri göndereceği ve backend üzerinden bu ayrımın nasıl yapılması gerektiği bu düküman üzerinden tanımlanmıştır. 
 

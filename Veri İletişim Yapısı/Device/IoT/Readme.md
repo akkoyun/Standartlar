@@ -44,7 +44,7 @@ IoT iletişim bloğuna ait cihaz tarafından gönderilen veri paketi aşağıdak
 | IP			|:white_check_mark:	|:white_check_mark:	|
 | Code			|:white_check_mark:	|:white_check_mark:	|
 | RSSI			|:white_check_mark:	|:white_check_mark:	|
-| ConnTime		|:white_check_mark:	|:white_check_mark:	|
+| ConnTime		|:white_check_mark:	|:x:	            |
 | LAC			|:white_check_mark:	|:white_check_mark:	|
 | Cell_ID		|:white_check_mark:	|:white_check_mark:	|
 
@@ -269,6 +269,8 @@ GSM IoT sistemler öncelikle şebeke bağlantısı kurar ve daha sonra 2G alt ya
 | Değişken Tipi   | int                                                  |
 | Değişken Birimi | Saniye                                               |
 | Örnek Veri      | 32                                                   |
+
+    # Bu veri "tiny" paketlerinde gönderilemyecektir.
 
 ***
 
