@@ -37,39 +37,27 @@ Tüm projeler ortak bir veri iletişim altyapısı içerisinde birleştirilmiş 
 
 ```json
 {
-    "Command": "STF:WeatherStat.Timed",
+    "Command": "STF:PowerStat.Interrupt",
     "Device": {
         "Info": {
             "ID": "70A11D1D01000026",
-            "Hardware": "03.00.00",
-            "Firmware": "03.00.00"
+            "Temperature": 27.91341,
+            "Humidity": 24.7523
         },
         "Power": {
             "Battery": {
                 "AC": -0.15,
-                "FB": 2000,
-                "IB": 1300,
                 "IV": 4.17,
                 "SOC": 92.13,
-                "T": 0,
                 "Charge": 3
             }
         },
         "IoT": {
             "GSM": {
-                "Module": {
-                    "Firmware": "13.00.007",
-                    "IMEI": "353613080341871",
-                    "Manufacturer": 1,
-                    "Model": 1,
-                    "Serial": "0001767743"
-                },
                 "Operator": {
-                    "Iccid": "8990011916180288985",
                     "IP": "192.168.0.1",
                     "Code": 28601,
                     "RSSI": 10,
-                    "ConnTime": 22,
                     "LAC": "855E",
                     "Cell_ID": "BFAB"
                 }
@@ -78,26 +66,25 @@ Tüm projeler ortak bir veri iletişim altyapısı içerisinde birleştirilmiş 
     },
     "Payload": {
         "TimeStamp": "2022-03-23  14:18:28",
-        "WeatherStat": {
-            "Event": 111,
-            "Location": {
-                "Latitude": 47.407614681869745,
-                "Longitude": 8.553115781396627
+        "PowerStat": {
+            "DeviceStatus": 240,
+            "FaultStatus": 500,
+            "Pressure": {
+                "Min": 6.792786,
+                "Max": 6.841798,
+                "Avg": 6.801981,
+                "Inst": 6.819542,
+                "Slope": -0.000488,
+                "Offset": 16,
+                "R2": 0.724861,
+                "DataCount": 48
             },
-            "Environment": {
-                "AT": 22.223,
-                "AH": 22.222,
-                "AP": 222.22,
-                "UV": 3,
-                "ST": [
-                    22.22,
-                    0,
-                    0,
-                    22.11
-                ],
-                "R": 22,
-                "WD": 329,
-                "WS": 22.33
+            "Energy": {
+                "Voltage": [222.0329, 220.3512, 223.6668],
+                "Current": [0.007388, 0.006879, 0.007192],
+                "PowerFactor": -0.15941,
+                "Consumption": [60697, 14007, 60697],
+                "Frequency": 50.02493
             }
         }
     }
