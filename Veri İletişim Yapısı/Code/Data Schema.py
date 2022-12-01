@@ -17,13 +17,13 @@ class IoT_Data_Pack_Model(BaseModel):
 		class IoT_Data_Pack_Info(BaseModel):
 			
 			# Device ID
-			ID: str
+			ID: str(to_upper=True, min_length=10, max_length=18)
 			
 			# Device Hardware Version
-			Hardware: Optional[str] = None
+			Hardware: Optional[str(max_length=8)] = None
 			
 			# Device Firmware Version
-			Firmware: Optional[str] = None
+			Firmware: Optional[str(max_length=8)] = None
 			
 			# Device PCB Temperature
 			Temperature: float
@@ -77,19 +77,19 @@ class IoT_Data_Pack_Model(BaseModel):
 				class IoT_Data_Pack_IoT_Module(BaseModel):
 					
 					# GSM Module Firmware
-					Firmware: Optional[str]
+					Firmware: Optional[str(max_length=8)] = None
 
 					# Module IMEI Number
-					IMEI: Optional[str]
+					IMEI: Optional[str(max_length=16)] = None
 
 					# Module Manufacturer
-					Manufacturer: Optional[int]
+					Manufacturer: Optional[int] = 1
 
 					# Module Model
-					Model: Optional[int]
+					Model: Optional[int] = 1
 
 					# Module Serial Number
-					Serial: Optional[str]
+					Serial: Optional[str(max_length=10)] = None
 				
 				# Device IoT Module
 				Module: Optional[IoT_Data_Pack_IoT_Module]
@@ -98,25 +98,25 @@ class IoT_Data_Pack_Model(BaseModel):
 				class IoT_Data_Pack_IoT_Operator(BaseModel):
 					
 					# SIM ICCID
-					ICCID: Optional[str]
+					ICCID: Optional[str(max_length=20)] = None
 
 					# Operator Code
-					Code: int
+					Code: int = 0
 
 					# IP
-					IP: str
+					IP: Optional[str(max_length=15)] = None
 					
 					# RSSI
-					RSSI: int
+					RSSI: int = 0
 					
 					# Connection Time
-					ConnTime: Optional[int]
+					ConnTime: Optional[int] = 0
 					
 					# LAC
-					LAC: Optional[str]
+					LAC: Optional[str(max_length=4)] = None
 					
 					# Cell ID
-					Cell_ID: Optional[str]
+					Cell_ID: Optional[str(max_length=4)] = None
 
 				# IoT Operator
 				Operator: IoT_Data_Pack_IoT_Operator
