@@ -11,19 +11,25 @@ WeatherStat projesine ait veri paketi bloğudur. Command alanında belirlenen ko
             "Longitude": 8.553115781396627
         },
         "Environment": {
-            "AT": 22.223,
-            "AH": 22.222,
-            "AP": 222.22,
-            "UV": 3,
-            "ST": [
-                22.22,
-                0,
-                0,
-                22.11
+            "AT": 22.223,   // Air Temperature
+            "AH": 22.222,   // Relative Humidity
+            "AP": 222.22,   // Air Preassure
+            "UV": 3,        // UV Index
+            "ST": [         // Soil Temperature
+                22.22,      // 10cm
+                0,          // 20cm
+                22.11       // 30cm
+                0,          // 40cm
+                0,          // 50cm
+                22.11       // 60cm
+                0,          // 70cm
+                0,          // 80cm
+                22.11       // 90cm
+                0           // 100cm
             ],
-            "R": 22,
-            "WD": 329,
-            "WS": 22.33
+            "R": 22,        // Rain
+            "WD": 329,      // Wind Direction
+            "WS": 22.33     // Wind Speed
         }
     }
 }
@@ -122,11 +128,35 @@ Sistemin UV sensörüne ait kalibre UV indisi değeridir. Eğer sistemde donanı
 
 Sistemin ST sensörüne ait kalibre toprak sıcaklığı değeridir. İleri versiyonlarda birden fazla katman sıcaklık verisi okuma ihtimaline karşı paket içerisinde array olarak gönderilmektedir. Bu array indisi değeri her bir derinliğe karşılık gelmektedir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.
 
-Not: Son planlama sonrasında ST dizisini 4 kademe olacak şekilde sabitlendi. 
-ST[0] : 10cm
-ST[1] : 30cm
-ST[2] : 60cm
-ST[3] : 90cm
+Not: Son planlama sonrasında ST dizisini 4 kademe olacak şekilde sabitlendi. Fakat ileride yapılabilecek geliştirmeleri karşılayabilmek adına her bir derinliği sabitlemekteyiz.
+
+| Değişken Adı | Sensör Derinliği | V1 Kullanımı       |
+|--------------|------------------|--------------------|
+| ST[0]        | 10 cm            | :white_check_mark: |
+| ST[1]        | 20 cm            | :x:                |
+| ST[2]        | 30 cm            | :white_check_mark: |
+| ST[3]        | 40 cm            | :x:                |
+| ST[4]        | 50 cm            | :x:                |
+| ST[5]        | 60 cm            | :white_check_mark: |
+| ST[6]        | 70 cm            | :x:                |
+| ST[7]        | 80 cm            | :x:                |
+| ST[8]        | 90 cm            | :white_check_mark: |
+| ST[9]        | 100 cm           | :x:                |
+
+```json
+"ST": [
+    22.22,  // 10cm
+    0,      // 20cm
+    22.11   // 30cm
+    0,      // 40cm
+    0,      // 50cm
+    22.11   // 60cm
+    0,      // 70cm
+    0,      // 80cm
+    22.11   // 90cm
+    0       // 100cm
+]
+```
 
 ### "R" : Yağmur Kova Ölçüm Verisi
 
