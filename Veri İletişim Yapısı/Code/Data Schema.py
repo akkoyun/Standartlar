@@ -1,258 +1,166 @@
-from pydantic import BaseModel
-from typing import Optional
-from datetime import datetime
-
-# Define IoT RAW Data Base Model
-# PowerStat Model Version 01.02.00
-# WeatherStat Model Version 01.02.00
-class IoT_Data_Pack_Model(BaseModel):
-
-	# Define Command
-	Command: str
-
-	# Define Device
-	class IoT_Data_Pack_Device(BaseModel):
-
-		# Define Info
-		class IoT_Data_Pack_Info(BaseModel):
-			
-			# Device ID
-			ID: str(to_upper=True, min_length=10, max_length=18)
-			
-			# Device Hardware Version
-			Hardware: Optional[str(max_length=8)] = None
-			
-			# Device Firmware Version
-			Firmware: Optional[str(max_length=8)] = None
-			
-			# Device PCB Temperature
-			Temperature: float
-			
-			# Device PCB Humidity
-			Humidity: float
-		
-		# Device Info
-		Info: IoT_Data_Pack_Info
-
-		# Define Power
-		class IoT_Data_Pack_Power(BaseModel):
-
-			# Define Battery
-			class IoT_Data_Pack_Battery(BaseModel):
-
-				# Instant Battery Voltage
-				IV: float
-
-				# Average Battery Current
-				AC: float
-
-				# Battery State of Charge
-				SOC: float
-
-				# Battery Charge State
-				Charge: int
-
-				# Battery Temperature
-				T: Optional[float]
-
-				# Battery Full Battery Cap
-				FB: Optional[int]
-
-				# Battery Instant Battery Cap
-				IB: Optional[int]
-			
-			# Device Battery
-			Battery: IoT_Data_Pack_Battery
-		
-		# Device Power
-		Power: IoT_Data_Pack_Power
-
-		# Define IoT
-		class IoT_Data_Pack_IoT(BaseModel):
-
-			# Define GSM
-			class IoT_Data_Pack_GSM(BaseModel):
-
-				# Define IoT Module
-				class IoT_Data_Pack_IoT_Module(BaseModel):
-					
-					# GSM Module Firmware
-					Firmware: Optional[str(max_length=8)] = None
-
-					# Module IMEI Number
-					IMEI: Optional[str(max_length=16)] = None
-
-					# Module Manufacturer
-					Manufacturer: Optional[int] = 1
-
-					# Module Model
-					Model: Optional[int] = 1
-
-					# Module Serial Number
-					Serial: Optional[str(max_length=10)] = None
-				
-				# Device IoT Module
-				Module: Optional[IoT_Data_Pack_IoT_Module]
-
-				# Define IoT Operator
-				class IoT_Data_Pack_IoT_Operator(BaseModel):
-					
-					# SIM ICCID
-					ICCID: Optional[str(max_length=20)] = None
-
-					# Operator Code
-					Code: int = 0
-
-					# IP
-					IP: Optional[str(max_length=15)] = None
-					
-					# RSSI
-					RSSI: int = 0
-					
-					# Connection Time
-					ConnTime: Optional[int] = 0
-					
-					# LAC
-					LAC: Optional[str(max_length=4)] = None
-					
-					# Cell ID
-					Cell_ID: Optional[str(max_length=4)] = None
-
-				# IoT Operator
-				Operator: IoT_Data_Pack_IoT_Operator
-			
-			# Device GSM
-			GSM: IoT_Data_Pack_GSM
-
-		# Device IoT
-		iot: IoT_Data_Pack_IoT
-
-	# Device
-	Device: IoT_Data_Pack_Device
-
-	# Define payload
-	class IoT_Data_Pack_Payload(BaseModel):
-
-		# TimeStamp
-		TimeStamp: datetime
-
-		# PowerStat Model Definition
-		class IoT_Data_Pack_Payload_PowerStat(BaseModel):
-
-			# Device Status
-			DeviceStatus: int
-
-			# Fault Status
-			FaultStatus: int
-
-			# Pressure Model Definition
-			class IoT_Data_Pack_Payload_PowerStat_Pressure(BaseModel):
-				
-				# Min Pressure in Measurement Interval
-				Min: Optional[float] = None
-
-				# Max Pressure in Measurement Interval
-				Max: Optional[float] = None
-
-				# Avg Pressure of Measurement Interval
-				Avg: Optional[float] = None
-
-				# Last Readed Pressure in Measurement Interval
-				Inst: Optional[float] = None
-
-				# Slope of Pressure Trend in Measurement Interval
-				Slope: Optional[float] = None
-
-				# Offset of Pressure Trend in Measurement Interval
-				Offset: Optional[float] = None
-
-				# R2 of Pressure Trend in Measurement Interval
-				R2: Optional[float] = None
-
-				# Measured Data Count in Measurement Interval
-				DataCount: Optional[int] = None
-
-			# Pressure
-			Pressure: Optional[IoT_Data_Pack_Payload_PowerStat_Pressure]
-
-			# Energy Model Definition
-			class IoT_Data_Pack_Payload_PowerStat_Energy(BaseModel):
-
-				# Last Measured Voltage Array (R,S,T)
-				Voltage: list[Optional[float]] = None
-
-				# Last Measured Current Array (R,S,T)
-				Current: list[Optional[float]] = None
-
-				# Last Measured PowerFactor Average
-				PowerFactor: Optional[float] = None
-
-				# Total Energy Consumption Array in Send Interval (Active,Reactive)
-				Consumption: list[Optional[float]] = None
-
-				# Last Measured Frequency Value
-				Frequency: Optional[float] = None
-
-			# Energy
-			Energy: Optional[IoT_Data_Pack_Payload_PowerStat_Energy]
-
-			# Falut Control List Array
-			Fault: list[Optional[bool]] = None
-
-		# PowerStat Payload
-		PowerStat: Optional[IoT_Data_Pack_Payload_PowerStat]
-
-		# WeatherStat Model Definition
-		class IoT_Data_Pack_Payload_WeatherStat(BaseModel):
-
-			# Device Status
-			DeviceStatus: int
-
-			# Location Definition
-			class IoT_Data_Pack_Payload_WeatherStat_Location(BaseModel):
-				
-				# Latitude Value of Device
-				Latitude: float
-
-				# Longtitude Value of Device
-				Longitude: float
-
-			# Location
-			Location: Optional[IoT_Data_Pack_Payload_WeatherStat_Location]
-
-			# Environment Measurement Definition
-			class IoT_Data_Pack_Payload_WeatherStat_Environment(BaseModel):
-				
-				# Last Measured Air Temperature Value
-				AT: Optional[float] = None
-
-				# Last Measured Relative Humidity Value
-				AH: Optional[float] = None
-
-				# Last Measured Air Pressure Value
-				AP: Optional[float] = None
-
-				# Last Measured UV Value
-				UV: Optional[int] = None
-
-				# Last Measured Soil Temperature Value
-				ST: list[Optional[float]] = None
-
-				# Last Measured Rain Value
-				R: Optional[int] = None
-
-				# Last Measured Wind Direction Value
-				WD: Optional[int] = None
-
-				# Last Measured Wind Speed Value
-				WS: Optional[float] = None
-
-			# Environment
-			Environment: IoT_Data_Pack_Payload_WeatherStat_Environment
-
-		# WeatherStat Payload
-		WeatherStat: Optional[IoT_Data_Pack_Payload_WeatherStat]
-
-	# Payload
-	Payload: IoT_Data_Pack_Payload
-
+from pydantic import BaseModel, Field, conlist
+from typing import Optional, List
+
+# Define IoT RAW Data Base Model 02.00.00
+
+class Info(BaseModel):
+    ID: str
+    Hardware: Optional[str] = None
+    Firmware: Optional[str] = None
+    Temperature: Optional[float] = None
+    Humidity: Optional[float] = None
+
+class Battery(BaseModel):
+    IV: float
+    AC: float
+    SOC: float
+    FB: Optional[int] = None
+    IB: Optional[int] = None
+    T: Optional[float] = None
+    Charge: int
+
+class Power(BaseModel):
+    Battery: Battery
+
+class Module(BaseModel):
+    Firmware: str
+    IMEI: str
+    Manufacturer: int
+    Model: int
+    Serial: str
+
+class Operator(BaseModel):
+    Iccid: Optional[str] = None
+    IP: Optional[str] = None
+    Code: int
+    RSSI: int
+    ConnTime: Optional[int] = None
+    LAC: Optional[str] = None
+    Cell_ID: Optional[str] = None
+
+class GSM(BaseModel):
+    Module: Optional[Module] = None
+    Operator: Operator
+
+class IoT(BaseModel):
+    GSM: GSM
+
+class Device(BaseModel):
+    Info: Info
+    Power: Power
+    IoT: IoT
+
+class StatusLimit(BaseModel):
+    Control: bool
+    Min: Optional[int]
+    Max: Optional[int]
+
+class StatusRegression(BaseModel):
+    Control: bool
+    Max: Optional[float]
+
+class StatusImbalance(BaseModel):
+    Control: bool
+    Max: Optional[float]
+
+class StatusPressure(BaseModel):
+    Limit: Optional[StatusLimit]
+    Regression: Optional[StatusRegression]
+
+class StatusVoltage(BaseModel):
+    Limit: Optional[StatusLimit]
+    Imbalance: Optional[StatusImbalance]
+
+class StatusCurrent(BaseModel):
+    Limit: Optional[StatusLimit]
+    Imbalance: Optional[StatusImbalance]
+    Multiplexer: Optional[int]
+
+class StatusFrequency(BaseModel):
+    Limit: Optional[StatusLimit]
+
+class StatusControl(BaseModel):
+    PhaseLose: Optional[bool]
+    Thermic: Optional[bool]
+    MotorProtection: Optional[bool]
+    ContactorAnomaly: Optional[bool]
+    Pressure: Optional[StatusPressure]
+    Voltage: Optional[StatusVoltage]
+    Current: Optional[StatusCurrent]
+    Frequency: Optional[StatusFrequency]
+
+class Status(BaseModel):
+	Device: int
+	Fault: Optional[int] = None
+	Control: Optional[StatusControl]
+
+class Pressure(BaseModel):
+    Pout: conlist(float, min_items=1, max_items=8)
+
+class Voltage(BaseModel):
+    PhaseR: conlist(float, min_items=1, max_items=8)
+    PhaseS: conlist(float, min_items=1, max_items=8)
+    PhaseT: conlist(float, min_items=1, max_items=8)
+
+class Current(BaseModel):
+    PhaseR: conlist(float, min_items=1, max_items=8)
+    PhaseS: conlist(float, min_items=1, max_items=8)
+    PhaseT: conlist(float, min_items=1, max_items=8)
+
+class PowerFactor(BaseModel):
+    PhaseR: Optional[conlist(float, min_items=1, max_items=8)]
+    PhaseS: Optional[conlist(float, min_items=1, max_items=8)]
+    PhaseT: Optional[conlist(float, min_items=1, max_items=8)]
+    PhaseA: Optional[conlist(float, min_items=1, max_items=8)]
+
+class Frequency(BaseModel):
+    FQ: conlist(float, min_items=1, max_items=8)
+
+class Consumption(BaseModel):
+    Active: int
+    ReActive: int
+
+class Energy(BaseModel):
+    Voltage: Optional[Voltage]
+    Current: Optional[Current]
+    PowerFactor: Optional[PowerFactor]
+    Frequency: Optional[Frequency]
+    Consumption: Optional[Consumption]
+
+class Input(BaseModel):
+	IN1: bool
+	IN2: bool
+	IN3: bool
+	IN4: bool
+	IN5: bool
+	IN6: bool
+	IN7: bool
+	IN8: bool
+
+class Location(BaseModel):
+    Lat: float
+    Long: float
+
+class Environment(BaseModel):
+	AT: Optional[float]
+	AH: Optional[float]
+	AP: Optional[float]
+	UV: Optional[int]
+	ST: Optional[conlist(float, min_items=1, max_items=8)]
+	R: Optional[int]
+	WD: Optional[int]
+	WS: Optional[float]
+
+class Payload(BaseModel):
+    TimeStamp: str
+    Status: Optional[Status]
+    Pressure: Optional[Pressure]
+    Energy: Optional[Energy]
+    Input: Optional[Input]
+    Location: Optional[Location]
+    Environment: Optional[Environment]
+
+class DataPack(BaseModel):
+    Command: str
+    Device: Device
+    Payload: Payload

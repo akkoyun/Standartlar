@@ -8,8 +8,8 @@
         },
         "Power": {
             "Battery": {
-                "AC": -0.15,
                 "IV": 4.17,
+                "AC": -0.15,
                 "SOC": 92.13,
                 "Charge": 3
             }
@@ -28,9 +28,10 @@
     },
     "Payload": {
         "TimeStamp": "2022-03-23  14:18:28",
-        "PowerStat": {
-            "DeviceStatus": 240,
-            "FaultStatus": 500
+        "Status": {
+            "Device": 240,
+            "Fault": 500
         }
+
     }
 }
