@@ -137,7 +137,7 @@ Kodlar kullanım yerine göre değişiklikler göstermektedir.
 | H2xx          | Cıvata      | Ölçüsüne bakılmaksızın tüm Cıvata'lar bu grup içerisindedir. |
 | H3xx          | Somun       | Ölçüsüne bakılmaksızın tüm Somun'lar bu grup içerisindedir.  |
 | H4xx          | Pul         | Ölçüsüne bakılmaksızın tüm Pul'lar bu grup içerisindedir.    |
-| H5xx          | Ayraç       | Ölçüsüne bakılmaksızın tüm Ayraç'lar bu grup içerisindedir.  |
+| H5xx          | Distans       | Ölçüsüne bakılmaksızın tüm Ayraç'lar bu grup içerisindedir.  |
 | H6xx          | Segman      | Ölçüsüne bakılmaksızın tüm Segman'lar bu grup içerisindedir.  |
 | H7xx          | Pim         | Ölçüsüne bakılmaksızın tüm Pim'ler bu grup içerisindedir.  |
 | H8xx          | Yay         | Ölçüsüne bakılmaksızın tüm Yay'lar bu grup içerisindedir.  |
@@ -171,8 +171,8 @@ Kodlar kullanım yerine göre değişiklikler göstermektedir.
 |:-------------:|:-----------:|-----------------|
 | S1xx | Ürün Künyesi | Ürün özellikleri tanımlanan, ürüne ait tanımlayıcı seri numaralarının olduğu etikettir. |
 | S2xx | QR Kod | Ürünü sisteme tanıtmak için kullanılan üretici firmaya has ürün QR kodu etiketidir. |
-| S3xx | Marketing | Ürüne ait kullanım broşürü vb pazarlama dokümanlarının tamamı bu grup altında yer aşmaktadır. |
-| S4xx | -- | -- |
+| S3xx | Marketing | Ürüne ait kullanım broşürü vb pazarlama dokümanlarının tamamı bu grup altında yer almaktadır. |
+| S4xx | Ambalaj | Ürünün taşınması, korunması, saklanması vb. paketlemelerin tamamı bu grup altında yer almaktadır. |
 | S5xx | -- | -- |
 | S6xx | -- | -- |
 | S7xx | -- | -- |
