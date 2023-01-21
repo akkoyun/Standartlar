@@ -122,7 +122,7 @@ Kodlar kullanım yerine göre değişiklikler göstermektedir.
 | M6xx          | -- | -- |
 | M7xx          | -- | -- |
 | M8xx          | -- | -- |
-| M9xx          | -- | -- |
+| M9xx          | Rekor | Ölçüsüne bakılmaksızın her türlü metal Rekor bu grup içerisindedir. |
 
 #### H (Hardware) Segmenti Grup Kodları
 
@@ -137,11 +137,11 @@ Kodlar kullanım yerine göre değişiklikler göstermektedir.
 | H2xx          | Cıvata      | Ölçüsüne bakılmaksızın tüm Cıvata'lar bu grup içerisindedir. |
 | H3xx          | Somun       | Ölçüsüne bakılmaksızın tüm Somun'lar bu grup içerisindedir.  |
 | H4xx          | Pul         | Ölçüsüne bakılmaksızın tüm Pul'lar bu grup içerisindedir.    |
-| H5xx          | Ayraç       | Ölçüsüne bakılmaksızın tüm Ayraç'lar bu grup içerisindedir.  |
+| H5xx          | Distans       | Ölçüsüne bakılmaksızın tüm Ayraç'lar bu grup içerisindedir.  |
 | H6xx          | Segman      | Ölçüsüne bakılmaksızın tüm Segman'lar bu grup içerisindedir.  |
 | H7xx          | Pim         | Ölçüsüne bakılmaksızın tüm Pim'ler bu grup içerisindedir.  |
 | H8xx          | Yay         | Ölçüsüne bakılmaksızın tüm Yay'lar bu grup içerisindedir.  |
-| H9xx          | -- | -- |
+| H9xx          | Diğer | Montaj sırasında kullanılan Diğer parçalar bu grup içerisindedir. |
 
 #### W (Wire) Segmenti Grup Kodları
 
@@ -158,8 +158,8 @@ Kodlar kullanım yerine göre değişiklikler göstermektedir.
 | W5xx          | -- | -- |
 | W6xx          | -- | -- |
 | W7xx          | -- | -- |
-| W8xx          | -- | -- |
-| W9xx          | -- | -- |
+| W8xx          | Konnektör | Kablo bağlanmadan kullanılan her türlü Konnektör bu grup içerisindedir. |
+| W9xx          | Ekipman | Kablolar için kullanılan her türlü Ekipman bu grup içerisindedir. |
 
 #### S Segmenti Grup Kodları
 
@@ -171,8 +171,8 @@ Kodlar kullanım yerine göre değişiklikler göstermektedir.
 |:-------------:|:-----------:|-----------------|
 | S1xx | Ürün Künyesi | Ürün özellikleri tanımlanan, ürüne ait tanımlayıcı seri numaralarının olduğu etikettir. |
 | S2xx | QR Kod | Ürünü sisteme tanıtmak için kullanılan üretici firmaya has ürün QR kodu etiketidir. |
-| S3xx | Marketing | Ürüne ait kullanım broşürü vb pazarlama dokümanlarının tamamı bu grup altında yer aşmaktadır. |
-| S4xx | -- | -- |
+| S3xx | Marketing | Ürüne ait kullanım broşürü vb pazarlama dokümanlarının tamamı bu grup altında yer almaktadır. |
+| S4xx | Ambalaj | Ürünün taşınması, korunması, saklanması vb. paketlemelerin tamamı bu grup altında yer almaktadır. |
 | S5xx | -- | -- |
 | S6xx | -- | -- |
 | S7xx | -- | -- |
@@ -188,14 +188,14 @@ Kodlar kullanım yerine göre değişiklikler göstermektedir.
 | Ana Grup Kodu | Grup Tanımı | Grup Açıklaması |
 |:-------------:|:-----------:|-----------------|
 | E1xx | Batarya | Ürünler / modüller içerisinde kullanılan her türlü batarya (şarj edilebilir yada edilemez) voltaj seviyesine bakılmaksızın bu grup içerisinde yer almaktadır. |
-| E2xx | Solar Panel | ürünler içerisinde kullanılan değişken ebat, voltaj veya güçte olan her tip solar panel bu grup içerisinde yer almaktadır. |
+| E2xx | Solar Panel | Ürünler içerisinde kullanılan değişken ebat, voltaj veya güçte olan her tip solar panel bu grup içerisinde yer almaktadır. |
 | E3xx | RF Anten | Ürünler içerisinde kullanılmakta olan her çeşit (çubuk, PCB, sticker vb) ve her frekanstaki antenler bu grup içerisinde yer almaktadır. |
 | E4xx | Switch / Buton | Ürün içerisinde kullanılan her türlü anahtarlama işlemi yapan elemanların tamamı bu grup içerisinde yer almaktadır. |
 | E5xx | Basınç Sensörü | Her türlü analog yada dijital su basıncı ölçen sensörler bu grup içerisinde yer almaktadır. |
-| E6xx | -- | -- |
+| E6xx | İkaz | Ürünler içerisinde kullanılan her türlü İkaz veren parçalar bu grup içerisinde yer almaktadır. |
 | E7xx | -- | -- |
-| E8xx | -- | -- |
-| E9xx | -- | -- |
+| E8xx | Display | Ürünler içerisinde kullanılan her türlü Display (OLED, LCD vb.) veren parçalar bu grup içerisinde yer almaktadır. |
+| E9xx | Akım Trafosu | Ürünler içerisinde kullanılan her türlü Akım Trafosu (gerilim ve akım değerlerine bakılmaksızın) bu grup içerisinde yer almaktadır. |
 
 ---
 
