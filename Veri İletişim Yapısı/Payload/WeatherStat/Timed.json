@@ -1,5 +1,5 @@
 {
-    "Command": "STF:WeatherStat.Manual",
+    "Command": "STF:WeatherStat.Timed",
     "Device": {
         "Info": {
             "ID": "70A11D1D01000026",
@@ -28,12 +28,9 @@
                 },
                 "Operator": {
                     "Iccid": "8990011916180288985",
-                    "IP": "192.168.0.1",
                     "Code": 28601,
                     "RSSI": 10,
-                    "ConnTime": 22,
-                    "LAC": "855E",
-                    "Cell_ID": "BFAB"
+                    "ConnTime": 22
                 }
             }
         }

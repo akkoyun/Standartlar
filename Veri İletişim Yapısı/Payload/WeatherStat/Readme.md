@@ -1,6 +1,8 @@
 # "WeatherStat" Veri Paketi 
 
-WeatherStat projesine ait veri paketi bloğudur. Command alanında belirlenen komuta özel yapıda olacaktır. Meteoroloji istasyonuna ait veri paketleri ve hangi komutta hangi verisetinin gönderileceği bilgisi [ilgili linkte](Commands.md) tanımlanmıştır.
+WeatherStat projesine ait veri paketidir. Command alanında belirlenen komuta özel yapıda olacaktır. Meteoroloji istasyonuna ait veri paketleri ve hangi komutta hangi verisetinin gönderileceği bilgisi [ilgili linkte](Commands.md) tanımlanmıştır.
+
+WeatherStat V4 donanım yapısı her 30dk da bir sistemi uyandırarak veri paketini sunucuya atıp tekrar uyuması üzerine kurgulanmıştır.
 
 ```json
 "Payload": {
@@ -34,6 +36,20 @@ WeatherStat projesine ait veri paketi bloğudur. Command alanında belirlenen ko
     }
 }
 ```
+
+***
+
+## "TimeStamp" Veri Paketi Zaman Etiketi
+
+Veri paketinin oluşum zamana ait zaman etiketidir. Tüm payload verilerinde zorunlu olarak bulunacaktır. WeatherStat sistemlerinde timestamp GSM bağlantısı üzerinden okunmaktadır.
+
+|                 | Açıklama                                             |
+|-----------------|------------------------------------------------------|
+| Değişken Adı    | TimeStamp                                            |
+| Değişken Tanımı | Veri ölçümleme zamanına ait zaman etiketi            |
+| Değişken Tipi   | Date/Time                                            |
+| Değişlen Birimi | -                                                    |
+| Örnek Veri      | 2020-10-23  14:18:28                                 |
 
 ***
 
@@ -165,11 +181,11 @@ Not: Son planlama sonrasında ST dizisini 4 kademe olacak şekilde sabitlendi. F
 | Değişken Adı    | R                 |
 | Değişken Tanımı | Yağmur Miktarı    |
 | Değişken Tipi   | int               |
-| Değişlen Birimi | mm (litre) / 30dk |
+| Değişlen Birimi | Tip / 30dk        |
 | Örnek Veri      | 222               |
 | Zorunlu Veri    | Hayır             |
 
-Sistemin R sensörüne ait yağmur şiddeti değeridir. Kovalı sistem yağmur sensörü için gönderilen bu değer bir hesap yöntemi ile hesaplanıp veritabanına hesaplanan değer kaydedilecektir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.
+Sistemin R sensörüne ait yağmur şiddeti değeridir. Kovalı sistem yağmur sensörü için gönderilen bu değer (belirli süre içerisinde kovanın devrilme (tip) sayısı olarak belirlenir) bir hesap yöntemi ile hesaplanıp veritabanına hesaplanan değer kaydedilecektir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.
 
 ### "WD" : Rüzgar Yönü Verisi
 
