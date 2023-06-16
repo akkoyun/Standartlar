@@ -39,10 +39,10 @@
 | 0x00 | Genel çağrı (Tüm slave cihazların kabul edeceği adres) |
 | 0x1_ | Su basıncı (WP) ölçümlemesi yapan sensör segmenti.     |
 | 0x2_ | Enerji ölçümlemesi yapan cihaz segmenti.               |
-| 0x3_ | Çevresel sensör ölçümlemesi yapan cihaz segmenti.      |
-| 0x4_ | Rüzgar ölçümlemesi yapan sensör segmenti.              |
-| 0x5_ | Yağmur ölçümlemesi yapan sensör segmenti.              |
-| 0x6_ | Toprak altı sensör ölçümlemesi yapan cihaz segmenti.   |
+| 0x3_ | Meteoroloji ölçümlemesi yapan cihaz segmenti.          |
+| 0x4_ |                                                        |
+| 0x5_ |                                                        |
+| 0x6_ |                                                        |
 | 0x7_ |                                                        |
 | 0x8_ |                                                        |
 | 0x9_ |                                                        |
@@ -53,3 +53,26 @@
 | 0xE_ | Ekran cihazları segmenti.                              |
 | 0xF_ |                                                        |
 
+***
+
+### Data/Set Segmenti
+
+Slave üzerinden bir verinin alınması veya bir değerin ayarlanması gerekli olan durumlarda bu segment içerisinde data veya set değeri yer alacaktır. 
+
+* Master tarafından gönderilen paketlerde bu alan veri bütünlüğünü bozmamak adına boş (0x0000000000000000) gönderilmektedir. 
+
+* Eğer master slave üzerinden bir değer istedi ise bu segmentte 8 byte uzunluğunda float (eksi değerlerde olabilecek şekilde) değeri dönecektir. İstenen veri integer değeri ise virgülden sonraki kısım sıfır olarak gönderilecektir.
+
+* Eğer master slave üzerinde bir değeri set etmek isterse bu segmentte set edilecek değer 8 byte uzunluğunda float (eksi değerlerde olabilecek şekilde) gönderilecektir. Set edilmek istenen veri integer değeri ise virgülden sonraki kısım sıfır olarak gönderilecektir.
+
+***
+
+### CRC Segmenti
+
+İletişim paketi içerisinde yer alan tüm byte'ların mod 0xFF e göre 0 olması gerekmektedir. Bu sayede veri paketinin doğru iletildiği anlaşılmaktadır. Bu nedenle bu segmentte yer alan veri paketin tamamı için (CRC hariç diğer byte'lar) mod 0xFF tamamlayıcısı olarak kullanılmaktadır.
+
+***
+
+### Stop Segmenti
+
+CRC segmentinde yer alan byte değeri kurgu gereği hiçbir zaman 0xFF olamayacağı için stop segmenti için 0xFF seçilmiştir.
