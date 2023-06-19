@@ -8,8 +8,8 @@ Sistem üzerinde yer alan 1 adet basınç sensörü üzerinden anlık su basınc
 
 | Komut Yönü | Start | Address | Command     | Data/Set                                              | CRC  | Stop |
 |:----------:|:-----:|:-------:|:-----------:|:-----------------------------------------------------:|:----:|:----:|
-| M --> S | 0xA0  | 0x10    | 0x00 - 0x00 | 0x00 - 0x00 - 0x00 - 0x00 - 0x00 - 0x00 - 0x00 - 0x00 | 0x00 | 0xFF |
-| S --> M | 0xB0  | 0x10    | 0x00 - 0x00 | 0x00 - 0x00 - 0x00 - 0x00 - 0x00 - 0x00 - 0x00 - 0x00 | 0x00 | 0xFF |
+| M --> S    | 0xA0  | 0x10    | 0x1E - 0x10 | 0x00 - 0x00 - 0x00 - 0x00 - 0x00 - 0x00 - 0x00 - 0x00 | 0x23 | 0xFF |
+| S --> M    | 0xB0  | 0x10    | 0x1E - 0x10 | 0x40 - 0x14 - 0x7A - 0xE1 - 0x47 - 0xEA - 0x14 - 0x7B | 0xA4 | 0xFF |
 
 ***
 
@@ -97,7 +97,7 @@ Majör komut segmenti slave cihaz içerisinden hangi verinin okunacağı yada se
 
 |      | 0x0_    | 0x1_ | 0x2_ | 0x3_ | 0x4_ | 0x5_  | 0x6_    | 0x7_    | 0x8_    | 0x9_    | 0xA_ | 0xB_ | 0xC_ | 0xD_ | 0xE_ | 0xF_ |
 |------|---------|------|------|------|------|-------|---------|---------|---------|---------|------|------|------|------|------|------|
-| 0x_0 | Device  | AT   | ST   | V    | IN   | OUT   | VAL-A   | VAL-B   | SEL-A   | SEL-B   | --   | --   | --   | --   | HMI1 | --   |
+| 0x_0 | --      | AT   | ST   | V    | IN   | OUT   | VAL-A   | VAL-B   | SEL-A   | SEL-B   | --   | --   | --   | --   | HMI1 | --   |
 | 0x_1 | --      | AH   | ST1  | VR   | IN1  | OUT1  | VAL-A1  | VAL-B1  | SEL-A1  | SEL-B1  | --   | --   | --   | --   | HMI2 | --   |
 | 0x_2 | --      | AP   | ST2  | VS   | IN2  | OUT2  | VAL-A2  | VAL-B2  | SEL-A2  | SEL-B2  | --   | --   | --   | --   | --   | --   |
 | 0x_3 | --      | --   | ST3  | VT   | IN3  | OUT3  | VAL-A3  | VAL-B3  | SEL-A3  | SEL-B3  | --   | --   | --   | --   | --   | --   |
@@ -107,14 +107,35 @@ Majör komut segmenti slave cihaz içerisinden hangi verinin okunacağı yada se
 | 0x_7 | --      | R    | ST7  | IT   | IN7  | OUT7  | VAL-A7  | VAL-B7  | SEL-A7  | SEL-B7  | --   | --   | --   | --   | --   | --   |
 | 0x_8 | --      | --   | ST8  | P    | IN8  | OUT8  | VAL-A8  | VAL-B8  | SEL-A8  | SEL-B8  | --   | --   | --   | --   | --   | --   |
 | 0x_9 | --      | UVI  | ST9  | PR   | IN9  | OUT9  | VAL-A9  | VAL-B9  | SEL-A9  | SEL-B9  | --   | --   | --   | --   | --   | --   |
-| 0x_A | INT     | --   | ST10 | PS   | IN10 | OUT10 | VAL-A10 | VAL-B10 | SEL-A10 | SEL-B10 | --   | --   | --   | --   | --   | --   |
-| 0x_B | INT-POL | ULT  | --   | PT   | IN11 | OUT11 | VAL-A11 | VAL-B11 | SEL-A11 | SEL-B11 | --   | --   | --   | --   | --   | --   |
+| 0x_A | --      | --   | ST10 | PS   | IN10 | OUT10 | VAL-A10 | VAL-B10 | SEL-A10 | SEL-B10 | --   | --   | --   | --   | --   | --   |
+| 0x_B | --      | ULT  | --   | PT   | IN11 | OUT11 | VAL-A11 | VAL-B11 | SEL-A11 | SEL-B11 | --   | --   | --   | --   | --   | --   |
 | 0x_C | --      | ULH  | --   | E    | IN12 | OUT12 | VAL-A12 | VAL-B12 | SEL-A12 | SEL-B12 | --   | --   | --   | --   | --   | --   |
-| 0x_D | --      | --   | --   | ER   | IN13 | OUT13 | VAL-A13 | VAL-B13 | SEL-A13 | SEL-B13 | --   | --   | --   | --   | --   | --   |
+| 0x_D | DEVICE  | --   | --   | ER   | IN13 | OUT13 | VAL-A13 | VAL-B13 | SEL-A13 | SEL-B13 | --   | --   | --   | --   | --   | --   |
 | 0x_E | --      | WP   | --   | ES   | IN14 | OUT14 | VAL-A14 | VAL-B14 | SEL-A14 | SEL-B14 | --   | --   | --   | --   | --   | --   |
 | 0x_F | --      | --   | --   | ET   | IN15 | OUT15 | VAL-A15 | VAL-B15 | SEL-A15 | SEL-B15 | --   | --   | --   | --   | --   | --   |
 
 #### Minör Komut Segmenti
+
+Minör komut segmenti majör komuta bağlı hangi değerin okunacağını yada set edileceği bilgisini içermektedir. Veri tipine göre sınıflandırılmıştır.
+
+|      | 0x0_    | 0x1_     | 0x2_    | 0x3_ | 0x4_    | 0x5_     | 0x6_    | 0x7_    | 0x8_    | 0x9_    | 0xA_      | 0xB_ | 0xC_ | 0xD_ | 0xE_ | 0xF_    |
+|------|---------|----------|---------|------|---------|----------|---------|---------|---------|---------|-----------|------|------|------|------|---------|
+| 0x_0 | RESET   | INST     | COEFF   | --   | VSCALE  | ACTIVE   | --      | --      | --      | --      | --        | --   | --   | --   | --   | --      |
+| 0x_1 | --      | MAX      | VAR     | --   | ISCALE  | REACTIVE | --      | --      | --      | --      | --        | --   | --   | --   | --   | --      |
+| 0x_2 | --      | MIN      | RSLOPE  | --   | FQ      | APPARENT | --      | --      | --      | --      | --        | --   | --   | --   | --   | --      |
+| 0x_3 | --      | DC       | ROFFSET | --   | PF      | FUND     | --      | --      | --      | --      | --        | --   | --   | --   | --   | --      |  
+| 0x_4 | --      | SUM      | RR2     | --   | HPVCOEF | FUNDVA   | --      | --      | --      | --      | --        | --   | --   | --   | --   | --      |
+| 0x_5 | --      | SUMSQ    | --      | --   | HPICOEF | PRECV    | --      | --      | --      | --      | --        | --   | --   | --   | --   | --      |
+| 0x_6 | --      | AVG      | --      | --   | POFFSET | PDEL     | --      | --      | --      | --      | --        | --   | --   | --   | --   | --      |
+| 0x_7 | --      | EAVG     | --      | --   | QOFFSET | QRECV    | --      | --      | --      | --      | --        | --   | --   | --   | --   | --      |
+| 0x_8 | --      | GAVG     | --      | --   | PHCOMP  | QDEL     | --      | --      | --      | --      | --        | --   | --   | --   | --   | --      |
+| 0x_9 | --      | RMSAVG   | --      | --   | HARM    | --       | --      | --      | --      | --      | --        | --   | --   | --   | --   | --      |
+| 0x_A | --      | ERMSAVG  | --      | --   | BUCKETL | HARMV    | --      | --      | --      | --      | --        | --   | --   | --   | --   | CSLOPE  |
+| 0x_B | --      | Q1       | --      | --   | BUCKETH | HARMI    | --      | --      | --      | --      | --        | --   | --   | --   | --   | COFFSET |
+| 0x_C | --      | MEDIAN   | --      | --   | --      | --       | --      | --      | --      | --      | --        | --   | --   | --   | --   | --      |
+| 0x_D | INT     | Q3       | --      | --   | --      | --       | --      | --      | --      | --      | --        | --   | --   | --   | --   | --      |
+| 0x_E | --      | STDEV    | --      | --   | --      | --       | --      | --      | --      | --      | --        | --   | --   | --   | --   | --      |
+| 0x_F | CLEAR   | STDEVERR | --      | --   | --      | --       | --      | --      | --      | --      | --        | --   | --   | --   | --   | --      |
 
 
 
