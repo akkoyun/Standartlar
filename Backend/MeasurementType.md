@@ -1,6 +1,19 @@
-# Measurement Type List
+# Ölçüm Tipi Tablosu
 
 Veri paketi içerisinde gelen tüm ölçümler (listede belirtilen) **measurement** tablosu içerisine kaydedilecektir. 
+
+## Ölçüm Segmentleri
+
+| Segment     | Segment ID |
+|-------------|------------|
+| Device      | 1          |
+| Power       | 2          |
+| Environment | 3          |
+| Water       | 4          |
+| Energy      | 5          |
+| Battery     | 6          |
+
+## Ölçüm Tipleri
 
 | Type ID | Type Name                   | Variable         | Unit  | Segment     |
 |---------|-----------------------------|------------------|-------|-------------|
