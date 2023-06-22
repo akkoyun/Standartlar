@@ -6,9 +6,7 @@ Cihaza ait tanımlayıcı bilgileri içermektedir.
 "Info": {
     "ID": "70A11D1D01000026",
     "Hardware": "03.00.00",
-    "Firmware": "03.00.00",
-    "Temperature": 27.91,
-    "Humidity": 24.75
+    "Firmware": "03.00.00"
 }
 ```
 
@@ -67,17 +65,25 @@ Cihazın firmware tarafına ait tanımlayıcı versiyon bildirimidir. Majör, mi
 
 ***
 
-### "Temperature" : PCB (kutu içi) Sıcaklığı Verisi
+
+
+
+
+
+
+
+
+### "PCBT" : PCB (kutu içi) Sıcaklığı Verisi
 
 Sistemin T (kutu içi / PCB sıcaklığı) sensörüne ait kalibre sıcaklık değeridir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.
 
 ```json
-"Temperature": 27.91
+"PCBT": 27.91
 ```
 
 |                 | Açıklama       |
 |-----------------|----------------|
-| Değişken Adı    | Temperature    |
+| Değişken Adı    | PCBT           |
 | Değişken Tanımı | PCB Sıcaklığı  |
 | Değişken Tipi   | Float          |
 | Değişlen Birimi | Derece         |
@@ -85,17 +91,17 @@ Sistemin T (kutu içi / PCB sıcaklığı) sensörüne ait kalibre sıcaklık de
 
 ***
 
-### "Humidity" : PCB (kutu içi) Bağıl Nem Verisi
+### "PCBH" : PCB (kutu içi) Bağıl Nem Verisi
 
 Sistemin H (kutu içi / PCB bağıl nem) sensörüne ait kalibre bağıl nem değeridir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.
 
 ```json
-"Humidity": 24.75
+"PCBH": 24.75
 ```
 
 |                 | Açıklama       |
 |-----------------|----------------|
-| Değişken Adı    | Humidity       |
+| Değişken Adı    | PCBH           |
 | Değişken Tanımı | PCB Bağıl Nem  |
 | Değişken Tipi   | Float          |
 | Değişlen Birimi | %              |

@@ -2,9 +2,7 @@
     "Command": "STF:PowerStat.Offline",
     "Device": {
         "Info": {
-            "ID": "70A11D1D01000026",
-            "Temperature": 27.91341,
-            "Humidity": 24.7523
+            "ID": "70A11D1D01000026"
         },
         "Power": {
             "Battery": {
@@ -28,10 +26,6 @@
     },
     "Payload": {
         "TimeStamp": "2022-03-23  14:18:28",
-        "Status": {
-            "Device": 240,
-            "Fault": 500
-        }
-
+        "Status": "0FF0086E"
     }
 }

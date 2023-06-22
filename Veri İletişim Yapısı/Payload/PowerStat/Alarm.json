@@ -2,9 +2,7 @@
     "Command": "STF:PowerStat.Alarm",
     "Device": {
         "Info": {
-            "ID": "70A11D1D01000026",
-            "Temperature": 27.91341,
-            "Humidity": 24.7523
+            "ID": "70A11D1D01000026"
         },
         "Power": {
             "Battery": {
@@ -28,10 +26,9 @@
     },
     "Payload": {
         "TimeStamp": "2022-03-23  14:18:28",
-        "Status": {
-            "Device": 240,
-            "Fault": 500
-        },
+        "PCBT": 27.91341,
+        "PCBH": 24.7523,
+        "Status": "0FF0086E",
         "Pressure": {
             "Pout": [6.12, 6.84, 7.12, 7.22, -0.0003, 12, 0.87, 48]
         },
@@ -59,16 +56,6 @@
                 "Active": 1234,
                 "ReActive": 1234
             }
-        },
-        "Input": {
-            "IN1": true,
-            "IN2": true,
-            "IN3": true,
-            "IN4": true,
-            "IN5": true,
-            "IN6": true,
-            "IN7": true,
-            "IN8": true
         }
     }
 }

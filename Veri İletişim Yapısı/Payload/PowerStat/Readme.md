@@ -5,57 +5,9 @@ PowerStat projesine ait veri paketi bloğudur. Command alanında belirlenen komu
 ```json
 "Payload": {
     "TimeStamp": "2022-03-23  14:18:28",
-    "Status": {
-        "Device": 240,
-        "Fault": 500,
-        "Control": {
-            "PhaseLose": true,
-            "Thermic": true,
-            "MotorProtection": true,
-            "ContactorAnomaly": true,
-            "Pressure": {
-                "Limit": {
-                    "Control": true,
-                    "Min": 0,
-                    "Max": 10
-                },
-                "Regression": {
-                    "Control": true,
-                    "Max": 0.06
-                }
-            },
-            "Voltage": {
-                "Limit": {
-                    "Control": true,
-                    "Min": 0,
-                    "Max": 10
-                },
-                "Imbalance": {
-                    "Control": true,
-                    "Max": 0.07
-                }
-            },
-            "Current": {
-                "Limit": {
-                    "Control": true,
-                    "Min": 0,
-                    "Max": 10
-                },
-                "Imbalance": {
-                    "Control": true,
-                    "Max": 0.07
-                },
-                "Multiplexer": 30
-            },
-            "Frequency": {
-                "Limit": {
-                    "Control": true,
-                    "Min": 0,
-                    "Max": 10
-                }
-            }
-        }    
-    },
+    "PCBT": 27.91341,
+    "PCBH": 24.7523,
+    "Status": "0FF0086E",
     "Pressure": {
         "Pout": [6.12, 6.84, 7.12, 7.22, -0.0003, 12, 0.87, 48]
     },
@@ -83,16 +35,6 @@ PowerStat projesine ait veri paketi bloğudur. Command alanında belirlenen komu
             "Active": 1234,
             "ReActive": 1234
         }
-    },
-    "Input": {
-        "IN1": true,
-        "IN2": true,
-        "IN3": true,
-        "IN4": true,
-        "IN5": true,
-        "IN6": true,
-        "IN7": true,
-        "IN8": true
     }
 }
 ```
