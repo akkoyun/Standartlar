@@ -7,6 +7,7 @@ Bu işlemleri hem cihaz üzerinde çok fazla sistem kaynağı tüketmemesi için
 | Register Tipi     | Açıklama                                        | Veri Tipi |
 |-------------------|-------------------------------------------------|-----------|
 | Status_Register   | Sistem durumlarını değerlendiren ana register.  | uint32_t  |
+| Buffer_Register   | Durum karşılaştırması yapan register.           | uint32_t  |
 | Publish_Mask      | Durumların kullanıcıya bildirim maskesi.        | uint32_t  |
 | Stop_Mask         | Durumlara göre otomatik aksiyon alma maskesi.   | uint32_t  |
 
