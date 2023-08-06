@@ -1,8 +1,6 @@
-![Blok Diagram](/Veri%20%C4%B0leti%C5%9Fim%20Yap%C4%B1s%C4%B1/Images/Kafka%20Block%20Diagram.jpg)
-
 # Veri İletişim Protokolü [01.02.00]
 
-"STF Tarım" için **Temmuz 2022** ve sonrası geliştirilmekte olan tüm IoT cihazları için kullanılacak olan veri iletişim yapısı ve teknik detayları bu doküman içerisinde tanımlanmıştır. Diğer tüm **STF** projeleri ile birlikte yapılan planlama doğrultusunda tüm cihazların tek bir **EndPoint** üzerinden çalışması uygun görülmüştür. End point üzerinden hangi cihazın hangi şartlarda veri göndereceği ve backend üzerinden bu ayrımın nasıl yapılması gerektiği bu düküman üzerinden tanımlanmıştır. 
+"STF Tarım" için **Temmuz 2022** ve sonrası geliştirilmekte olan tüm IoT cihazları için kullanılacak olan veri iletişim yapısı ve teknik detayları bu doküman içerisinde tanımlanmıştır. Diğer tüm **STF** projeleri ile birlikte yapılan planlama doğrultusunda tüm cihazların tek bir **EndPoint** üzerinden çalışması uygun görülmüştür. End point üzerinden hangi cihazın hangi şartlarda veri göndereceği ve backend üzerinden bu ayrımın nasıl yapılması gerektiği bu düküman üzerinden tanımlanmıştır.
 
 ## 1. - Cihaz Veri Gönderim ve IoT Bağlantı Yapısı
 
@@ -12,7 +10,7 @@ Bu sistematik ve cihaz özelliği doğrultusunda veri paketi içerisinde yer ala
 
 ### 1.A. - WeatherStat Veri Gönderim Yapısı
 
-Tarımsal meteoroloji sistemi kurgu gereği tek yönlü veri trafiğiğine sahip bir sistemdir. Bu kurgu bünyesinde aşağıdaki koşullarda IoT veri transferi yapılacaktır. WeatherStat (P101) sistemi uyuyan uyanan bir donanım kurgusuna sahiptir. Bu kurgu gereği sistem donanım olarak belirlenen süre periodlarında (30 dk da bir) uyanarak veri paketi hazırlayacak ve sunucuya veri gönderimi yapacaktır. 
+Tarımsal meteoroloji sistemi kurgu gereği tek yönlü veri trafiğiğine sahip bir sistemdir. Bu kurgu bünyesinde aşağıdaki koşullarda IoT veri transferi yapılacaktır. WeatherStat (P101) sistemi uyuyan uyanan bir donanım kurgusuna sahiptir. Bu kurgu gereği sistem donanım olarak belirlenen süre periodlarında (30 dk da bir) uyanarak veri paketi hazırlayacak ve sunucuya veri gönderimi yapacaktır.
 
 * Cihaz güç altyapısı : Batarya (solar şarjlı)
 * Cihaz çalışma sistemi : Uyu-Uyan
@@ -20,13 +18,14 @@ Tarımsal meteoroloji sistemi kurgu gereği tek yönlü veri trafiğiğine sahip
 
 ### 1.B. - PowerStat Veri Gönderim Yapısı
 
-PowerStat sistemi kurgu gereği elektrik panosu üzerine montajlanmaktadır. Bu nedenle güç sorunu bulunmamaktadır. Elektrik olduğu sürece kendisini GSM şebekesine bağlı tutacak elektrik gitmesi durumunda ise elektriğin gittiğini haber ederek GSM i kapatıp uyku moduna geçecektir. Cihaz bağlı durumdayken belirlenen veri tipleri ile gönderim yapacak ve sunucudan veri alabilecektir. 
+PowerStat sistemi kurgu gereği elektrik panosu üzerine montajlanmaktadır. Bu nedenle güç sorunu bulunmamaktadır. Elektrik olduğu sürece kendisini GSM şebekesine bağlı tutacak elektrik gitmesi durumunda ise elektriğin gittiğini haber ederek GSM i kapatıp uyku moduna geçecektir. Cihaz bağlı durumdayken belirlenen veri tipleri ile gönderim yapacak ve sunucudan veri alabilecektir.
 
 * Cihaz güç altyapısı : Batarya (220V şarjlı)
 * Cihaz çalışma sistemi : Devamlı uyanım (enerji varken)
 * İletişim : Çift yönlü (cihaz <--> sunucu)
 
 ### 1.C. - FilterStat Veri Gönderim Yapısı
+
 ...
 
 ## 2. - Veri Paketi Yapısı
@@ -110,11 +109,8 @@ Tüm projeler ortak bir veri iletişim altyapısı içerisinde birleştirilmiş 
 
 Tüm IoT cihazlarımız sistemi yapı gereği sunuculara veri gönderimi yaptıktan sonra cevap için beklemede kalır. Sunucu tarafından verinin uygun şekilde yakalandığını belirten ibare gelmesi durumunda sistem rutin işlemine devam eder (uyuyan cihazlar tekrar uyku moduna döner). Eğerki onay mesajı gelmemesi durumunda veri kaydını tekrar gönderir (5 deneme yapar ve hala kayıt olmadı ise uyur). Bu nedenle gönderilen veri paketine karşılık olarak aşağıdaki yapıda bir cevap sunucu tarafından dönecektir.
 
-
-```json
-{
-	"Event": 200,
-}
+```JSON
+"Event": 200
 ```
 
 Event değişkeni içerisinde gönderilecek olan kod numaraları HTTP Header tanımları ile aynıdır (aşağıda belirtilmiştir). Bu kod numaraları artabilir olduğu ve duruma göre ekleme yapılabileceği unutulmamalıdır (tabloda belirtilen kodlar sabittir).

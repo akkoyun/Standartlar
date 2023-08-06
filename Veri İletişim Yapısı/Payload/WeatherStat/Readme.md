@@ -1,4 +1,4 @@
-# "WeatherStat" Veri Paketi 
+# "WeatherStat" Veri Paketi
 
 WeatherStat projesine ait veri paketidir. Command alanında belirlenen komuta özel yapıda olacaktır. Meteoroloji istasyonuna ait veri paketleri ve hangi komutta hangi verisetinin gönderileceği bilgisi [ilgili linkte](Commands.md) tanımlanmıştır.
 
@@ -61,7 +61,7 @@ WeatherStat projesi saha üzerinde yer alan konumunu takip etmek amacı ile GPS 
 
 ### "Latitude" : Cihaz Enlem Bilgisi
 
-Cihazlarımız üzerinde anlık konum bilgisi alabilmek adına GPS sensörü bulunmaktadır. Bu GPS sensörü üzerinden günün belirlenen saatleri içerisinde (cihaz konumunın sürekli değişmemesi ve güç tüketiminin gündüz gün ışığı ile karşılanması planlanarak her gün öğle saatlerinde 12-14 saatleri arasında gönderilecektir) gönderilecek olan enlem bilgisidir. 
+Cihazlarımız üzerinde anlık konum bilgisi alabilmek adına GPS sensörü bulunmaktadır. Bu GPS sensörü üzerinden günün belirlenen saatleri içerisinde (cihaz konumunın sürekli değişmemesi ve güç tüketiminin gündüz gün ışığı ile karşılanması planlanarak her gün öğle saatlerinde 12-14 saatleri arasında gönderilecektir) gönderilecek olan enlem bilgisidir.
 
 Bir noktanın enlemi, ekvator düzleminin bu noktayı Dünya'nın merkezine bağlayan doğru ile oluşturduğu açının ölçüsüdür. Yapısal olarak -90° ile 90° arasında oluşur. Negatif değerler güney yarım küre konumları içindir ve ekvatorda enlem 0 ° değerindedir.
 
@@ -69,7 +69,7 @@ Bir noktanın enlemi, ekvator düzleminin bu noktayı Dünya'nın merkezine bağ
 
 ### "Longtituude" : Cihaz Boylam Bilgisi
 
-Cihazlarımız üzerinde anlık konum bilgisi alabilmek adına GPS sensörü bulunmaktadır. Bu GPS sensörü üzerinden günün belirlenen saatleri içerisinde (cihaz konumunın sürekli değişmemesi ve güç tüketiminin gündüz gün ışığı ile karşılanması planlanarak her gün öğle saatlerinde 12-14 saatleri arasında gönderilecektir) gönderilecek olan boylam bilgisidir. 
+Cihazlarımız üzerinde anlık konum bilgisi alabilmek adına GPS sensörü bulunmaktadır. Bu GPS sensörü üzerinden günün belirlenen saatleri içerisinde (cihaz konumunın sürekli değişmemesi ve güç tüketiminin gündüz gün ışığı ile karşılanması planlanarak her gün öğle saatlerinde 12-14 saatleri arasında gönderilecektir) gönderilecek olan boylam bilgisidir.
 
 Enlem için ekvator gibi doğal bir referans olmaması farkıyla, prensip boylam için aynıdır. Boylam referansı Greenwich Meridian'da keyfi olarak ayarlanmıştır (Londra'nın banliyölerinde Greenwich'teki Royal Greenwich Gözlemevi'nden geçer) ve bir noktanın boylamı, ekseni tarafından oluşturulan yarım düzlemin oluşturduğu açının ölçümüdür. yer ve Greenwich meridyeninden ve dünyanın ekseninin oluşturduğu ve noktadan geçen yarım düzlemden geçer.
 
@@ -196,7 +196,7 @@ Sistemin R sensörüne ait yağmur şiddeti değeridir. Kovalı sistem yağmur s
 | Değişken Tipi   | int                  |
 | Değişlen Birimi | Derece (kuzeye göre) |
 | Örnek Veri      | 222                  |
-| Zorunlu Veri    | Hayır                | 
+| Zorunlu Veri    | Hayır                |
 
 Sistemin W sensörüne ait rüzgar yönü değeridir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.
 
@@ -209,6 +209,6 @@ Sistemin W sensörüne ait rüzgar yönü değeridir. Eğer sistemde donanımsal
 | Değişken Tipi   | float                |
 | Değişlen Birimi | m/sn                 |
 | Örnek Veri      | 12.12                |
-| Zorunlu Veri    | Hayır                | 
+| Zorunlu Veri    | Hayır                |
 
 Sistemin W sensörüne ait rüzgar şiddeti değeridir. Eğer sistemde donanımsal bir arıza mevcut ise bu veri tipi -1xx olarak gönderilmektedir. Bu veri tipleri daha sonra tanımlanacaktır.

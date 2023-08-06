@@ -1,0 +1,340 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "WeatherStat Data Schema",
+	"description": "WeatherStat data schema.",
+	"type": "object",
+	"properties": {
+		"Command": {
+			"type": "string",
+			"maxLength": 30,
+			"description": "Data pack name."
+		},
+		"Device": {
+			"type": "object",
+			"properties": {
+				"Info": {
+					"type": "object",
+					"description": "Device information.",
+					"properties": {
+						"ID": {
+							"type": "string",
+							"minLength": 14,
+							"maxLength": 16,
+							"description": "Device unique id number."
+						},
+						"Hardware": {
+							"type": "string",
+							"minLength": 8,
+							"maxLength": 8,
+							"description": "Device hardware version."
+						},
+						"Firmware": {
+							"type": "string",
+							"minLength": 8,
+							"maxLength": 8,
+							"description": "Device firmware version."
+						}
+					},
+					"required": [
+						"ID"
+					]
+				},
+				"Power": {
+					"type": "object",
+					"description": "Device power information.",
+					"properties": {
+						"Battery": {
+							"type": "object",
+							"description": "Battery information",
+							"properties": {
+								"AC": {
+									"type": "number",
+									"description": "Average current (mA).",
+									"minimum": -3000,
+									"maximum": 3000
+								},
+								"FB": {
+									"type": "integer",
+									"description": "Full battery capacity (mAh).",
+									"minimum": 0,
+									"maximum": 5000
+								},
+								"IB": {
+									"type": "integer",
+									"description": "Instant battery capacity (mAh).",
+									"minimum": 0,
+									"maximum": 5000
+								},
+								"IV": {
+									"type": "number",
+									"description": "Battery voltage (V).",
+									"minimum": 0,
+									"maximum": 5
+								},
+								"SOC": {
+									"type": "number",
+									"description": "State of charge (%).",
+									"minimum": 0,
+									"maximum": 100
+								},
+								"T": {
+									"type": "integer",
+									"description": "Battery temperature (C).",
+									"minimum": -40,
+									"maximum": 85
+								},
+								"Charge": {
+									"type": "integer",
+									"description": "Charge state.",
+									"minimum": 0,
+									"maximum": 5
+								}
+							},
+							"required": [
+								"AC",
+								"IV",
+								"SOC",
+								"Charge"
+							]
+						}
+					},
+					"required": [
+						"Battery"
+					]
+				},
+				"IoT": {
+					"type": "object",
+					"description": "Device IoT information.",
+					"properties": {
+						"GSM": {
+							"type": "object",
+							"description": "GSM information.",
+							"properties": {
+								"Module": {
+									"type": "object",
+									"description": "GSM module information.",
+									"properties": {
+										"Firmware": {
+											"type": "string",
+											"description": "GSM module firmware version.",
+											"minLength": 8,
+											"maxLength": 9
+										},
+										"IMEI": {
+											"type": "string",
+											"description": "GSM module IMEI number.",
+											"minLength": 15,
+											"maxLength": 18
+										},
+										"Manufacturer": {
+											"type": "integer",
+											"description": "GSM module manufacturer ID.",
+											"minimum": 0,
+											"maximum": 255
+										},
+										"Model": {
+											"type": "integer",
+											"description": "GSM module model ID.",
+											"minimum": 0,
+											"maximum": 255
+										},
+										"Serial": {
+											"type": "string",
+											"description": "GSM module serial number.",
+											"minLength": 0,
+											"maxLength": 10
+										}
+									}
+								},
+								"Operator": {
+									"type": "object",
+									"description": "Operator information.",
+									"properties": {
+										"Iccid": {
+											"type": "string",
+											"description": "SIM card ICCID number.",
+											"minLength": 15,
+											"maxLength": 20
+										},
+										"Code": {
+											"type": "integer",
+											"description": "Operator code.",
+											"minimum": 0,
+											"maximum": 65535
+										},
+										"RSSI": {
+											"type": "integer",
+											"description": "Signal strength (dBm)."
+										},
+										"ConnTime": {
+											"type": "integer",
+											"description": "Connection time (s).",
+											"minimum": 0,
+											"maximum": 65535
+										}
+									},
+									"required": [
+										"RSSI"
+									]
+								}
+							},
+							"required": [
+								"Operator"
+							]
+						}
+					},
+					"required": [
+						"GSM"
+					]
+				}
+			}
+		},
+		"Payload": {
+			"type": "object",
+			"description": "Device payload information.",
+			"properties": {
+				"TimeStamp": {
+					"type": "string",
+					"description": "Data timestamp.",
+					"format": "date-time",
+					"minLength": 20,
+					"maxLength": 20
+				},
+				"WeatherStat": {
+					"type": "object",
+					"description": "Weather station information.",
+					"properties": {
+						"Location": {
+							"type": "object",
+							"description": "Location information.",
+							"properties": {
+								"Latitude": {
+									"type": "number",
+									"description": "Latitude in decimal degrees (WGS84)."
+								},
+								"Longitude": {
+									"type": "number",
+									"description": "Longitude in decimal degrees (WGS84)."
+								}
+							}
+						},
+						"Environment": {
+							"type": "object",
+							"description": "Environment information.",
+							"properties": {
+								"AT": {
+									"type": "number",
+									"description": "Air temperature (C).",
+									"minimum": -40,
+									"maximum": 85
+								},
+								"AH": {
+									"type": "number",
+									"description": "Air humidity (%).",
+									"minimum": 0,
+									"maximum": 100
+								},
+								"AP": {
+									"type": "number",
+									"description": "Air pressure (hPa).",
+									"minimum": 500,
+									"maximum": 2000
+								},
+								"UV": {
+									"type": "integer",
+									"description": "UV index.",
+									"minimum": 0,
+									"maximum": 15
+								},
+								"ST": {
+									"type": "array",
+									"description": "Soil temperature array.",
+									"items": [
+										{
+											"type": "number",
+											"description": "10 cm Soil temperature (C)."
+										},
+										{
+											"type": "number",
+											"description": "20 cm Soil temperature (C)."
+										},
+										{
+											"type": "number",
+											"description": "30 cm Soil temperature (C)."
+										},
+										{
+											"type": "number",
+											"description": "40 cm Soil temperature (C)."
+										},
+										{
+											"type": "number",
+											"description": "50 cm Soil temperature (C)."
+										},
+										{
+											"type": "number",
+											"description": "60 cm Soil temperature (C)."
+										},
+										{
+											"type": "number",
+											"description": "70 cm Soil temperature (C)."
+										},
+										{
+											"type": "number",
+											"description": "80 cm Soil temperature (C)."
+										},
+										{
+											"type": "number",
+											"description": "90 cm Soil temperature (C)."
+										},
+										{
+											"type": "number",
+											"description": "100 cm Soil temperature (C)."
+										}
+									],
+									"minItems": 1,
+									"maxItems": 10
+								},
+								"R": {
+									"type": "integer",
+									"description": "Rainfall (mm).",
+									"minimum": 0,
+									"maximum": 1000
+								},
+								"WD": {
+									"type": "integer",
+									"description": "Wind direction (degrees).",
+									"minimum": 0,
+									"maximum": 360
+								},
+								"WS": {
+									"type": "number",
+									"description": "Wind speed (m/s).",
+									"minimum": 0,
+									"maximum": 1000
+								}
+							},
+							"required": [
+								"AT",
+								"AH",
+								"AP",
+								"UV"
+							]
+						}
+					},
+					"required": [
+						"Environment"
+					]
+				}
+			},
+			"required": [
+				"TimeStamp",
+				"WeatherStat"
+			]
+		}
+	},
+	"required": [
+		"Command",
+		"Device",
+		"Payload"
+	]
+}

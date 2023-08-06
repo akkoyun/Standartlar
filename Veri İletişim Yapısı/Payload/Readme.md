@@ -14,7 +14,7 @@ Veri paketinin oluşum zamana ait zaman etiketidir. Tüm payload verilerinde zor
 | Değişlen Birimi | -                                                    |
 | Örnek Veri      | 2020-10-23  14:18:28                                 |
 
-## 2. : Cihaz Veri Paketi 
+## 2. : Cihaz Veri Paketi
 
 Cihaza özel oluşturulan veri paketi bloğudur. Proje ismine göre isimler ile adlandırılmaktadır.  Mevcut projeler için payload paketi ve içerik yapıları aşağıdaki listede verilmiştir.
 

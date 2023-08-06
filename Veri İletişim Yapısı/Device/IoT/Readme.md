@@ -31,22 +31,22 @@ IoT iletişim bloğuna ait cihaz tarafından gönderilen veri paketi aşağıdak
 
 İlgili komutun içeriğinde tanımlandığı şekilde gerek veri paketini küçültmek gerekse backend işlemlerini aza indirmek amacı ile bazı durumlarda aşağıdaki tabloda belirtildiği üzere bazı parametreler sunucuya gönderilmeyecektir.
 
-| Değişken Adı  | Normal Paket      | Tiny Paket        | 
+| Değişken Adı  | Normal Paket      | Tiny Paket        |
 |---------------|:-----------------:|:-----------------:|
-| Module		|:white_check_mark:	|:x:				|
-| Firmware		|:white_check_mark:	|:x:				|
-| IMEI			|:white_check_mark:	|:x:				|
-| Manufacturer	|:white_check_mark:	|:x:				|
-| Model			|:white_check_mark:	|:x:				|
-| Serial		|:white_check_mark:	|:x:				|
-| Operator		|:white_check_mark:	|:white_check_mark:	|
-| Iccid			|:white_check_mark:	|:x:				|
-| IP			|:white_check_mark:	|:white_check_mark:	|
-| Code			|:white_check_mark:	|:white_check_mark:	|
-| RSSI			|:white_check_mark:	|:white_check_mark:	|
-| ConnTime		|:white_check_mark:	|:x:	            |
-| LAC			|:white_check_mark:	|:white_check_mark:	|
-| Cell_ID		|:white_check_mark:	|:white_check_mark:	|
+| Module  |:white_check_mark: |:x:    |
+| Firmware  |:white_check_mark: |:x:    |
+| IMEI   |:white_check_mark: |:x:    |
+| Manufacturer |:white_check_mark: |:x:    |
+| Model   |:white_check_mark: |:x:    |
+| Serial  |:white_check_mark: |:x:    |
+| Operator  |:white_check_mark: |:white_check_mark: |
+| Iccid   |:white_check_mark: |:x:    |
+| IP   |:white_check_mark: |:white_check_mark: |
+| Code   |:white_check_mark: |:white_check_mark: |
+| RSSI   |:white_check_mark: |:white_check_mark: |
+| ConnTime  |:white_check_mark: |:x:             |
+| LAC   |:white_check_mark: |:white_check_mark: |
+| Cell_ID  |:white_check_mark: |:white_check_mark: |
 
 ***
 
@@ -62,7 +62,7 @@ Cihazlarımız Telit firmasının üretmekte olduğu 2G altyapısına sahip habe
 
 Bu veri alanı GSM modeme ait fiziksel özellik değerlerini içermektedir.
 
-    # Bu veri "tiny" paketlerinde gönderilemyecektir.
+    Bu veri "tiny" paketlerinde gönderilemyecektir.
 
 ***
 
@@ -78,7 +78,7 @@ GSM IoT iletişime ait modül içerisinde çalışmakta olan embeded firmware ve
 | Değişken Birimi | -                                                    |
 | Örnek Veri      | 13.00.007                                            |
 
-    # Bu veri "tiny" paketlerinde gönderilemyecektir.
+    Bu veri "tiny" paketlerinde gönderilemyecektir.
 
 ***
 
@@ -94,7 +94,7 @@ GSM Modemleri fiziksel olarak kayıt altına alabilmek ve devlet regülasyonular
 | Değişken Birimi | -                                                    |
 | Örnek Veri      | 353613080341053                                      |
 
-    # Bu veri "tiny" paketlerinde gönderilemyecektir.
+    Bu veri "tiny" paketlerinde gönderilemyecektir.
 
 ***
 
@@ -119,8 +119,7 @@ Kullanmakta olduğumuz üretici bilgileri.
 | 2  | Quectel      |
 | 3  | Simcom       |
 
-
-    # Bu veri "tiny" paketlerinde gönderilemyecektir.
+    Bu veri "tiny" paketlerinde gönderilemyecektir.
 
 ***
 
@@ -146,8 +145,7 @@ Kullanmakta olduğumuz model bilgileri.
 | 3  | LE910          |
 | 4  | LE910S1-EAG    |
 
-
-    # Bu veri "tiny" paketlerinde gönderilemyecektir.
+    Bu veri "tiny" paketlerinde gönderilemyecektir.
 
 ***
 
@@ -163,7 +161,7 @@ GSM Modem seri numara bilgisi.
 | Değişken Birimi | -                              |
 | Örnek Veri      | 0000020273                     |
 
-    # Bu veri "tiny" paketlerinde gönderilemyecektir.
+    Bu veri "tiny" paketlerinde gönderilemyecektir.
 
 ***
 
@@ -185,13 +183,13 @@ ICCID (Integrated Circuit Card Identifier) olarak bilinen kod numarası GSM şeb
 | Değişken Birimi | -                                                    |
 | Örnek Veri      | 8990011901130266075                                  |
 
-    # Bu veri "tiny" paketlerinde gönderilemyecektir.
+    Bu veri "tiny" paketlerinde gönderilemyecektir.
 
 ***
 
 #### "IP" : Hat IP Adresi
 
-IP adresi modül şebekeye her bağlandığında operatör tarafından verilen (statik veya dinamik) adrestir. Sunucu ile yapılan tüm iletişimler (gelen veya giden veri) bu adres üzerinden yürütülmektedir. 
+IP adresi modül şebekeye her bağlandığında operatör tarafından verilen (statik veya dinamik) adrestir. Sunucu ile yapılan tüm iletişimler (gelen veya giden veri) bu adres üzerinden yürütülmektedir.
 
 |                 | Açıklama                                             |
 |-----------------|------------------------------------------------------|
@@ -226,7 +224,7 @@ Operatör code bilgileri xxxyy yapısında 2 bileşenden oluşmaktadır. İlk 3 
 
 ***
 
-#### "RSSI" : Operatör Sinyal Gücü 
+#### "RSSI" : Operatör Sinyal Gücü
 
 |                 | Açıklama                                             |
 |-----------------|------------------------------------------------------|
@@ -270,7 +268,7 @@ GSM IoT sistemler öncelikle şebeke bağlantısı kurar ve daha sonra 2G alt ya
 | Değişken Birimi | Saniye                                               |
 | Örnek Veri      | 32                                                   |
 
-    # Bu veri "tiny" paketlerinde gönderilemyecektir.
+    Bu veri "tiny" paketlerinde gönderilemyecektir.
 
 ***
 
