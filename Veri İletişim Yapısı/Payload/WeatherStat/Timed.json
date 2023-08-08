@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/akkoyun/Standartlar/main/Schema/WeatherStat.json",
     "Command": "STF:WeatherStat.Timed",
     "Device": {
         "Info": {
