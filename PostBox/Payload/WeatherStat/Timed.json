@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/akkoyun/Standartlar/main/Schema/WeatherStat.json",
+    "$schema": "https://raw.githubusercontent.com/akkoyun/Standartlar/main/PostBox/Schema/WeatherStat.json",
     "Command": "STF:WeatherStat.Timed",
     "Device": {
         "Info": {
@@ -37,7 +37,7 @@
         }
     },
     "Payload": {
-        "TimeStamp": "2022-03-23  14:18:28",
+        "TimeStamp": "2022-03-23 14:18:28",
         "WeatherStat": {
             "Location": {
                 "Latitude": 47.407614681869745,
@@ -46,7 +46,7 @@
             "Environment": {
                 "AT": 22.223,
                 "AH": 22.222,
-                "AP": 222.22,
+                "AP": 522.22,
                 "UV": 3,
                 "ST": [
                     22.22,

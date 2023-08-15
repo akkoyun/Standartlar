@@ -1,4 +1,4 @@
-# Veri İletişim Protokolü [01.02.00]
+# PostBox - Veri İletişim Protokolü [01.02.00]
 
 "STF Tarım" için **Temmuz 2022** ve sonrası geliştirilmekte olan tüm IoT cihazları için kullanılacak olan veri iletişim yapısı ve teknik detayları bu doküman içerisinde tanımlanmıştır. Diğer tüm **STF** projeleri ile birlikte yapılan planlama doğrultusunda tüm cihazların tek bir **EndPoint** üzerinden çalışması uygun görülmüştür. End point üzerinden hangi cihazın hangi şartlarda veri göndereceği ve backend üzerinden bu ayrımın nasıl yapılması gerektiği bu düküman üzerinden tanımlanmıştır.
 
