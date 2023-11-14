@@ -1,4 +1,4 @@
-MCC_ID,MCC_ISO,MCC_Country_Name,MCC_Country_Code,MCC_Country_lag_Image_URL,MNC_ID,MNC_Brand_Name,MNC_Operator_Name,MNC_Operator_Image_URL
+MCC_ID,MCC_ISO,MCC_Country_Name,MCC_Country_Code,MCC_Country_lag_Image_URL,MNC_ID,MNC_Brand_Name,MNC_Operator_Name
 0,Unknown,Unknown,,,0,Unknown,Unknown,
 289,GE-AB,Abkhazia,,,67,Aquafon,Aquafon JSC,
 289,GE-AB,Abkhazia,,,88,A-Mobile,A-Mobile LLSC,
