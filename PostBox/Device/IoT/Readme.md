@@ -8,20 +8,22 @@ IoT iletişim bloğuna ait cihaz tarafından gönderilen veri paketi aşağıdak
 "IoT": {
     "GSM": {
         "Module": {
-            "Firmware": "13.00.007",
-            "IMEI": "353613080341871",
             "Manufacturer": 1,
             "Model": 1,
-            "Serial": "0001767743"
+            "FW": "13.00.007",
+            "Serial": "0001767743",
+            "IMEI": "353613080341871"
         },
         "Operator": {
-            "Iccid": "8990011916180288985",
-            "IP": "192.168.0.1",
-            "Code": 28601,
+            "SIM_Type": 1,
+            "ICCID": "8990011916180288985",
+            "MCC": 286,
+            "MNC": 1,
             "RSSI": 10,
-            "ConnTime": 22,
+            "TAC": "855E",
             "LAC": "855E",
-            "Cell_ID": "BFAB"
+            "Cell_ID": "BFAB",
+            "ConnTime": 22
         }
     }
 }
@@ -33,26 +35,30 @@ IoT iletişim bloğuna ait cihaz tarafından gönderilen veri paketi aşağıdak
 
 | Değişken Adı  | Normal Paket      | Tiny Paket        |
 |---------------|:-----------------:|:-----------------:|
-| Module  |:white_check_mark: |:x:    |
-| Firmware  |:white_check_mark: |:x:    |
-| IMEI   |:white_check_mark: |:x:    |
-| Manufacturer |:white_check_mark: |:x:    |
-| Model   |:white_check_mark: |:x:    |
-| Serial  |:white_check_mark: |:x:    |
-| Operator  |:white_check_mark: |:white_check_mark: |
-| Iccid   |:white_check_mark: |:x:    |
-| IP   |:white_check_mark: |:white_check_mark: |
-| Code   |:white_check_mark: |:white_check_mark: |
-| RSSI   |:white_check_mark: |:white_check_mark: |
-| ConnTime  |:white_check_mark: |:x:             |
-| LAC   |:white_check_mark: |:white_check_mark: |
-| Cell_ID  |:white_check_mark: |:white_check_mark: |
+|               |                   |                   |
+| **Module**    |:white_check_mark: |:x:                |
+| Manufacturer  |:white_check_mark: |:x:                |
+| Model         |:white_check_mark: |:x:                |
+| FW            |:white_check_mark: |:x:                |
+| Serial        |:white_check_mark: |:x:                |
+| IMEI          |:white_check_mark: |:x:                |
+|               |                   |                   |
+| **Operator**  |:white_check_mark: |:white_check_mark: |
+| SIM_Type      |:white_check_mark: |:x:                |
+| ICCID         |:white_check_mark: |:x:                |
+| MCC           |:white_check_mark: |:white_check_mark: |
+| MNC           |:white_check_mark: |:white_check_mark: |
+| RSSI          |:white_check_mark: |:white_check_mark: |
+| TAC           |:white_check_mark: |:white_check_mark: |
+| LAC           |:white_check_mark: |:white_check_mark: |
+| Cell_ID       |:white_check_mark: |:white_check_mark: |
+| ConnTime      |:white_check_mark: |:x:                |
 
 ***
 
 ## GSM
 
-Cihazlarımız Telit firmasının üretmekte olduğu 2G altyapısına sahip haberleşme imkanı sunan GE910QUAD modemini barındırmaktadır. 2G şebeke kullanan en stabil modem olması nedeniyle bu model seçilmiştir ve 3G,LTE,5G bantlarını destekleyen xE910 ailesinin bir ürünüdür. Footprint değişikliği olmadan sadece modül değiştirerek bant seçimi yapılabilmektedir.
+Cihazlarımız Telit firmasının üretmekte olduğu modemleri barındırmaktadır. Modele göre değişiklik göstermekle birlikte 2G, 3G, LTE ve 5G şebekelerini destekleyebilen xE910 ailesi modemler kullanılmaktadır. 
 
     Yeni nesi cihazlarda farklı modemler kullanılabilecektir.
 
@@ -61,38 +67,6 @@ Cihazlarımız Telit firmasının üretmekte olduğu 2G altyapısına sahip habe
 ### Module
 
 Bu veri alanı GSM modeme ait fiziksel özellik değerlerini içermektedir.
-
-    Bu veri "tiny" paketlerinde gönderilemyecektir.
-
-***
-
-#### "Firmware" : GSM Modül Firmware
-
-GSM IoT iletişime ait modül içerisinde çalışmakta olan embeded firmware versiyon bilgisidir. Majör, minör ve hata düzeltme durumlarını içermektedir. İlk 2 basamak **majör yazılım versiyonu** sonraki 2 basamak ise **minör yazılım versiyonu** bilgisini vermektedir. Son 3 basamak ise hata düzeltme kod versiyonu bilgisini içermektedir.
-
-|                 | Açıklama                                             |
-|-----------------|------------------------------------------------------|
-| Değişken Adı    | Firmware                                             |
-| Değişken Tanımı | GSM **Firmware** (GE910 firmware versiyonu)          |
-| Değişken Tipi   | String (9 Byte)                                      |
-| Değişken Birimi | -                                                    |
-| Örnek Veri      | 13.00.007                                            |
-
-    Bu veri "tiny" paketlerinde gönderilemyecektir.
-
-***
-
-#### "IMEI" : GSM Modül IMEI Numarası
-
-GSM Modemleri fiziksel olarak kayıt altına alabilmek ve devlet regülasyonuları için anahtar oluşturması için her GSM modemde olması gereken tekil 15 byte bir veridir. Bu id sayesinde modem satınalma parti vs gibi bilgiler takip edilebilmektedir.
-
-|                 | Açıklama                                             |
-|-----------------|------------------------------------------------------|
-| Değişken Adı    | IMEI                                                 |
-| Değişken Tanımı | GSM Modem **IMEI** Number (IMEI)                     |
-| Değişken Tipi   | String (15 Byte)                                     |
-| Değişken Birimi | -                                                    |
-| Örnek Veri      | 353613080341053                                      |
 
     Bu veri "tiny" paketlerinde gönderilemyecektir.
 
@@ -149,6 +123,22 @@ Kullanmakta olduğumuz model bilgileri.
 
 ***
 
+#### "FW" : GSM Modül Firmware
+
+GSM IoT iletişime ait modül içerisinde çalışmakta olan embeded firmware versiyon bilgisidir. Majör, minör ve hata düzeltme durumlarını içermektedir. İlk 2 basamak **majör yazılım versiyonu** sonraki 2 basamak ise **minör yazılım versiyonu** bilgisini vermektedir. Son 3 basamak ise hata düzeltme kod versiyonu bilgisini içermektedir.
+
+|                 | Açıklama                   |
+|-----------------|----------------------------|
+| Değişken Adı    | FW                         |
+| Değişken Tanımı | GSM Modem **F**irm**w**are |
+| Değişken Tipi   | String (9 Byte)            |
+| Değişken Birimi | -                          |
+| Örnek Veri      | 13.00.007                  |
+
+    Bu veri "tiny" paketlerinde gönderilemyecektir.
+
+***
+
 #### "Serial" : GSM Modül Seri Numarası
 
 GSM Modem seri numara bilgisi.
@@ -165,9 +155,47 @@ GSM Modem seri numara bilgisi.
 
 ***
 
+#### "IMEI" : GSM Modül IMEI Numarası
+
+GSM Modemleri fiziksel olarak kayıt altına alabilmek ve devlet regülasyonuları için anahtar oluşturması için her GSM modemde olması gereken tekil 15 byte bir veridir. Bu id sayesinde modem satınalma parti vs gibi bilgiler takip edilebilmektedir.
+
+|                 | Açıklama                                             |
+|-----------------|------------------------------------------------------|
+| Değişken Adı    | IMEI                                                 |
+| Değişken Tanımı | GSM Modem **IMEI** Number (IMEI)                     |
+| Değişken Tipi   | String (15 Byte)                                     |
+| Değişken Birimi | -                                                    |
+| Örnek Veri      | 353613080341053                                      |
+
+    Bu veri "tiny" paketlerinde gönderilemyecektir.
+
+***
+
 ### Operator
 
 GSM IoT sistemler içerisinde bir diğer önemli kısımda bağlantı ve operatör değişkenleridir. Bu alan altında GSM modem ile SIM üzerinde belirtilen operatöre bağlantı yapıldıktan sonra elde edişen veriler yer almaktadır.
+
+***
+
+#### "SIM_Type" : SIM Tipi
+
+Sistem üzerinde kullanılan SIM kartın tipi bilgisidir. Bu bilgiye göre sistemde kullanılan SIM kartın fiziksel boyutu ve bağlantı tipi belirlenmektedir.
+
+|                 | Açıklama            |
+|-----------------|---------------------|
+| Değişken Adı    | SIM_Type            |
+| Değişken Tanımı | SIM Tipi            |
+| Değişken Tipi   | Integer             |
+| Değişken Birimi | -                   |
+| Örnek Veri      | 1                   |
+
+    Bu veri "tiny" paketlerinde gönderilemyecektir.
+
+| ID | Tip            |
+|----|----------------|
+| 0  | Unknown        |
+| 1  | Fiziksel SIM   |
+| 2  | eSIM           |
 
 ***
 
@@ -187,40 +215,35 @@ ICCID (Integrated Circuit Card Identifier) olarak bilinen kod numarası GSM şeb
 
 ***
 
-#### "IP" : Hat IP Adresi
+#### "MCC" : Operatör Ülke Kodu
 
-IP adresi modül şebekeye her bağlandığında operatör tarafından verilen (statik veya dinamik) adrestir. Sunucu ile yapılan tüm iletişimler (gelen veya giden veri) bu adres üzerinden yürütülmektedir.
+GSM operatörünün hangi ülke operatörü olduğu bilgisidir.
 
-|                 | Açıklama                                             |
-|-----------------|------------------------------------------------------|
-| Değişken Adı    | IP                                                   |
-| Değişken Tanımı | **I**nternet **P**rotokol Address                    |
-| Değişken Tipi   | String (15 byte max)                                 |
-| Değişken Birimi | -                                                    |
-| Örnek Veri      | 123.456.789.012                                      |
+|                 | Açıklama            |
+|-----------------|---------------------|
+| Değişken Adı    | MCC                 |
+| Değişken Tanımı | Operator Ülke Kodu  |
+| Değişken Tipi   | int                 |
+| Değişken Birimi | -                   |
+| Örnek Veri      | 28601               |
+
+Her operatör için dünya genelinde hazırlanmış bir kod [listesi](https://www.mcc-mnc.com) mevcuttur. Türkiye için operatör listesi aşağıdaki gibidir.
 
 ***
 
-#### "Code" : Operatör Kodu
+#### "MNC" : Operatör Ülke Kodu
 
-GSM in hangi operatöre bağlandığı bilgisidir.
+GSM operatörünün hangi ülke operatörü olduğu bilgisidir.
 
-|                 | Açıklama                                             |
-|-----------------|------------------------------------------------------|
-| Değişken Adı    | Code                                                 |
-| Değişken Tanımı | Operator **Code** (Operatör kodu)                    |
-| Değişken Tipi   | int                                                  |
-| Değişken Birimi | -                                                    |
-| Örnek Veri      | 28601                                                |
+|                 | Açıklama              |
+|-----------------|-----------------------|
+| Değişken Adı    | MNC                   |
+| Değişken Tanımı | Operator Ülke Sıra No |
+| Değişken Tipi   | int                   |
+| Değişken Birimi | -                     |
+| Örnek Veri      | 28601                 |
 
-Operatör code bilgileri xxxyy yapısında 2 bileşenden oluşmaktadır. İlk 3 rakam (286) ülke kodunu son 2 rakam (01) ise operatör kodunu belirtmektedir. Yurt dışı projelerinde bu alan ülke konunumun belirlenmesinde faydalı olacaktır. Her operatör için dünya genelinde hazırlanmış bir kod [listesi](https://www.mcc-mnc.com) mevcuttur. Türkiye için operatör listesi aşağıdaki gibidir.
-
-| Operator Code | Operator Adı |
-|---------------|--------------|
-| 28601         | Turkcell     |
-| 28602         | Vodafone     |
-| 28603         | Turk Telekom |
-| 28604         | Turk Telekom |
+Her operatör için dünya genelinde hazırlanmış bir kod [listesi](https://www.mcc-mnc.com) mevcuttur. Türkiye için operatör listesi aşağıdaki gibidir.
 
 ***
 

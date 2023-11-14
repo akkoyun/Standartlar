@@ -6,10 +6,10 @@ Proje içerisinde kullanılmakta olan donanıma (cihaz elektronik donanımı) ai
 "Device": {
     "Info": {
         "ID": "70A11D1D01000026",
-        "Hardware": "03.00.00",
-        "Firmware": "03.00.00",
-        "Temperature": 27.91,
-        "Humidity": 24.75
+        "HW": "03.00.00",
+        "FW": "03.00.00",
+        "PCBT": 27.91,
+        "PCBH": 24.75
     },
     "Power": {
         "Battery": {

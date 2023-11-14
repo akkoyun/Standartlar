@@ -4,8 +4,10 @@
         "Info": {
             "ID": "70A11D1D01000026",
             "Hardware": "03.00.00",
-            "Firmware": "03.00.00"
-        },
+            "Firmware": "03.00.00",
+            "PCBT": 27.91341,
+            "PCBH": 24.7523
+            },
         "Power": {
             "Battery": {
                 "IV": 4.17,
@@ -40,8 +42,6 @@
     },
     "Payload": {
         "TimeStamp": "2022-03-23  14:18:28",
-        "PCBT": 27.91341,
-        "PCBH": 24.7523,
         "Status": {
             "Status": "0FF0086E",
             "Publish": "0FF0086E",

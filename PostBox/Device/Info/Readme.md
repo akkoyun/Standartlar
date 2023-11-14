@@ -5,8 +5,10 @@ Cihaza ait tanımlayıcı bilgileri içermektedir.
 ```json
 "Info": {
     "ID": "70A11D1D01000026",
-    "Hardware": "03.00.00",
-    "Firmware": "03.00.00"
+    "HW": "03.00.00",
+    "FW": "03.00.00",
+    "PCBT": 27.91,
+    "PCBH": 24.75
 }
 ```
 
@@ -16,11 +18,11 @@ Cihaza ait tanımlayıcı bilgileri içermektedir.
 
 | Değişlen Adı  | Normal Paket      | Tiny Paket        |
 |---------------|:-----------------:|:-----------------:|
-| ID   |:white_check_mark: |:white_check_mark: |
-| Hardware  |:white_check_mark: |:x:    |
-| Firmware  |:white_check_mark: |:x:    |
-| Temperature |:white_check_mark: |:x:    |
-| Humidity  |:white_check_mark: |:x:    |
+| ID            |:white_check_mark: |:white_check_mark: |
+| Hardware      |:white_check_mark: |:x:                |
+| Firmware      |:white_check_mark: |:x:                |
+| Temperature   |:white_check_mark: |:white_check_mark: |
+| Humidity      |:white_check_mark: |:white_check_mark: |
 
 ***
 
@@ -36,28 +38,28 @@ Bu veriler okunduğu zaman HEX formatında okunmaktadır onluk sistemede çevril
 
 ***
 
-### “Hardware" : Donanım Versiyonu
+### “HW" : Donanım Versiyonu
 
 Cihazın donanım tarafına ait tanımlayıcı versiyon bildirimidir. Majör ve minör versiyon yanı sıra (donanım versiyonu içerdiği modüllerde yer alan değişikliklere göre şekillenmektedir) üretim parti numarasını içermektedir. İlk 2 basamak **majör donanım versiyonu** sonraki 2 basamak ise **minör donanım versiyonu** bilgisini vermektedir. Son 2 basamak ise üretim parti numarasını içermektedir. Tüm bu versiyon yapısı GIT reposu üzerindeki release kodlarına aittir ve detayları repo üzerinde açıklanmıştır. XX.XX.XX yapısı şeklinde 8 byte string olarak gönderilmektedir (hep aynı uzunlukta).
 
     Bu veri "tiny" paketlerinde gönderilemyecektir.
 
 ```json
-"Hardware": "03.00.00"
+"HW": "03.00.00"
 ```
 
  Versiyon kodlama yapısı semantik kodlama sistemi üzerine kurgulanmıştır.
 
 ***
 
-### “Firmware" : Yazılım Versiyonu
+### “FW" : Yazılım Versiyonu
 
 Cihazın firmware tarafına ait tanımlayıcı versiyon bildirimidir. Majör, minör ve hata düzeltme durumlarını içermektedir. İlk 2 basamak **majör yazılım versiyonu** sonraki 2 basamak ise **minör yazılım versiyonu** bilgisini vermektedir. Son 2 basamak ise hata düzeltme kod versiyonu bilgisini içermektedir.
 
 	Bu veri "tiny" paketlerinde gönderilemyecektir.
 
 ```json
-"Firmware": "03.00.00"
+"FW": "03.00.00"
 ```
 
  Versiyon kodlama yapısı semantik kodlama sistemi üzerine kurgulanmıştır.

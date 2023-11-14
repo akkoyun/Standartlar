@@ -40,8 +40,8 @@ Tüm projeler ortak bir veri iletişim altyapısı içerisinde birleştirilmiş 
     "Device": {
         "Info": {
             "ID": "70A11D1D01000026",
-            "Hardware": "03.00.00",
-            "Firmware": "03.00.00"
+            "HW": "03.00.00",
+            "FW": "03.00.00"
         },
         "Power": {
             "Battery": {
@@ -50,30 +50,35 @@ Tüm projeler ortak bir veri iletişim altyapısı içerisinde birleştirilmiş 
                 "IB": 1300,
                 "IV": 4.17,
                 "SOC": 92.13,
-                "T": 0,
+                "T": 23.12,
                 "Charge": 3
             }
         },
         "IoT": {
             "GSM": {
                 "Module": {
-                    "Firmware": "13.00.007",
-                    "IMEI": "353613080341871",
                     "Manufacturer": 1,
                     "Model": 1,
-                    "Serial": "0001767743"
+                    "FW": "13.00.007",
+                    "Serial": "0001767743",
+                    "IMEI": "353613080341871"
                 },
                 "Operator": {
-                    "Iccid": "8990011916180288985",
-                    "Code": 28601,
+                    "SIM_Type": 1,
+                    "ICCID": "8990011916180288985",
+                    "MCC": 286,
+                    "MNC": 1,
                     "RSSI": 10,
+                    "TAC": "855E",
+                    "LAC": "855E",
+                    "Cell_ID": "BFAB",
                     "ConnTime": 22
                 }
             }
         }
     },
     "Payload": {
-        "TimeStamp": "2022-03-23  14:18:28",
+        "TimeStamp": "2022-03-23T14:18:28Z",
         "WeatherStat": {
             "Location": {
                 "Latitude": 47.407614681869745,

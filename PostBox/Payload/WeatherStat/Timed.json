@@ -37,7 +37,7 @@
         }
     },
     "Payload": {
-        "TimeStamp": "2022-03-23 14:18:28",
+        "TimeStamp": "2022-03-23T14:18:28Z",
         "WeatherStat": {
             "Location": {
                 "Latitude": 47.407614681869745,
