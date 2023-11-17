@@ -1,7 +1,9 @@
 Segment_ID,Description
 0,Unknown
-1,Power
+1,Device
+2,Power
 3,GSM
-4,Environment
-5,Wate
-6,Energy
+4,Location
+5,Environment
+6,Water
+7,Energy
