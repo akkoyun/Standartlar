@@ -2,6 +2,8 @@ Type_ID,Description,Variable,Unit,Segment
 0,Unknown,-,-,0
 1,PCB Temperature,PCB_T,C,1
 2,PCB Humidity,PCB_H,%,1
+3,Latitude,Latitude,Degree,1
+4,Longitude,Longitude,Degree,1
 1010,Battery Instant Voltage,B_IV,V,1
 1020,Battery Average Current,B_AC,mA,1
 1030,Battery State of Charge,B_SOC,%,1
@@ -14,8 +16,6 @@ Type_ID,Description,Variable,Unit,Segment
 3003,GSM Cell ID,Cell_ID,-,3
 3004,RSSI,RSSI,dBm,3
 3005,Connection Time,ConnTime,Sec,3
-3006,Latitude,Latitude,Degree,3
-3007,Longitude,Longitude,Degree,3
 4010,Air Temperature,AT,C,4
 4011,Air Temperature 2,AT2,C,4
 4012,Air Temperature 3,AT3,C,4
