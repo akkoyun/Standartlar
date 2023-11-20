@@ -2,13 +2,23 @@ Type_ID,Description,Variable,Unit,Segment
 0,Unknown,-,-,0
 1001,PCB Temperature,PCB_T,C,1
 1002,PCB Humidity,PCB_H,%,1
-2001,Battery Instant Voltage,B_IV,V,2
-2002,Battery Average Current,B_AC,mA,2
-2003,Battery State of Charge,B_SOC,%,2
-2004,Battery Temperature,B_T,C,2
-2005,Battery Full Capacity,B_FC,mAh,2
-2006,Battery Instant Capacity,B_IC,mAh,2
-2007,Battery Charge State,B_CS,-,2
+2011,Battery Instant Voltage,B_IV,V,2
+2012,Battery Average Voltage,B_AV,V,2
+2013,Battery Empty Voltage,B_EV,V,2
+2014,Battery Recover Voltage,B_RV,V,2
+2021,Battery Instant Current,B_IC,A,2
+2022,Battery Average Current,B_AC,A,2
+2031,Battery State of Charge,B_SOC,%,2
+2032,Battery Average State of Charge,B_SOCA,%,2
+2041,Battery Instant Capacity,B_IC,mAh,2
+2042,Battery Design Capacity,B_DC,mAh,2
+2043,Battery Full Capacity,B_FC,mAh,2
+2051,Battery Temperature,B_T,C,2
+2061,Battery Time to Empty,B_TTE,Min,2
+2062,Battery Time to Full,B_TTF,Min,2
+2071,Battery Cycle Count,B_CC,-,2
+2072,Battery Age,B_Age,Day,2
+2081,Battery Health,B_H,%,2
 3001,GSM TAC ID,TAC,-,3
 3002,GSM LAC ID,LAC,-,3
 3003,GSM Cell ID,Cell_ID,-,3
@@ -24,45 +34,13 @@ Type_ID,Description,Variable,Unit,Segment
 4008,Position Accuracy,P_Acc,m,4
 4009,Position Fix Type,Fix,-,4
 5010,Air Temperature,AT,C,5
-5011,Air Temperature 2,AT2,C,5
-5012,Air Temperature 3,AT3,C,5
-5013,Air Temperature 4,AT4,C,5
-5014,Air Temperature 5,AT5,C,5
 5020,Feel Temperature,AT_FL,C,5
-5021,Feel Temperature 2,AT2_FL,C,5
-5022,Feel Temperature 3,AT3_FL,C,5
-5023,Feel Temperature 4,AT4_FL,C,5
-5024,Feel Temperature 5,AT5_FL,C,5
 5030,Dew Point,AT_Dew,C,5
-5031,Dew Point 2,AT2_Dew,C,5
-5032,Dew Point 3,AT3_Dew,C,5
-5033,Dew Point 4,AT4_Dew,C,5
-5034,Dew Point 5,AT5_Dew,C,5
 5040,Air Humidity,AH,%,5
-5041,Air Humidity 2,AH2,%,5
-5042,Air Humidity 3,AH3,%,5
-5043,Air Humidity 4,AH4,%,5
-5044,Air Humidity 5,AH5,%,5
 5050,Air Pressure,AP,hPa,5
-5051,Air Pressure 2,AP2,hPa,5
-5052,Air Pressure 3,AP3,hPa,5
-5053,Air Pressure 4,AP4,hPa,5
-5054,Air Pressure 5,AP5,hPa,5
 5060,UV Index,UV,-,5
-5061,UV Index 2,UV2,-,5
-5062,UV Index 3,UV3,-,5
-5063,UV Index 4,UV4,-,5
-5064,UV Index 5,UV5,-,5
 5070,Visual Light,VL,Lux,5
-5071,Visual Light 2,VL2,Lux,5
-5072,Visual Light 3,VL3,Lux,5
-5073,Visual Light 4,VL4,Lux,5
-5074,Visual Light 5,VL5,Lux,5
 5080,Infrared Light,IL,Lux,5
-5081,Infrared Light 2,IL2,Lux,5
-5082,Infrared Light 3,IL3,Lux,5
-5083,Infrared Light 4,IL4,Lux,5
-5084,Infrared Light 5,IL5,Lux,5
 5090,Soil Temperature,ST,C,5
 5091,Soil Temperature 10 cm,ST0,C,5
 5092,Soil Temperature 20 cm,ST1,C,5
@@ -116,14 +94,31 @@ Type_ID,Description,Variable,Unit,Segment
 5140,Rain Tip Counter,R,-,5
 5150,Rain Accumulation,RA,mm,5
 5160,Wind Speed,WS,m/Sn,5
-5161,Wind Speed 1,WS1,m/Sn,5
-5162,Wind Speed 2,WS2,m/Sn,5
-5163,Wind Speed 3,WS3,m/Sn,5
+5161,Wind Speed Sensor 1,WS1,m/Sn,5
+5162,Wind Speed Sensor 2,WS2,m/Sn,5
+5163,Wind Speed Sensor 3,WS3,m/Sn,5
 5170,Wind Gust Speed,WGS,m/Sn,5
-5171,Wind Gust Speed 1,WGS1,m/Sn,5
-5172,Wind Gust Speed 2,WGS2,m/Sn,5
-5173,Wind Gust Speed 3,WGS3,m/Sn,5
+5171,Wind Gust Speed Sensor 1,WGS1,m/Sn,5
+5172,Wind Gust Speed Sensor 2,WGS2,m/Sn,5
+5173,Wind Gust Speed Sensor 3,WGS3,m/Sn,5
 5180,Wind Direction,WD,Degree,5
+5190,Wind Chill,WC,C,5
+5200,Heat Index,HI,C,5
+5210,Heat Stress Index,HSI,C,5
+5220,THSW Index,THSW,C,5
+5230,THW Index,THW,C,5
+5240,CO2,CO2,ppm,5
+5250,CO,CO,ppm,5
+5260,NO2,NO2,ppm,5
+5270,O3,O3,ppm,5
+5280,SO2,SO2,ppm,5
+5290,PM1,PM1,ug/m3,5
+5300,PM2.5,PM2.5,ug/m3,5
+5310,PM10,PM10,ug/m3,5
+5320,PM4,PM4,ug/m3,5
+5330,PM0.5,PM0.5,ug/m3,5
+5340,PM0.3,PM0.3,ug/m3,5
+5350,PM0.1,PM0.1,ug/m3,5
 6010,Water Pressure,WP,Bar,6
 6011,Water Pressure Instant,WP_I,Bar,6
 6012,Water Pressure Minimum,WP_MIN,Bar,6
