@@ -34,10 +34,15 @@ Type_ID,Description,Variable,Unit,Segment
 4008,Position Accuracy,P_Acc,m,4
 4009,Position Fix Type,Fix,-,4
 5010,Air Temperature,AT,C,5
+5019,Air Temperature Daily Average,AT_Daily,C,5
 5020,Feel Temperature,AT_FL,C,5
+5029,Feel Temperature Daily Average,AT_FL_Daily,C,5
 5030,Dew Point,AT_Dew,C,5
+5039,Dew Point Daily Average,AT_Dew_Daily,C,5
 5040,Air Humidity,AH,%,5
+5049,Air Humidity Daily Average,AH_Daily,%,5
 5050,Air Pressure,AP,hPa,5
+5059,Air Pressure Daily Average,AP_Daily,hPa,5
 5060,UV Index,UV,-,5
 5070,Visual Light,VL,Lux,5
 5080,Infrared Light,IL,Lux,5
