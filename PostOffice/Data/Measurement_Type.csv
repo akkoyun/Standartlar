@@ -19,6 +19,7 @@ Type_ID,Description,Variable,Unit,Segment
 2071,Battery Cycle Count,B_CC,-,2
 2072,Battery Age,B_Age,Day,2
 2081,Battery Health,B_H,%,2
+2090,Battery Charge Status,B_CS,-,2
 3001,GSM TAC ID,TAC,-,3
 3002,GSM LAC ID,LAC,-,3
 3003,GSM Cell ID,Cell_ID,-,3

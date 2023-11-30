@@ -40,6 +40,7 @@ Kodlar kullanım yerine göre değişiklikler göstermektedir.
 | Segment Kodu | Segment Tanımı | Segment Açıklaması |
 |:------------:|:--------------:|:-------------------|
 | P | **P**roduct | *Ürün segmentidir.* </br> Tanımlanmış bir amacı olan, çeşitli parçaların birleşimi oluşan bir ürün reçetesine tabi ürünlerin tamamı bu segment içerisinde yer almaktadır. Ürün kullanım hakları ve mülkiyeti müşteri ve/veya Ovoo ya ait olabilir. Ürün kullanım hakları devir sözleşmesi ile müşteriye devredilmemiş tüm ürünler Ovoo zimmetinde sayılmaktadır. Ürün içerisinde kullanılan modül, kablo, plastik veya metal ürünler yeni bir revizyona geçmesi durumunda ürün kodu da yeni bir revizyona geçmektedir. |
+| A | **A**ssembly | *Montaj ekipmanları segmentidir.* </br> Ürün reçetesinde yer alan ve montaj sırasında kullanılan tüm parçalar bu segment içerisinde yer almaktadır. Ürün kullanım hakları ve mülkiyeti müşteri ve/veya Ovoo ya ait olabilir. Ürün kullanım hakları devir sözleşmesi ile müşteriye devredilmemiş tüm ürünler Ovoo zimmetinde sayılmaktadır. |
 | B | **B**oard | *Elektronik modül segmentidir.* </br> Tasarımı (şematik ve PCB) Ovoo yapılmış tüm elektronik modüller bu segment içerisindedir. Modülün kullanım hakları kime ait olduğu önemsenmez. Modül kullanım hakları devir sözleşmesi ile müşteriye devredilmemiş tüm modüller Ovoo zimmetinde sayılmaktadır. |
 | C | **C**asting | *Plastik enjeksiyon segmentidir.* </br> Tasarım ve mülkiyetleri üretici firmaya aittir. Ovoo kod sistematiğinde ürün reçetesi çıkartılması tasarımlarım projelendirilmesi vb. uygulamalar için kodlandırılmaktadır. Tekil olarak her bir plastik enjeksiyon üretimi yapılan (tekli yada çoklu kalıp kullanılması gözetmeksizin) tüm parçalar bu segment içersinde yer almaktadır. Bu segmente ait parçaların tasarım dosyaları Ovoo kütüphanesinde yer almayabilir (STL ve/veya Step dosyaları Ovoo kütüphanesinde yer almaktadır). |
 | M | **M**etal | *Metal parça segmentidir.* </br> CNC, torna veya sac lazer kesim üretim teknikleri ile üretilen, hammaddesi demir, çelik, krom, bakır, alüminyum vb. maddelerden her türlü parça bu segmenttedir. Tasarım ve mülkiyeti tasarımcı firmaya (Ovoo ve/veya müşteri) aitdir. Ovoo kod sistematiğinde ürün reçetesi çıkartılması tasarımlarım projelendirilmesi vb. uygulamalar için kodlandırılmaktadır. Bu segmente ait parçaların tasarım dosyaları Ovoo kütüphanesinde yer almayabilir (STL ve/veya Step dosyaları Ovoo kütüphanesinde yer almaktadır). |
@@ -66,6 +67,23 @@ Kodlar kullanım yerine göre değişiklikler göstermektedir.
 | P8xx | Programlama | Geliştirilen B1xx segmenti işlemci kartlarının programlanması (ICSP, JTAG vb) için kullanılacak olan bilgisayar bağlantılı ve/veya kendi başına çalışabilen cihaz grubudur.|
 | P9xx | Test & Kontrol | Geliştirilen modül, kablo vb donanım için kullanılacak olan test, kontrol vb işlemleri gerçekleştirecek donanım grubudur. |
  
+#### A (Assembly) Segmenti Grup Kodları
+
+    Ürün geliştirme basamakları içerisinde yer alan ve üretimi firma tarafından 
+    yapılmayan her türlü parça ürünleri bu grup içerisinde yer almaktadır.
+    Bu modüller için planlanmış kategoriler aşağıda tanımlanmıştır.
+
+| Ana Grup Kodu | Grup Tanımı   | Grup Açıklaması                                                                                                          |
+|:-------------:|:-------------:|--------------------------------------------------------------------------------------------------------------------------|
+| A1xx          | Plastik Grubu | Ürün reçetesinde yer alan ve üretimi firma tarafından yapılmayan tüm plastik parçalar bu grup içerisinde yer almaktadır. |
+| A2xx          | --            | --                                                                                                                       |
+| A3xx          | --            | --                                                                                                                       |
+| A4xx          | --            | --                                                                                                                       |
+| A5xx          | --            | --                                                                                                                       |
+| A6xx          | --            | --                                                                                                                       |
+| A7xx          | Hortum        | Her çeşit hortum bu grup içerisinde yer almaktadır.                                                                      |
+| A8xx          | Kablo Bağı    | Kablo yönetimi için kullanılan her türlü malzemeden yapılmış ekipmanlar bu grup içerisinde yer almaktadır.               |
+| A9xx          | Diğer         | Kategorisi bulunmayan her türlü parça bu grup içerisinde yer almaktadır.                                                 |
  
 #### B (Board) Segmenti Grup Kodları
 
@@ -105,24 +123,23 @@ Kodlar kullanım yerine göre değişiklikler göstermektedir.
 | C8xx | -- | -- |
 | C9xx | Overmold       | Tasarımları yapılan her türlü modül, kablo vb. cihazların dış ortam yalıtımı (veya estetik) için gerçekleştirilen düşük basınç ve sıcaklık kullanılarak yapılan plastik kaplama yöntemi içeren tüm malzemeler bu grup içerisinde yer almaktadır. Tasarımlar ve kalıp kullanım hakları üretici firmaya aittir. |
 
-#### M (Metal) Segmenti Grup Kodları
+#### E Segmenti Grup Kodları
 
-    Ürün geliştirme basamakları içerisinde yer alan ve montaj sırasında kullanılan
-    ürün reçetesi içerisinde yer alan her türlü metal parça ürünleri bu grup
-    içerisinde yer almaktadır. Bu modüller için planlanmış kategoriler 
-    aşağıda tanımlanmıştır.
+    Proje içerisinde kullanılacak olan üretimi iç kaynaklı yapılmayan her türlü
+    elektrik malzemesi (switch, batarya vb) bu grup içerisinde yer almaktadır. 
+    Bu modüller için planlanmış kategoriler aşağıda tanımlanmıştır.
 
 | Ana Grup Kodu | Grup Tanımı | Grup Açıklaması |
 |:-------------:|:-----------:|-----------------|
-| M1xx          | -- | -- |
-| M2xx          | -- | -- |
-| M3xx          | -- | -- |
-| M4xx          | -- | -- |
-| M5xx          | -- | -- |
-| M6xx          | -- | -- |
-| M7xx          | -- | -- |
-| M8xx          | -- | -- |
-| M9xx          | Rekor | Ölçüsüne bakılmaksızın her türlü metal Rekor bu grup içerisindedir. |
+| E1xx | Batarya | Ürünler / modüller içerisinde kullanılan her türlü batarya (şarj edilebilir yada edilemez) voltaj seviyesine bakılmaksızın bu grup içerisinde yer almaktadır. |
+| E2xx | Solar Panel | Ürünler içerisinde kullanılan değişken ebat, voltaj veya güçte olan her tip solar panel bu grup içerisinde yer almaktadır. |
+| E3xx | RF Anten | Ürünler içerisinde kullanılmakta olan her çeşit (çubuk, PCB, sticker vb) ve her frekanstaki antenler bu grup içerisinde yer almaktadır. |
+| E4xx | Switch / Buton | Ürün içerisinde kullanılan her türlü anahtarlama işlemi yapan elemanların tamamı bu grup içerisinde yer almaktadır. |
+| E5xx | Basınç Sensörü | Her türlü analog yada dijital su basıncı ölçen sensörler bu grup içerisinde yer almaktadır. |
+| E6xx | İkaz | Ürünler içerisinde kullanılan her türlü İkaz veren parçalar bu grup içerisinde yer almaktadır. |
+| E7xx | -- | -- |
+| E8xx | Display | Ürünler içerisinde kullanılan her türlü Display (OLED, LCD vb.) veren parçalar bu grup içerisinde yer almaktadır. |
+| E9xx | Akım Trafosu | Ürünler içerisinde kullanılan her türlü Akım Trafosu (gerilim ve akım değerlerine bakılmaksızın) bu grup içerisinde yer almaktadır. |
 
 #### H (Hardware) Segmenti Grup Kodları
 
@@ -131,35 +148,36 @@ Kodlar kullanım yerine göre değişiklikler göstermektedir.
     yer almaktadır. 
     Bu modüller için planlanmış kategoriler aşağıda tanımlanmıştır.
 
-| Ana Grup Kodu | Grup Tanımı | Grup Açıklaması |
-|:-------------:|:-----------:|-----------------|
-| H1xx          | Vida        | Ölçüsüne bakılmaksızın tüm Vida'lar bu grup içerisindedir.   |
-| H2xx          | Cıvata      | Ölçüsüne bakılmaksızın tüm Cıvata'lar bu grup içerisindedir. |
-| H3xx          | Somun       | Ölçüsüne bakılmaksızın tüm Somun'lar bu grup içerisindedir.  |
-| H4xx          | Pul         | Ölçüsüne bakılmaksızın tüm Pul'lar bu grup içerisindedir.    |
-| H5xx          | Distans       | Ölçüsüne bakılmaksızın tüm Ayraç'lar bu grup içerisindedir.  |
-| H6xx          | Segman      | Ölçüsüne bakılmaksızın tüm Segman'lar bu grup içerisindedir.  |
-| H7xx          | Pim         | Ölçüsüne bakılmaksızın tüm Pim'ler bu grup içerisindedir.  |
-| H8xx          | Yay         | Ölçüsüne bakılmaksızın tüm Yay'lar bu grup içerisindedir.  |
-| H9xx          | Diğer | Montaj sırasında kullanılan Diğer parçalar bu grup içerisindedir. |
+| Ana Grup Kodu | Grup Tanımı | Grup Açıklaması                                                   |
+|:-------------:|:-----------:|-------------------------------------------------------------------|
+| H1xx          | Vida        | Ölçüsüne bakılmaksızın tüm Vida'lar bu grup içerisindedir.        |
+| H2xx          | Cıvata      | Ölçüsüne bakılmaksızın tüm Cıvata'lar bu grup içerisindedir.      |
+| H3xx          | Somun       | Ölçüsüne bakılmaksızın tüm Somun'lar bu grup içerisindedir.       |
+| H4xx          | Pul         | Ölçüsüne bakılmaksızın tüm Pul'lar bu grup içerisindedir.         |
+| H5xx          | Distans     | Ölçüsüne bakılmaksızın tüm Ayraç'lar bu grup içerisindedir.       |
+| H6xx          | Segman      | Ölçüsüne bakılmaksızın tüm Segman'lar bu grup içerisindedir.      |
+| H7xx          | Pim         | Ölçüsüne bakılmaksızın tüm Pim'ler bu grup içerisindedir.         |
+| H8xx          | Yay         | Ölçüsüne bakılmaksızın tüm Yay'lar bu grup içerisindedir.         |
+| H9xx          | Diğer       | Montaj sırasında kullanılan Diğer parçalar bu grup içerisindedir. |
 
-#### W (Wire) Segmenti Grup Kodları
+#### M (Metal) Segmenti Grup Kodları
 
-    Proje içerisinde kullanılacak olan her türlü elektrik iletim elemanları (kablo, 
-    kablo ağacı vb) bu grup içerisinde yer almaktadır. 
-    Bu modüller için planlanmış kategoriler aşağıda tanımlanmıştır.
+    Ürün geliştirme basamakları içerisinde yer alan ve montaj sırasında kullanılan
+    ürün reçetesi içerisinde yer alan her türlü metal parça ürünleri bu grup
+    içerisinde yer almaktadır. Bu modüller için planlanmış kategoriler 
+    aşağıda tanımlanmıştır.
 
-| Ana Grup Kodu | Grup Tanımı | Grup Açıklaması |
-|:-------------:|:-----------:|-----------------|
-| W1xx          | Sinyal      | Voltaj seviyesine bakılmaksızın tüm sinyal iletişim kabloları bu grup içerisindedir. Sensör vb modüllerin çalışması için gerekli olan (sadece bağlı modül enerjisi için) güç iletim hatlarını içerebilir. |
-| W2xx          | Güç         | Voltaj seviyesine bakılmaksızın tüm güç iletişim kabloları bu grup içerisindedir. Ana besleme hatları (batarya, adaptör vb.) gibi sadece güç hattı içeren kablolar. |
-| W3xx          | RF          | RF iletişim tipine bakılmaksızın her türlü anten iletişim kabloları bu grup içerisindedir. |
-| W4xx          | -- | -- |
-| W5xx          | -- | -- |
-| W6xx          | -- | -- |
-| W7xx          | -- | -- |
-| W8xx          | Konnektör | Kablo bağlanmadan kullanılan her türlü Konnektör bu grup içerisindedir. |
-| W9xx          | Ekipman | Kablolar için kullanılan her türlü Ekipman bu grup içerisindedir. |
+| Ana Grup Kodu | Grup Tanımı | Grup Açıklaması                                                                                       |
+|:-------------:|:-----------:|-------------------------------------------------------------------------------------------------------|
+| M1xx          | Lazer Kesim | Kalınlığı ve malzemesine bakılmaksızın lazer kesim ve büküm yapılmış tüm metaller bu grupta yer alır. |
+| M2xx          | --          | --                                                                                                    |
+| M3xx          | --          | --                                                                                                    |
+| M4xx          | Torna İşleme| --                                                                                                    |
+| M5xx          | --          | --                                                                                                    |
+| M6xx          | --          | --                                                                                                    |
+| M7xx          | Pim / Tel   | Ölçüsüne bakılmaksızın her ölçü ve malzemede pim bu grupta yer alır.                                  |
+| M8xx          | Mıknatıs    | Ölçüsüne bakılmaksızın her türlü mıknatıs bu grup içerisindedir.                                      |
+| M9xx          | Rekor       | Ölçüsüne bakılmaksızın her türlü metal Rekor bu grup içerisindedir.                                   |
 
 #### S Segmenti Grup Kodları
 
@@ -179,23 +197,23 @@ Kodlar kullanım yerine göre değişiklikler göstermektedir.
 | S8xx | -- | -- |
 | S9xx | -- | -- |
 
-#### E Segmenti Grup Kodları
+#### W (Wire) Segmenti Grup Kodları
 
-    Proje içerisinde kullanılacak olan üretimi iç kaynaklı yapılmayan her türlü
-    elektrik malzemesi (switch, batarya vb) bu grup içerisinde yer almaktadır. 
+    Proje içerisinde kullanılacak olan her türlü elektrik iletim elemanları (kablo, 
+    kablo ağacı vb) bu grup içerisinde yer almaktadır. 
     Bu modüller için planlanmış kategoriler aşağıda tanımlanmıştır.
 
 | Ana Grup Kodu | Grup Tanımı | Grup Açıklaması |
 |:-------------:|:-----------:|-----------------|
-| E1xx | Batarya | Ürünler / modüller içerisinde kullanılan her türlü batarya (şarj edilebilir yada edilemez) voltaj seviyesine bakılmaksızın bu grup içerisinde yer almaktadır. |
-| E2xx | Solar Panel | Ürünler içerisinde kullanılan değişken ebat, voltaj veya güçte olan her tip solar panel bu grup içerisinde yer almaktadır. |
-| E3xx | RF Anten | Ürünler içerisinde kullanılmakta olan her çeşit (çubuk, PCB, sticker vb) ve her frekanstaki antenler bu grup içerisinde yer almaktadır. |
-| E4xx | Switch / Buton | Ürün içerisinde kullanılan her türlü anahtarlama işlemi yapan elemanların tamamı bu grup içerisinde yer almaktadır. |
-| E5xx | Basınç Sensörü | Her türlü analog yada dijital su basıncı ölçen sensörler bu grup içerisinde yer almaktadır. |
-| E6xx | İkaz | Ürünler içerisinde kullanılan her türlü İkaz veren parçalar bu grup içerisinde yer almaktadır. |
-| E7xx | -- | -- |
-| E8xx | Display | Ürünler içerisinde kullanılan her türlü Display (OLED, LCD vb.) veren parçalar bu grup içerisinde yer almaktadır. |
-| E9xx | Akım Trafosu | Ürünler içerisinde kullanılan her türlü Akım Trafosu (gerilim ve akım değerlerine bakılmaksızın) bu grup içerisinde yer almaktadır. |
+| W1xx          | Sinyal      | Voltaj seviyesine bakılmaksızın tüm sinyal iletişim kabloları bu grup içerisindedir. Sensör vb modüllerin çalışması için gerekli olan (sadece bağlı modül enerjisi için) güç iletim hatlarını içerebilir. |
+| W2xx          | Güç         | Voltaj seviyesine bakılmaksızın tüm güç iletişim kabloları bu grup içerisindedir. Ana besleme hatları (batarya, adaptör vb.) gibi sadece güç hattı içeren kablolar. |
+| W3xx          | RF          | RF iletişim tipine bakılmaksızın her türlü anten iletişim kabloları bu grup içerisindedir. |
+| W4xx          | -- | -- |
+| W5xx          | -- | -- |
+| W6xx          | -- | -- |
+| W7xx          | -- | -- |
+| W8xx          | Konnektör | Kablo bağlanmadan kullanılan her türlü Konnektör bu grup içerisindedir. |
+| W9xx          | Ekipman | Kablolar için kullanılan her türlü Ekipman bu grup içerisindedir. |
 
 ---
 
