@@ -200,6 +200,7 @@ VRMS_R,Phase R RMS Voltage,V,7
 VRMS_S,Phase S RMS Voltage,V,7
 VRMS_T,Phase T RMS Voltage,V,7
 VRMS_A,RMS Voltage Average,V,7
+VRMS_IMB,Imbalance Voltage,V,7
 VRMS_MIN_R,Phase R RMS Voltage Minimum,V,7
 VRMS_MIN_S,Phase S RMS Voltage Minimum,V,7
 VRMS_MIN_T,Phase T RMS Voltage Minimum,V,7
