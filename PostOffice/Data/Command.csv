@@ -1,0 +1,8 @@
+Command_ID,Command,Description
+0,Unknown,Unknown Command
+1,Online,Device is Online
+2,Timed,Timed Data Update
+3,Alarm,Alarm Condition
+4,Interrupt,Interrupt Condition
+5,Offline,Device is Offline
+6,Configuration,Configuration Command

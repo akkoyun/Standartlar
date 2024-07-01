@@ -1,3 +1,6 @@
 Status_ID,Description
 0,Unknown
 1,Test Device
+2,Demo Device
+3,Production Device
+4,Retired Device

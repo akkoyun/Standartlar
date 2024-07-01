@@ -1,3 +1,2 @@
-Calibration_ID,Device_ID,Type_ID,Gain,Offset
-0,0,0,1,0
-1,A20000011D13BD70,5140,0.1611630240404766,0
+Calibration_ID,Device_ID,Variable_ID,Gain,Offset
+0,0,Unknown,1,0

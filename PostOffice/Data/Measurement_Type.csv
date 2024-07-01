@@ -1,339 +1,463 @@
-Type_ID,Description,Variable,Unit,Segment
-0,Unknown,-,-,0
-1001,PCB Temperature,PCB_T,C,1
-1002,PCB Humidity,PCB_H,%,1
-2011,Battery Instant Voltage,B_IV,V,2
-2012,Battery Average Voltage,B_AV,V,2
-2013,Battery Empty Voltage,B_EV,V,2
-2014,Battery Recover Voltage,B_RV,V,2
-2021,Battery Instant Current,B_IC,A,2
-2022,Battery Average Current,B_AC,A,2
-2031,Battery State of Charge,B_SOC,%,2
-2032,Battery Average State of Charge,B_SOCA,%,2
-2041,Battery Instant Capacity,B_IC,mAh,2
-2042,Battery Design Capacity,B_DC,mAh,2
-2043,Battery Full Capacity,B_FC,mAh,2
-2051,Battery Temperature,B_T,C,2
-2061,Battery Time to Empty,B_TTE,Min,2
-2062,Battery Time to Full,B_TTF,Min,2
-2071,Battery Cycle Count,B_CC,-,2
-2072,Battery Age,B_Age,Day,2
-2081,Battery Health,B_H,%,2
-2090,Battery Charge Status,B_CS,-,2
-3001,GSM TAC ID,TAC,-,3
-3002,GSM LAC ID,LAC,-,3
-3003,GSM Cell ID,Cell_ID,-,3
-3004,RSSI,RSSI,dBm,3
-3005,Connection Time,ConnTime,Sec,3
-4001,Latitude,Latitude,Degree,4
-4002,Longitude,Longitude,Degree,4
-4003,Altitude,Altitude,m,4
-4004,Speed,Speed,m/Sn,4
-4005,Heading,Head,Degree,4
-4006,Horizontal Accuracy,H_Acc,m,4
-4007,Vertical Accuracy,V_Acc,m,4
-4008,Position Accuracy,P_Acc,m,4
-4009,Position Fix Type,Fix,-,4
-5010,Air Temperature,AT,C,5
-5019,Air Temperature Daily Average,AT_Daily,C,5
-5020,Feel Temperature,AT_FL,C,5
-5029,Feel Temperature Daily Average,AT_FL_Daily,C,5
-5030,Dew Point,AT_Dew,C,5
-5039,Dew Point Daily Average,AT_Dew_Daily,C,5
-5040,Air Humidity,AH,%,5
-5049,Air Humidity Daily Average,AH_Daily,%,5
-5050,Air Pressure,AP,hPa,5
-5059,Air Pressure Daily Average,AP_Daily,hPa,5
-5060,UV Index,UV,-,5
-5070,Visual Light,VL,Lux,5
-5080,Infrared Light,IL,Lux,5
-5090,Soil Temperature,ST,C,5
-5091,Soil Temperature 10 cm,ST0,C,5
-5092,Soil Temperature 20 cm,ST1,C,5
-5093,Soil Temperature 30 cm,ST2,C,5
-5094,Soil Temperature 40 cm,ST3,C,5
-5095,Soil Temperature 50 cm,ST4,C,5
-5096,Soil Temperature 60 cm,ST5,C,5
-5097,Soil Temperature 70 cm,ST6,C,5
-5098,Soil Temperature 80 cm,ST7,C,5
-5099,Soil Temperature 90 cm,ST8,C,5
-5100,Soil Moisture,SM,%,5
-5101,Soil Moisture 10 cm,SM0,%,5
-5102,Soil Moisture 20 cm,SM1,%,5
-5103,Soil Moisture 30 cm,SM2,%,5
-5104,Soil Moisture 40 cm,SM3,%,5
-5105,Soil Moisture 50 cm,SM4,%,5
-5106,Soil Moisture 60 cm,SM5,%,5
-5107,Soil Moisture 70 cm,SM6,%,5
-5108,Soil Moisture 80 cm,SM7,%,5
-5109,Soil Moisture 90 cm,SM8,%,5
-5110,Soil EC,SEC,ms/cm,5
-5111,Soil EC 10 cm,SEC0,ms/cm,5
-5112,Soil EC 20 cm,SEC1,ms/cm,5
-5113,Soil EC 30 cm,SEC2,ms/cm,5
-5114,Soil EC 40 cm,SEC3,ms/cm,5
-5115,Soil EC 50 cm,SEC4,ms/cm,5
-5116,Soil EC 60 cm,SEC5,ms/cm,5
-5117,Soil EC 70 cm,SEC6,ms/cm,5
-5118,Soil EC 80 cm,SEC7,ms/cm,5
-5119,Soil EC 90 cm,SEC8,ms/cm,5
-5120,Soil Salinity,SS,ppm,5
-5121,Soil Salinity 10 cm,SS0,ppm,5
-5122,Soil Salinity 20 cm,SS1,ppm,5
-5123,Soil Salinity 30 cm,SS2,ppm,5
-5124,Soil Salinity 40 cm,SS3,ppm,5
-5125,Soil Salinity 50 cm,SS4,ppm,5
-5126,Soil Salinity 60 cm,SS5,ppm,5
-5127,Soil Salinity 70 cm,SS6,ppm,5
-5128,Soil Salinity 80 cm,SS7,ppm,5
-5129,Soil Salinity 90 cm,SS8,ppm,5
-5130,Soil Water Potential,SWP,kPa,5
-5131,Soil Water Potential 10 cm,SWP0,kPa,5
-5132,Soil Water Potential 20 cm,SWP1,kPa,5
-5133,Soil Water Potential 30 cm,SWP2,kPa,5
-5134,Soil Water Potential 40 cm,SWP3,kPa,5
-5135,Soil Water Potential 50 cm,SWP4,kPa,5
-5136,Soil Water Potential 60 cm,SWP5,kPa,5
-5137,Soil Water Potential 70 cm,SWP6,kPa,5
-5138,Soil Water Potential 80 cm,SWP7,kPa,5
-5139,Soil Water Potential 90 cm,SWP8,kPa,5
-5140,Rain Tip Counter,R,-,5
-5150,Rain Accumulation,RA,mm,5
-5160,Wind Speed,WS,m/Sn,5
-5161,Wind Speed Sensor 1,WS1,m/Sn,5
-5162,Wind Speed Sensor 2,WS2,m/Sn,5
-5163,Wind Speed Sensor 3,WS3,m/Sn,5
-5170,Wind Gust Speed,WGS,m/Sn,5
-5171,Wind Gust Speed Sensor 1,WGS1,m/Sn,5
-5172,Wind Gust Speed Sensor 2,WGS2,m/Sn,5
-5173,Wind Gust Speed Sensor 3,WGS3,m/Sn,5
-5180,Wind Direction,WD,Degree,5
-5190,Wind Chill,WC,C,5
-5200,Heat Index,HI,C,5
-5210,Heat Stress Index,HSI,C,5
-5220,THSW Index,THSW,C,5
-5230,THW Index,THW,C,5
-5240,CO2,CO2,ppm,5
-5250,CO,CO,ppm,5
-5260,NO2,NO2,ppm,5
-5270,O3,O3,ppm,5
-5280,SO2,SO2,ppm,5
-5290,PM1,PM1,ug/m3,5
-5300,PM2.5,PM2.5,ug/m3,5
-5310,PM10,PM10,ug/m3,5
-5320,PM4,PM4,ug/m3,5
-5330,PM0.5,PM0.5,ug/m3,5
-5340,PM0.3,PM0.3,ug/m3,5
-5350,PM0.1,PM0.1,ug/m3,5
-6010,Water Pressure,WP,Bar,6
-6011,Water Pressure Instant,WP_I,Bar,6
-6012,Water Pressure Minimum,WP_MIN,Bar,6
-6013,Water Pressure Maximum,WP_MAX,Bar,6
-6014,Water Pressure Average,WP_Avg,Bar,6
-6020,Water Pressure 2,WP2,Bar,6
-6021,Water Pressure 2 Instant,WP2_I,Bar,6
-6022,Water Pressure 2 Minimum,WP2_MIN,Bar,6
-6023,Water Pressure 2 Maximum,WP2_MAX,Bar,6
-6024,Water Pressure 2 Average,WP2_Avg,Bar,6
-6030,Water Pressure 3,WP3,Bar,6
-6031,Water Pressure 3 Instant,WP3_I,Bar,6
-6032,Water Pressure 3 Minimum,WP3_MIN,Bar,6
-6033,Water Pressure 3 Maximum,WP3_MAX,Bar,6
-6034,Water Pressure 3 Average,WP3_Avg,Bar,6
-6040,Water Pressure 4,WP4,Bar,6
-6041,Water Pressure 4 Instant,WP4_I,Bar,6
-6042,Water Pressure 4 Minimum,WP4_MIN,Bar,6
-6043,Water Pressure 4 Maximum,WP4_MAX,Bar,6
-6044,Water Pressure 4 Average,WP4_Avg,Bar,6
-6050,Water Pressure 5,WP5,Bar,6
-6051,Water Pressure 5 Instant,WP5_I,Bar,6
-6052,Water Pressure 5 Minimum,WP5_MIN,Bar,6
-6053,Water Pressure 5 Maximum,WP5_MAX,Bar,6
-6054,Water Pressure 5 Average,WP5_Avg,Bar,6
-6060,Water Pressure IN,WPIN,Bar,6
-6061,Water Pressure IN Instant,WPIN_I,Bar,6
-6062,Water Pressure IN Minimum,WPIN_MIN,Bar,6
-6063,Water Pressure IN Maximum,WPIN_MAX,Bar,6
-6064,Water Pressure IN Average,WPIN_Avg,Bar,6
-6070,Water Pressure OUT,WPOUT,Bar,6
-6071,Water Pressure OUT Instant,WPOUT_I,Bar,6
-6072,Water Pressure OUT Minimum,WPOUT_MIN,Bar,6
-6073,Water Pressure OUT Maximum,WPOUT_MAX,Bar,6
-6074,Water Pressure OUT Average,WPOUT_Avg,Bar,6
-6080,Water Flow IN,WFIN,m3/h,6
-6090,Water Flow OUT,WFOUT,m3/h,6
-6100,Water Temperature IN,WTIN,C,6
-6110,Water Temperature OUT,WTOUT,C,6
-6120,Water Level,WL,m,6
-6900,Water Pressure Data Count,WP_CNT,-,6
-6901,Water Pressure 2 Data Count,WP2_CNT,-,6
-6902,Water Pressure 3 Data Count,WP3_CNT,-,6
-6903,Water Pressure 4 Data Count,WP4_CNT,-,6
-6904,Water Pressure 5 Data Count,WP5_CNT,-,6
-6905,Water Pressure IN Data Count,WPIN_CNT,-,6
-6906,Water Pressure OUT Data Count,WPOUT_CNT,-,6
-6907,Water Flow IN Data Count,WFIN_CNT,-,6
-6908,Water Flow OUT Data Count,WFOUT_CNT,-,6
-6909,Water Temperature IN Data Count,WTIN_CNT,-,6
-6910,Water Temperature OUT Data Count,WTOUT_CNT,-,6
-6911,Water Level Data Count,WL_CNT,-,6
-7010,Instant Voltage,V,V,7
-7011,Phase R Instant Voltage,V_R,V,7
-7012,Phase S Instant Voltage,V_S,V,7
-7013,Phase T Instant Voltage,V_T,V,7
-7014,Instant Voltage Average,V_A,V,7
-7020,RMS Voltage,VRMS,V,7
-7021,Phase R RMS Voltage,VRMS_R,V,7
-7022,Phase S RMS Voltage,VRMS_S,V,7
-7023,Phase T RMS Voltage,VRMS_T,V,7
-7024,RMS Voltage Average,VRMS_A,V,7
-7030,Fundamental Voltage,VFun,V,7
-7031,Phase R Fundamental Voltage,VFun_R,V,7
-7032,Phase S Fundamental Voltage,VFun_S,V,7
-7033,Phase T Fundamental Voltage,VFun_T,V,7
-7034,Fundamental Voltage Average,VFun_A,V,7
-7040,Harmonic Voltage,VHarm,V,7
-7041,Phase R Harmonic Voltage,VHarm_R,V,7
-7042,Phase S Harmonic Voltage,VHarm_S,V,7
-7043,Phase T Harmonic Voltage,VHarm_T,V,7
-7044,Harmonic Voltage Average,VHarm_A,V,7
-7050,Instant Current,I,A,7
-7051,Phase R Instant Current,I_R,A,7
-7052,Phase S Instant Current,I_S,A,7
-7053,Phase T Instant Current,I_T,A,7
-7054,Instant Current Average,I_A,A,7
-7060,Peak Current,IP,A,7
-7061,Phase R Peak Current,IP_R,A,7
-7062,Phase S Peak Current,IP_S,A,7
-7063,Phase T Peak Current,IP_T,A,7
-7064,Peak Current Average,IP_A,A,7
-7070,RMS Current,IRMS,A,7
-7071,Phase R RMS Current,IRMS_R,A,7
-7072,Phase S RMS Current,IRMS_S,A,7
-7073,Phase T RMS Current,IRMS_T,A,7
-7074,RMS Current Average,IRMS_A,A,7
-7080,Fundamental Current,IFun,A,7
-7081,Phase R Fundamental Current,IFun_R,A,7
-7082,Phase S Fundamental Current,IFun_S,A,7
-7083,Phase T Fundamental Current,IFun_T,A,7
-7084,Fundamental Current Average,IFun_A,A,7
-7090,Harmonic Current,IHarm,A,7
-7091,Phase R Harmonic Current,IHarm_R,A,7
-7092,Phase S Harmonic Current,IHarm_S,A,7
-7093,Phase T Harmonic Current,IHarm_T,A,7
-7094,Harmonic Current Average,IHarm_A,A,7
-7100,Active Power,P,W,7
-7101,Phase R Active Power,P_R,W,7
-7102,Phase S Active Power,P_S,W,7
-7103,Phase T Active Power,P_T,W,7
-7104,Active Power Average,P_A,W,7
-7110,Reactive Power,Q,Var,7
-7111,Phase R Reactive Power,Q_R,Var,7
-7112,Phase S Reactive Power,Q_S,Var,7
-7113,Phase T Reactive Power,Q_T,Var,7
-7114,Reactive Power Average,Q_A,Var,7
-7120,Apparent Power,S,VA,7
-7121,Phase R Apparent Power,S_R,VA,7
-7122,Phase S Apparent Power,S_S,VA,7
-7123,Phase T Apparent Power,S_T,VA,7
-7124,Apparent Power Average,S_A,VA,7
-7130,Fundamental Reactive Power,QFun,Var,7
-7131,Phase R Fundamental Reactive Power,QFun_R,Var,7
-7132,Phase S Fundamental Reactive Power,QFun_S,Var,7
-7133,Phase T Fundamental Reactive Power,QFun_T,Var,7
-7134,Fundamental Reactive Power Average,QFun_A,Var,7
-7140,Harmonic Reactive Power,QHarm,Var,7
-7141,Phase R Harmonic Reactive Power,QHarm_R,Var,7
-7142,Phase S Harmonic Reactive Power,QHarm_S,Var,7
-7143,Phase T Harmonic Reactive Power,QHarm_T,Var,7
-7144,Harmonic Reactive Power Average,QHarm_A,Var,7
-7150,Fundamental Power,PFun,-,7
-7151,Phase R Fundamental Power,PFun_R,-,7
-7152,Phase S Fundamental Power,PFun_S,-,7
-7153,Phase T Fundamental Power,PFun_T,-,7
-7154,Fundamental Power Average,PFun_A,-,7
-7160,Harmonic Power,PHarm,-,7
-7161,Phase R Harmonic Power,PHarm_R,-,7
-7162,Phase S Harmonic Power,PHarm_S,-,7
-7163,Phase T Harmonic Power,PHarm_T,-,7
-7164,Harmonic Power Average,PHarm_A,-,7
-7170,Fundamental Volt Ampere,FunVA,VA,7
-7171,Phase R Fundamental Volt Ampere,FunVA_R,VA,7
-7172,Phase S Fundamental Volt Ampere,FunVA_S,VA,7
-7173,Phase T Fundamental Volt Ampere,FunVA_T,VA,7
-7174,Fundamental Volt Ampere Average,FunVA_A,VA,7
-7180,Power Factor,PF,-,7
-7181,Phase R Power Factor,PF_R,-,7
-7182,Phase S Power Factor,PF_S,-,7
-7183,Phase T Power Factor,PF_T,-,7
-7184,Power Factor Average,PF_A,-,7
-7190,Frequency,FQ,Hz,7
-7200,Active Energy,AE,kWh,7
-7201,Phase R Active Energy,AE_R,kWh,7
-7202,Phase S Active Energy,AE_S,kWh,7
-7203,Phase T Active Energy,AE_T,kWh,7
-7204,Active Energy Average,AE_A,kWh,7
-7210,Reactive Energy Leading,RE_L,kVARh,7
-7211,Phase R Reactive Energy Leading,RE_L_R,kVARh,7
-7212,Phase S Reactive Energy Leading,RE_L_S,kVARh,7
-7213,Phase T Reactive Energy Leading,RE_L_T,kVARh,7
-7214,Reactive Energy Leading Average,RE_L_A,kVARh,7
-7215,Total Leading Reactive Energy,RE_L_TOT,kVARh,7
-7220,Reactive Energy Lagging,RE_G,kVARh,7
-7221,Phase R Reactive Energy Lagging,RE_G_R,kVARh,7
-7222,Phase S Reactive Energy Lagging,RE_G_S,kVARh,7
-7223,Phase T Reactive Energy Lagging,RE_G_T,kVARh,7
-7224,Reactive Energy Lagging Average,RE_G_A,kVARh,7
-7225,Total Lagging Reactive Energy,RE_G_TOT,kVARh,7
-7230,Chip Temperature,Max78630_T,C,7
-7900,Actual samples in previous accumulation interval,MAX_DIVISOR,-,7
-7901,High-rate sample counter,MAX_CYCLE,-,7
-7902,Low-rate sample counter,MAX_FRAME,-,7
-7903,Alarn and device status,MAX_STATUS,-,7
-7904,Alarm/status mask for AL1 output pin,MAX_MASK1,-,7
-7905,Alarm/status mask for AL2 output pin,MAX_MASK2,-,7
-7906,Alarm/status mask for AL3 output pin,MAX_MASK3,-,7
-7907,Alarm/status mask for AL4 output pin,MAX_MASK4,-,7
-7908,Alarm/status bits to hold until cleared by host,MAX_STICKY,-,7
-7909,State of DIO pins,MAX_DIO_STATE,-,7
-7910,Direction of DIO pins,MAX_DIO_DIR,-,7
-7911,Polarity of DIO pins,MAX_DIO_POL,-,7
-7912,Number of calibration cycles to average,MAX_CALCYCS,-,7
-7913,Current input HPF coefficient,MAX_HPF_COEF_I,-,7
-7914,Voltage input HPF coefficient,MAX_HPF_COEF_V,-,7
-7915,Phase compensation for AV1 input,MAX_PHASECOMP1,-,7
-7916,Phase compensation for AV2 input,MAX_PHASECOMP2,-,7
-7917,Phase compensation for AV3 input,MAX_PHASECOMP3,-,7
-7918,Baud rate for UART interface,MAX_BAUD,-,7
-7919,Current gain calibration,MAX_I1_GAIN,-,7
-7920,Current offset calibration,MAX_I1_OFFSET,-,7
-7921,Current gain calibration,MAX_I2_GAIN,-,7
-7922,Current offset calibration,MAX_I2_OFFSET,-,7
-7923,Current gain calibration,MAX_I3_GAIN,-,7
-7924,Current offset calibration,MAX_I3_OFFSET,-,7
-7925,Voltage gain calibration,MAX_V1_GAIN,-,7
-7926,Voltage offset calibration,MAX_V1_OFFSET,-,7
-7927,Voltage gain calibration,MAX_V2_GAIN,-,7
-7928,Voltage offset calibration,MAX_V2_OFFSET,-,7
-7929,Voltage gain calibration,MAX_V3_GAIN,-,7
-7930,Voltage offset calibration,MAX_V3_OFFSET,-,7
-7931,Temperature slope calibration,MAX_T_GAIN,-,7
-7932,Temperature offset calibration,MAX_T_OFFSET,-,7
-7933,Voltage imbalance alarm limit,MAX_VIMBAL,-,7
-7934,Current imbalance alarm limit,MAX_IIMBAL,-,7
-7935,Voltage lower alarm limit,MAX_VRMS_MIN,-,7
-7936,Voltage upper alarm limit,MAX_VRMS_MAX,-,7
-7937,RMS voltage sag threshold,MAX_VSAG_LIM,-,7
-7938,RMS current dynamic offset adjust,MAX_IARMS_OFF,-,7
-7939,RMS current dynamic offset adjust,MAX_IBRMS_OFF,-,7
-7940,RMS current dynamic offset adjust,MAX_ICRMS_OFF,-,7
-7941,Current upper alarm limit,MAX_IRMS_MAX,-,7
-7942,Current scale register,MAX_IFSCALE,-,7
-7943,Voltage scale register,MAX_VFSCALE,-,7
-7944,Temperature alarm lower limit,MAX_T_MIN,-,7
-7945,Temperature alarm upper limit,MAX_T_MAX,-,7
-7946,Frequency alarm lower limit,MAX_F_MIN,-,7
-7947,Frequency alarm upper limit,MAX_F_MAX,-,7
-7948,Energy bucket low word,MAX_BUCKET_L,-,7
-7949,Energy bucket high word,MAX_BUCKET_H,-,7
-7999,System status register,MAX_SYSSTAT,-,7
+Variable_ID,Variable_Description,Variable_Unit,Segment_ID
+STATUS,Status Register,-,1
+PUBLISH,Publish Register,-,1
+STOP,Stop Register,-,1
+B_IV,Battery Instant Voltage,V,2
+B_AV,Battery Average Voltage,V,2
+B_EV,Battery Empty Voltage,V,2
+B_RV,Battery Recover Voltage,V,2
+B_IC,Battery Instant Current,A,2
+B_AC,Battery Average Current,A,2
+B_SOC,Battery State of Charge,%,2
+B_SOCA,Battery Average State of Charge,%,2
+B_IC,Battery Instant Capacity,mAh,2
+B_DC,Battery Design Capacity,mAh,2
+B_FC,Battery Full Capacity,mAh,2
+B_T,Battery Temperature,C,2
+B_TTE,Battery Time to Empty,Min,2
+B_TTF,Battery Time to Full,Min,2
+B_CC,Battery Cycle Count,-,2
+B_Age,Battery Age,Day,2
+B_H,Battery Health,%,2
+B_CS,Battery Charge Status,-,2
+MCC,GSM Operator Country Code,-,3
+MNC,GSM Operator Network Code,-,3
+TAC,GSM TAC ID,-,3
+LAC,GSM LAC ID,-,3
+Cell_ID,GSM Cell ID,-,3
+RSSI,RSSI,dBm,3
+ConnTime,Connection Time,Sec,3
+WDS,Connection Type,-,3
+Latitude,Latitude,Degree,4
+Longitude,Longitude,Degree,4
+Altitude,Altitude,m,4
+Speed,Speed,m/Sn,4
+Head,Heading,Degree,4
+H_Acc,Horizontal Accuracy,m,4
+V_Acc,Vertical Accuracy,m,4
+P_Acc,Position Accuracy,m,4
+Fix,Position Fix Type,-,4
+PCB_T,PCB Temperature,C,5
+PCB_H,PCB Humidity,%,5
+AT,Air Temperature,C,5
+AT_Daily,Air Temperature Daily Average,C,5
+AT_FL,Feel Temperature,C,5
+AT_FL_Daily,Feel Temperature Daily Average,C,5
+AT_Dew,Dew Point,C,5
+AT_Dew_Daily,Dew Point Daily Average,C,5
+AH,Air Humidity,%,5
+AH_Daily,Air Humidity Daily Average,%,5
+AP,Air Pressure,hPa,5
+AP_Daily,Air Pressure Daily Average,hPa,5
+UV,UV Index,-,5
+VL,Visual Light,Lux,5
+IL,Infrared Light,Lux,5
+ST,Soil Temperature,C,5
+ST0,Soil Temperature 10 cm,C,5
+ST1,Soil Temperature 20 cm,C,5
+ST2,Soil Temperature 30 cm,C,5
+ST3,Soil Temperature 40 cm,C,5
+ST4,Soil Temperature 50 cm,C,5
+ST5,Soil Temperature 60 cm,C,5
+ST6,Soil Temperature 70 cm,C,5
+ST7,Soil Temperature 80 cm,C,5
+ST8,Soil Temperature 90 cm,C,5
+SM,Soil Moisture,%,5
+SM0,Soil Moisture 10 cm,%,5
+SM1,Soil Moisture 20 cm,%,5
+SM2,Soil Moisture 30 cm,%,5
+SM3,Soil Moisture 40 cm,%,5
+SM4,Soil Moisture 50 cm,%,5
+SM5,Soil Moisture 60 cm,%,5
+SM6,Soil Moisture 70 cm,%,5
+SM7,Soil Moisture 80 cm,%,5
+SM8,Soil Moisture 90 cm,%,5
+SEC,Soil EC,ms/cm,5
+SEC0,Soil EC 10 cm,ms/cm,5
+SEC1,Soil EC 20 cm,ms/cm,5
+SEC2,Soil EC 30 cm,ms/cm,5
+SEC3,Soil EC 40 cm,ms/cm,5
+SEC4,Soil EC 50 cm,ms/cm,5
+SEC5,Soil EC 60 cm,ms/cm,5
+SEC6,Soil EC 70 cm,ms/cm,5
+SEC7,Soil EC 80 cm,ms/cm,5
+SEC8,Soil EC 90 cm,ms/cm,5
+SS,Soil Salinity,ppm,5
+SS0,Soil Salinity 10 cm,ppm,5
+SS1,Soil Salinity 20 cm,ppm,5
+SS2,Soil Salinity 30 cm,ppm,5
+SS3,Soil Salinity 40 cm,ppm,5
+SS4,Soil Salinity 50 cm,ppm,5
+SS5,Soil Salinity 60 cm,ppm,5
+SS6,Soil Salinity 70 cm,ppm,5
+SS7,Soil Salinity 80 cm,ppm,5
+SS8,Soil Salinity 90 cm,ppm,5
+SWP,Soil Water Potential,kPa,5
+SWP0,Soil Water Potential 10 cm,kPa,5
+SWP1,Soil Water Potential 20 cm,kPa,5
+SWP2,Soil Water Potential 30 cm,kPa,5
+SWP3,Soil Water Potential 40 cm,kPa,5
+SWP4,Soil Water Potential 50 cm,kPa,5
+SWP5,Soil Water Potential 60 cm,kPa,5
+SWP6,Soil Water Potential 70 cm,kPa,5
+SWP7,Soil Water Potential 80 cm,kPa,5
+SWP8,Soil Water Potential 90 cm,kPa,5
+R,Rain Tip Counter,-,5
+RA,Rain Accumulation,mm,5
+WS,Wind Speed,m/Sn,5
+WS1,Wind Speed Sensor 1,m/Sn,5
+WS2,Wind Speed Sensor 2,m/Sn,5
+WS3,Wind Speed Sensor 3,m/Sn,5
+WGS,Wind Gust Speed,m/Sn,5
+WGS1,Wind Gust Speed Sensor 1,m/Sn,5
+WGS2,Wind Gust Speed Sensor 2,m/Sn,5
+WGS3,Wind Gust Speed Sensor 3,m/Sn,5
+WD,Wind Direction,Degree,5
+WC,Wind Chill,C,5
+HI,Heat Index,C,5
+HSI,Heat Stress Index,C,5
+THSW,THSW Index,C,5
+THW,THW Index,C,5
+CO2,CO2,ppm,5
+CO,CO,ppm,5
+NO2,NO2,ppm,5
+O3,O3,ppm,5
+SO2,SO2,ppm,5
+PM1,PM1,ug/m3,5
+PM2.5,PM2.5,ug/m3,5
+PM10,PM10,ug/m3,5
+PM4,PM4,ug/m3,5
+PM0.5,PM0.5,ug/m3,5
+PM0.3,PM0.3,ug/m3,5
+PM0.1,PM0.1,ug/m3,5
+WP,Water Pressure,Bar,6
+WP_I,Water Pressure Instant,Bar,6
+WP_MIN,Water Pressure Minimum,Bar,6
+WP_MAX,Water Pressure Maximum,Bar,6
+WP_Avg,Water Pressure Average,Bar,6
+WP2,Water Pressure 2,Bar,6
+WP2_I,Water Pressure 2 Instant,Bar,6
+WP2_MIN,Water Pressure 2 Minimum,Bar,6
+WP2_MAX,Water Pressure 2 Maximum,Bar,6
+WP2_Avg,Water Pressure 2 Average,Bar,6
+WP3,Water Pressure 3,Bar,6
+WP3_I,Water Pressure 3 Instant,Bar,6
+WP3_MIN,Water Pressure 3 Minimum,Bar,6
+WP3_MAX,Water Pressure 3 Maximum,Bar,6
+WP3_Avg,Water Pressure 3 Average,Bar,6
+WP4,Water Pressure 4,Bar,6
+WP4_I,Water Pressure 4 Instant,Bar,6
+WP4_MIN,Water Pressure 4 Minimum,Bar,6
+WP4_MAX,Water Pressure 4 Maximum,Bar,6
+WP4_Avg,Water Pressure 4 Average,Bar,6
+WP5,Water Pressure 5,Bar,6
+WP5_I,Water Pressure 5 Instant,Bar,6
+WP5_MIN,Water Pressure 5 Minimum,Bar,6
+WP5_MAX,Water Pressure 5 Maximum,Bar,6
+WP5_Avg,Water Pressure 5 Average,Bar,6
+WPIN,Water Pressure IN,Bar,6
+WPIN_I,Water Pressure IN Instant,Bar,6
+WPIN_MIN,Water Pressure IN Minimum,Bar,6
+WPIN_MAX,Water Pressure IN Maximum,Bar,6
+WPIN_Avg,Water Pressure IN Average,Bar,6
+WPOUT,Water Pressure OUT,Bar,6
+WPOUT_I,Water Pressure OUT Instant,Bar,6
+WPOUT_MIN,Water Pressure OUT Minimum,Bar,6
+WPOUT_MAX,Water Pressure OUT Maximum,Bar,6
+WPOUT_Avg,Water Pressure OUT Average,Bar,6
+WFIN,Water Flow IN,m3/h,6
+WFOUT,Water Flow OUT,m3/h,6
+WTIN,Water Temperature IN,C,6
+WTOUT,Water Temperature OUT,C,6
+WL,Water Level,m,6
+WP_CNT,Water Pressure Data Count,-,6
+WP2_CNT,Water Pressure 2 Data Count,-,6
+WP3_CNT,Water Pressure 3 Data Count,-,6
+WP4_CNT,Water Pressure 4 Data Count,-,6
+WP5_CNT,Water Pressure 5 Data Count,-,6
+WPIN_CNT,Water Pressure IN Data Count,-,6
+WPOUT_CNT,Water Pressure OUT Data Count,-,6
+WFIN_CNT,Water Flow IN Data Count,-,6
+WFOUT_CNT,Water Flow OUT Data Count,-,6
+WTIN_CNT,Water Temperature IN Data Count,-,6
+WTOUT_CNT,Water Temperature OUT Data Count,-,6
+WL_CNT,Water Level Data Count,-,6
+T_PUMP,Pump Work Time,Min,7
+V,Instant Voltage,V,7
+V_R,Phase R Instant Voltage,V,7
+V_S,Phase S Instant Voltage,V,7
+V_T,Phase T Instant Voltage,V,7
+V_A,Instant Voltage Average,V,7
+V_MIN_R,Phase R Instant Voltage Minimum,V,7
+V_MIN_S,Phase S Instant Voltage Minimum,V,7
+V_MIN_T,Phase T Instant Voltage Minimum,V,7
+V_MAX_R,Phase R Instant Voltage Maximum,V,7
+V_MAX_S,Phase S Instant Voltage Maximum,V,7
+V_MAX_T,Phase T Instant Voltage Maximum,V,7
+VRMS,RMS Voltage,V,7
+VRMS_R,Phase R RMS Voltage,V,7
+VRMS_S,Phase S RMS Voltage,V,7
+VRMS_T,Phase T RMS Voltage,V,7
+VRMS_A,RMS Voltage Average,V,7
+VRMS_MIN_R,Phase R RMS Voltage Minimum,V,7
+VRMS_MIN_S,Phase S RMS Voltage Minimum,V,7
+VRMS_MIN_T,Phase T RMS Voltage Minimum,V,7
+VRMS_MAX_R,Phase R RMS Voltage Maximum,V,7
+VRMS_MAX_S,Phase S RMS Voltage Maximum,V,7
+VRMS_MAX_T,Phase T RMS Voltage Maximum,V,7
+VFun,Fundamental Voltage,V,7
+VFun_R,Phase R Fundamental Voltage,V,7
+VFun_S,Phase S Fundamental Voltage,V,7
+VFun_T,Phase T Fundamental Voltage,V,7
+VFun_A,Fundamental Voltage Average,V,7
+VFun_MIN_R,Phase R Fundamental Voltage Minimum,V,7
+VFun_MIN_S,Phase S Fundamental Voltage Minimum,V,7
+VFun_MIN_T,Phase T Fundamental Voltage Minimum,V,7
+VFun_MAX_R,Phase R Fundamental Voltage Maximum,V,7
+VFun_MAX_S,Phase S Fundamental Voltage Maximum,V,7
+VFun_MAX_T,Phase T Fundamental Voltage Maximum,V,7
+VHarm,Harmonic Voltage,V,7
+VHarm_R,Phase R Harmonic Voltage,V,7
+VHarm_S,Phase S Harmonic Voltage,V,7
+VHarm_T,Phase T Harmonic Voltage,V,7
+VHarm_A,Harmonic Voltage Average,V,7
+VHarm_MIN_R,Phase R Harmonic Voltage Minimum,V,7
+VHarm_MIN_S,Phase S Harmonic Voltage Minimum,V,7
+VHarm_MIN_T,Phase T Harmonic Voltage Minimum,V,7
+VHarm_MAX_R,Phase R Harmonic Voltage Maximum,V,7
+VHarm_MAX_S,Phase S Harmonic Voltage Maximum,V,7
+VHarm_MAX_T,Phase T Harmonic Voltage Maximum,V,7
+I,Instant Current,A,7
+I_R,Phase R Instant Current,A,7
+I_S,Phase S Instant Current,A,7
+I_T,Phase T Instant Current,A,7
+I_A,Instant Current Average,A,7
+I_MIN_R,Phase R Instant Current Minimum,A,7
+I_MIN_S,Phase S Instant Current Minimum,A,7
+I_MIN_T,Phase T Instant Current Minimum,A,7
+I_MAX_R,Phase R Instant Current Maximum,A,7
+I_MAX_S,Phase S Instant Current Maximum,A,7
+I_MAX_T,Phase T Instant Current Maximum,A,7
+IP,Peak Current,A,7
+IP_R,Phase R Peak Current,A,7
+IP_S,Phase S Peak Current,A,7
+IP_T,Phase T Peak Current,A,7
+IP_A,Peak Current Average,A,7
+IP_MIN_R,Phase R Peak Current Minimum,A,7
+IP_MIN_S,Phase S Peak Current Minimum,A,7
+IP_MIN_T,Phase T Peak Current Minimum,A,7
+IP_MAX_R,Phase R Peak Current Maximum,A,7
+IP_MAX_S,Phase S Peak Current Maximum,A,7
+IP_MAX_T,Phase T Peak Current Maximum,A,7
+IRMS,RMS Current,A,7
+IRMS_R,Phase R RMS Current,A,7
+IRMS_S,Phase S RMS Current,A,7
+IRMS_T,Phase T RMS Current,A,7
+IRMS_A,RMS Current Average,A,7
+IRMS_MIN_R,Phase R RMS Current Minimum,A,7
+IRMS_MIN_S,Phase S RMS Current Minimum,A,7
+IRMS_MIN_T,Phase T RMS Current Minimum,A,7
+IRMS_MAX_R,Phase R RMS Current Maximum,A,7
+IRMS_MAX_S,Phase S RMS Current Maximum,A,7
+IRMS_MAX_T,Phase T RMS Current Maximum,A,7
+IFun,Fundamental Current,A,7
+IFun_R,Phase R Fundamental Current,A,7
+IFun_S,Phase S Fundamental Current,A,7
+IFun_T,Phase T Fundamental Current,A,7
+IFun_A,Fundamental Current Average,A,7
+IFun_MIN_R,Phase R Fundamental Current Minimum,A,7
+IFun_MIN_S,Phase S Fundamental Current Minimum,A,7
+IFun_MIN_T,Phase T Fundamental Current Minimum,A,7
+IFun_MAX_R,Phase R Fundamental Current Maximum,A,7
+IFun_MAX_S,Phase S Fundamental Current Maximum,A,7
+IFun_MAX_T,Phase T Fundamental Current Maximum,A,7
+IHarm,Harmonic Current,A,7
+IHarm_R,Phase R Harmonic Current,A,7
+IHarm_S,Phase S Harmonic Current,A,7
+IHarm_T,Phase T Harmonic Current,A,7
+IHarm_A,Harmonic Current Average,A,7
+IHarm_MIN_R,Phase R Harmonic Current Minimum,A,7
+IHarm_MIN_S,Phase S Harmonic Current Minimum,A,7
+IHarm_MIN_T,Phase T Harmonic Current Minimum,A,7
+IHarm_MAX_R,Phase R Harmonic Current Maximum,A,7
+IHarm_MAX_S,Phase S Harmonic Current Maximum,A,7
+IHarm_MAX_T,Phase T Harmonic Current Maximum,A,7
+P,Active Power,W,7
+P_R,Phase R Active Power,W,7
+P_S,Phase S Active Power,W,7
+P_T,Phase T Active Power,W,7
+P_A,Active Power Average,W,7
+P_MIN_R,Phase R Active Power Minimum,W,7
+P_MIN_S,Phase S Active Power Minimum,W,7
+P_MIN_T,Phase T Active Power Minimum,W,7
+P_MAX_R,Phase R Active Power Maximum,W,7
+P_MAX_S,Phase S Active Power Maximum,W,7
+P_MAX_T,Phase T Active Power Maximum,W,7
+Q,Reactive Power,Var,7
+Q_R,Phase R Reactive Power,Var,7
+Q_S,Phase S Reactive Power,Var,7
+Q_T,Phase T Reactive Power,Var,7
+Q_A,Reactive Power Average,Var,7
+Q_MIN_R,Phase R Reactive Power Minimum,Var,7
+Q_MIN_S,Phase S Reactive Power Minimum,Var,7
+Q_MIN_T,Phase T Reactive Power Minimum,Var,7
+Q_MAX_R,Phase R Reactive Power Maximum,Var,7
+Q_MAX_S,Phase S Reactive Power Maximum,Var,7
+Q_MAX_T,Phase T Reactive Power Maximum,Var,7
+S,Apparent Power,VA,7
+S_R,Phase R Apparent Power,VA,7
+S_S,Phase S Apparent Power,VA,7
+S_T,Phase T Apparent Power,VA,7
+S_A,Apparent Power Average,VA,7
+S_MIN_R,Phase R Apparent Power Minimum,VA,7
+S_MIN_S,Phase S Apparent Power Minimum,VA,7
+S_MIN_T,Phase T Apparent Power Minimum,VA,7
+S_MAX_R,Phase R Apparent Power Maximum,VA,7
+S_MAX_S,Phase S Apparent Power Maximum,VA,7
+S_MAX_T,Phase T Apparent Power Maximum,VA,7
+QFun,Fundamental Reactive Power,Var,7
+QFun_R,Phase R Fundamental Reactive Power,Var,7
+QFun_S,Phase S Fundamental Reactive Power,Var,7
+QFun_T,Phase T Fundamental Reactive Power,Var,7
+QFun_A,Fundamental Reactive Power Average,Var,7
+QFun_MIN_R,Phase R Fundamental Reactive Power Minimum,Var,7
+QFun_MIN_S,Phase S Fundamental Reactive Power Minimum,Var,7
+QFun_MIN_T,Phase T Fundamental Reactive Power Minimum,Var,7
+QFun_MAX_R,Phase R Fundamental Reactive Power Maximum,Var,7
+QFun_MAX_S,Phase S Fundamental Reactive Power Maximum,Var,7
+QFun_MAX_T,Phase T Fundamental Reactive Power Maximum,Var,7
+QHarm,Harmonic Reactive Power,Var,7
+QHarm_R,Phase R Harmonic Reactive Power,Var,7
+QHarm_S,Phase S Harmonic Reactive Power,Var,7
+QHarm_T,Phase T Harmonic Reactive Power,Var,7
+QHarm_A,Harmonic Reactive Power Average,Var,7
+QHarm_MIN_R,Phase R Harmonic Reactive Power Minimum,Var,7
+QHarm_MIN_S,Phase S Harmonic Reactive Power Minimum,Var,7
+QHarm_MIN_T,Phase T Harmonic Reactive Power Minimum,Var,7
+QHarm_MAX_R,Phase R Harmonic Reactive Power Maximum,Var,7
+QHarm_MAX_S,Phase S Harmonic Reactive Power Maximum,Var,7
+QHarm_MAX_T,Phase T Harmonic Reactive Power Maximum,Var,7
+PFun,Fundamental Power,-,7
+PFun_R,Phase R Fundamental Power,-,7
+PFun_S,Phase S Fundamental Power,-,7
+PFun_T,Phase T Fundamental Power,-,7
+PFun_A,Fundamental Power Average,-,7
+PFun_MIN_R,Phase R Fundamental Power Minimum,-,7
+PFun_MIN_S,Phase S Fundamental Power Minimum,-,7
+PFun_MIN_T,Phase T Fundamental Power Minimum,-,7
+PFun_MAX_R,Phase R Fundamental Power Maximum,-,7
+PFun_MAX_S,Phase S Fundamental Power Maximum,-,7
+PFun_MAX_T,Phase T Fundamental Power Maximum,-,7
+PHarm,Harmonic Power,-,7
+PHarm_R,Phase R Harmonic Power,-,7
+PHarm_S,Phase S Harmonic Power,-,7
+PHarm_T,Phase T Harmonic Power,-,7
+PHarm_A,Harmonic Power Average,-,7
+PHarm_MIN_R,Phase R Harmonic Power Minimum,-,7
+PHarm_MIN_S,Phase S Harmonic Power Minimum,-,7
+PHarm_MIN_T,Phase T Harmonic Power Minimum,-,7
+PHarm_MAX_R,Phase R Harmonic Power Maximum,-,7
+PHarm_MAX_S,Phase S Harmonic Power Maximum,-,7
+PHarm_MAX_T,Phase T Harmonic Power Maximum,-,7
+FunVA,Fundamental Volt Ampere,VA,7
+FunVA_R,Phase R Fundamental Volt Ampere,VA,7
+FunVA_S,Phase S Fundamental Volt Ampere,VA,7
+FunVA_T,Phase T Fundamental Volt Ampere,VA,7
+FunVA_A,Fundamental Volt Ampere Average,VA,7
+FunVA_MIN_R,Phase R Fundamental Volt Ampere Minimum,VA,7
+FunVA_MIN_S,Phase S Fundamental Volt Ampere Minimum,VA,7
+FunVA_MIN_T,Phase T Fundamental Volt Ampere Minimum,VA,7
+FunVA_MAX_R,Phase R Fundamental Volt Ampere Maximum,VA,7
+FunVA_MAX_S,Phase S Fundamental Volt Ampere Maximum,VA,7
+FunVA_MAX_T,Phase T Fundamental Volt Ampere Maximum,VA,7
+PF,Power Factor,-,7
+PF_R,Phase R Power Factor,-,7
+PF_S,Phase S Power Factor,-,7
+PF_T,Phase T Power Factor,-,7
+PF_A,Power Factor Average,-,7
+PF_MIN_R,Phase R Power Factor Minimum,-,7
+PF_MIN_S,Phase S Power Factor Minimum,-,7
+PF_MIN_T,Phase T Power Factor Minimum,-,7
+PF_MAX_R,Phase R Power Factor Maximum,-,7
+PF_MAX_S,Phase S Power Factor Maximum,-,7
+PF_MAX_T,Phase T Power Factor Maximum,-,7
+FQ,Frequency,Hz,7
+FQ_MIN,Frequency Minimum,Hz,7
+FQ_MAX,Frequency Maximum,Hz,7
+AE,Active Energy,kWh,7
+AE_R,Phase R Active Energy,kWh,7
+AE_S,Phase S Active Energy,kWh,7
+AE_T,Phase T Active Energy,kWh,7
+AE_A,Active Energy Average,kWh,7
+AE_TOT,Total Active Energy,kWh,7
+RE_L,Reactive Energy Leading,kVARh,7
+RE_L_R,Phase R Reactive Energy Leading,kVARh,7
+RE_L_S,Phase S Reactive Energy Leading,kVARh,7
+RE_L_T,Phase T Reactive Energy Leading,kVARh,7
+RE_L_A,Reactive Energy Leading Average,kVARh,7
+RE_L_TOT,Total Leading Reactive Energy,kVARh,7
+RE_G,Reactive Energy Lagging,kVARh,7
+RE_G_R,Phase R Reactive Energy Lagging,kVARh,7
+RE_G_S,Phase S Reactive Energy Lagging,kVARh,7
+RE_G_T,Phase T Reactive Energy Lagging,kVARh,7
+RE_G_A,Reactive Energy Lagging Average,kVARh,7
+RE_G_TOT,Total Lagging Reactive Energy,kVARh,7
+Max78630_T,Chip Temperature,C,7
+Max78630_T_MIN,Chip Temperature Minimum,C,7
+Max78630_T_MAX,Chip Temperature Maximum,C,7
+MAX_DIVISOR,Actual samples in previous accumulation interval,-,7
+MAX_CYCLE,High-rate sample counter,-,7
+MAX_FRAME,Low-rate sample counter,-,7
+MAX_STATUS,Alarm and device status,-,7
+MAX_MASK1,Alarm/status mask for AL1 output pin,-,7
+MAX_MASK2,Alarm/status mask for AL2 output pin,-,7
+MAX_MASK3,Alarm/status mask for AL3 output pin,-,7
+MAX_MASK4,Alarm/status mask for AL4 output pin,-,7
+MAX_STICKY,Alarm/status bits to hold until cleared by host,-,7
+MAX_DIO_STATE,State of DIO pins,-,7
+MAX_DIO_DIR,Direction of DIO pins,-,7
+MAX_DIO_POL,Polarity of DIO pins,-,7
+MAX_CALCYCS,Number of calibration cycles to average,-,7
+MAX_HPF_COEF_I,Current input HPF coefficient,-,7
+MAX_HPF_COEF_V,Voltage input HPF coefficient,-,7
+MAX_PHASECOMP1,Phase compensation for AV1 input,-,7
+MAX_PHASECOMP2,Phase compensation for AV2 input,-,7
+MAX_PHASECOMP3,Phase compensation for AV3 input,-,7
+MAX_BAUD,Baud rate for UART interface,-,7
+MAX_I1_GAIN,Current gain calibration,-,7
+MAX_I1_OFFSET,Current offset calibration,-,7
+MAX_I2_GAIN,Current gain calibration,-,7
+MAX_I2_OFFSET,Current offset calibration,-,7
+MAX_I3_GAIN,Current gain calibration,-,7
+MAX_I3_OFFSET,Current offset calibration,-,7
+MAX_V1_GAIN,Voltage gain calibration,-,7
+MAX_V1_OFFSET,Voltage offset calibration,-,7
+MAX_V2_GAIN,Voltage gain calibration,-,7
+MAX_V2_OFFSET,Voltage offset calibration,-,7
+MAX_V3_GAIN,Voltage gain calibration,-,7
+MAX_V3_OFFSET,Voltage offset calibration,-,7
+MAX_T_GAIN,Temperature slope calibration,-,7
+MAX_T_OFFSET,Temperature offset calibration,-,7
+MAX_VIMBAL,Voltage imbalance alarm limit,-,7
+MAX_IIMBAL,Current imbalance alarm limit,-,7
+MAX_VRMS_MIN,Voltage lower alarm limit,-,7
+MAX_VRMS_MAX,Voltage upper alarm limit,-,7
+MAX_VSAG_LIM,RMS voltage sag threshold,-,7
+MAX_IARMS_OFF,RMS current dynamic offset adjust,-,7
+MAX_IBRMS_OFF,RMS current dynamic offset adjust,-,7
+MAX_ICRMS_OFF,RMS current dynamic offset adjust,-,7
+MAX_IRMS_MAX,Current upper alarm limit,-,7
+MAX_IFSCALE,Current scale register,-,7
+MAX_VFSCALE,Voltage scale register,-,7
+MAX_T_MIN,Temperature alarm lower limit,-,7
+MAX_T_MAX,Temperature alarm upper limit,-,7
+MAX_F_MIN,Frequency alarm lower limit,-,7
+MAX_F_MAX,Frequency alarm upper limit,-,7
+MAX_BUCKET_L,Energy bucket low word,-,7
+MAX_BUCKET_H,Energy bucket high word,-,7
+SET_MIN_V,Voltage Min set,V,7
+SET_MAX_V,Voltage Max set,V,7
+MAX_SYSSTAT,System status register,-,7
+Firmware_ID,FOTA ID,-,9
+FOTA_Download_Status,FOTA Download Time,-,9
+FOTA_Download_Time,FOTA Download Status,Sec,9

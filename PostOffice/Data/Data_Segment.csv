@@ -1,9 +1,10 @@
-Segment_ID,Description
-0,Unknown
-1,Device
-2,Power
-3,GSM
-4,Location
-5,Environment
-6,Water
-7,Energy
+Segment_ID,Segment_Name,Description
+0,Unknown,Unknown Data Segment
+1,Device,Device Data Segment
+2,Power,Power Data Segment
+3,GSM,GSM Data Segment
+4,Location,Location Data Segment
+5,Environment,Environment Data Segment
+6,Water,Water Data Segment
+7,Energy,Energy Data Segment
+9,FOTA,FOTA Data Segment
