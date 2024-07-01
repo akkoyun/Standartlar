@@ -1,4 +1,5 @@
 Variable_ID,Variable_Description,Variable_Unit,Segment_ID
+Unknown,Unknown,-,0
 STATUS,Status Register,-,1
 PUBLISH,Publish Register,-,1
 STOP,Stop Register,-,1
