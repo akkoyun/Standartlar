@@ -4,3 +4,7 @@ Log_Description_ID,Log_Description
 2,New Empty Data Pack Received from Device
 3,New Invalid Data Pack Received from Device
 4,New Valid Data Pack Received from Device
+5,Pack Data Processed and Sent to Stream Topic
+6,Measurement Data Processed and Recorded in Database
+7,Rule Data Processed and Recorded in Database
+8,New KPI Data Processed and Recorded in Database
