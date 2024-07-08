@@ -1,10 +1,27 @@
 Log_Description_ID,Log_Description
 0,Unknown Log Description
-1,New API Root Get Request Received
-2,New Empty Data Pack Received from Device
-3,New Invalid Data Pack Received from Device
-4,New Valid Data Pack Received from Device
-5,Pack Data Processed and Sent to Stream Topic
-6,Measurement Data Processed and Recorded in Database
-7,Rule Data Processed and Recorded in Database
-8,New KPI Data Processed and Recorded in Database
+1,Service Started
+2,Service Stopped
+3,Service Paused
+4,Service Resumed
+5,Service Restarted
+6,Service Error
+7,Service Warning
+8,Service Critical
+50,New Connection Saved in Database
+51,New Device Saved in Database
+52,New Stream Saved in Database
+53,New Measurement Saved in Database
+54,New SIM Saved in Database
+55,New Firmware Saved in Database
+56,New Modem Saved in Database
+100,New API Root Get Request Received
+101,New Valid Data Pack Received from Device
+102,New Invalid Data Pack Received from Device
+103,New Invalid Data Pack Saved in Database
+104,New Empty Data Pack Received from Device
+105,New Empty Data Pack Saved in Database
+150,New Data Pack Processed and Sent to Stream Topic
+200,New Measurement Data Processed and Recorded in Database
+201,New KPI Data Processed and Recorded in Database
+300,New Rule Triggered and Recorded in Database
