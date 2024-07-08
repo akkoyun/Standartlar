@@ -1,0 +1,6 @@
+Log_Description_ID,Log_Description
+0,Unknown Log Description
+1,New API Root Get Request Received
+2,New Empty Data Pack Received from Device
+3,New Invalid Data Pack Received from Device
+4,New Valid Data Pack Received from Device

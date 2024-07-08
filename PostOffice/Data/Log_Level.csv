@@ -1,0 +1,11 @@
+Log_Level_ID,Log_Level_Name,Log_Level_Description
+0,UNKNOWN,Unknown LOG Level
+1,DEBUG,Debug LOG Level
+2,INFO,Information LOG Level
+3,DEVICE,Device LOG Level
+4,MEASUREMENT,Measurement LOG Level
+5,RULE,Rule LOG Level
+6,ERROR,Error LOG Level
+7,WARNING,Warning LOG Level
+8,CRITICAL,Critical LOG Level
+9,ALERT,Alert LOG Level
