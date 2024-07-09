@@ -4,3 +4,4 @@ Service_ID,Service_Name,Service_Description
 2,Data,Data Handle Service
 3,Measurement,Measurement Service
 4,Rule,Rule Service
+5,Fota,FOTA Service
