@@ -25,3 +25,10 @@ Log_Description_ID,Log_Description
 200,New Measurement Data Processed and Recorded in Database
 201,New KPI Data Processed and Recorded in Database
 300,New Rule Triggered and Recorded in Database
+400,FOTA FTP Connection Established
+401,FOTA FTP Connection Closed
+402,FOTA FTP Login Success
+403,FOTA FTP File Sent
+404,FOTA FTP File Received
+405,FOTA FTP Incomplete File Sent
+406,FOTA FTP Incomplete File Received
