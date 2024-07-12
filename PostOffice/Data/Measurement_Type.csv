@@ -256,6 +256,7 @@ IRMS_R,Phase R RMS Current,A,7
 IRMS_S,Phase S RMS Current,A,7
 IRMS_T,Phase T RMS Current,A,7
 IRMS_A,RMS Current Average,A,7
+IRMS_IMB,RMS Current Imbalance,%,7
 IRMS_MIN_R,Phase R RMS Current Minimum,A,7
 IRMS_MIN_S,Phase S RMS Current Minimum,A,7
 IRMS_MIN_T,Phase T RMS Current Minimum,A,7
